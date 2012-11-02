@@ -1,0 +1,231 @@
+Thu Nov  1 16:42:11 EDT 2012
+Use the ESMF 3.1.0rp2 library
+cd atmos/share         && gmake
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/share'
+gmake[2]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/share'
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict  -c module_ERR_MSG.f90
+ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o ffsync.o  idea_composition.o
+gmake[2]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/share'
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/share'
+cd atmos/phys          && gmake gocart_stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/phys'
+ar -r libphys.a module_LS_LISS.o module_LS_NOAHLSM.o module_SF_URBAN.o machine.o physcons.o funcphys.o module_nst_parameters.o module_nst_water_prop.o module_nst_model.o calpreciptype.o co2hc.o idea_solar_heating.o idea_tracer.o h2oc.o h2ohdc.o efield.o ideaca.o idea_co2.o idea_h2o.o idea_ion.o idea_o2_o3.o idea_dissipation.o idea_phys.o gocart_tracer_config_stub.o iounitdef.o ozne_def.o progtm_module.o date_def.o rascnvv2.o namelist_soilveg.o module_bfmicrophysics.o mersenne_twister.o tracer_const_h.o gfs_phy_tracer_config.o radlw_param.o radlw_datatb.o radlw_main.o radsw_param.o radsw_datatb.o radsw_main.o radiation_astronomy.o radiation_aerosols.o radiation_gases.o radiation_clouds.o radiation_surface.o grrad.o ozphys.o ozinterp.o sfcsub.o gbphys.o dcyc2.o dcyc2.pre.rad.o set_soilveg.o sfc_drv.o sfc_land.o progt2.o sfc_sice.o sfc_ocean.o sfc_nst.o sfc_diff.o sfc_diag.o sflx.o moninp.o moninp1.o moninq.o gwdps.o gwdc.o sascnv.o sascnvn.o cnvc90.o tridi2t3.o shalcv.o shalcv_opr.o shalcnv.o lrgsclr.o gscond.o precpd.o mstadb.o mstadbtn.o mstcnv.o get_prs.o gsmddrive.o module_BL_MYJPBL.o module_BL_GFSPBL.o module_CU_SAS.o module_CU_BMJ.o module_MP_ETANEW.o module_MP_FER_HIRES.o module_MP_WSM6.o module_MP_GFS.o module_RA_GFDL.o module_RA_RRTM.o module_SF_JSFC.o grrad_nmmb.o radiation_astronomy_nmmb.o num_parthds.o
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/phys'
+cd atmos/nmm           && gmake
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/nmm'
+gmake[2]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/nmm'
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict   -I../share -I../phys -c module_SOLVER_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_INIT_READ_NEMSIO.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_INIT_READ_BIN.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_VARS_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_OUTPUT.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_GET_CONFIG.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_SOLVER_GRID_COMP.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_DIGITAL_FILTER_NMM.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_DOMAIN_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_WRITE_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_GET_CONFIG_WRITE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_WRITE_ROUTINES.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_WRITE_GRID_COMP.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_NESTING.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_DOMAIN_GRID_COMP.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_PARENT_CHILD_CPL_COMP.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_TIMESERIES.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_NMM_INTEGRATE.f90
+module_NMM_INTEGRATE.f90(1501): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 910    FORMAT(' Child send 2-way data = ',g9.3)
+--------------------------------------------^
+module_NMM_INTEGRATE.f90(1500): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 909    FORMAT(' Integrate = ',g9.3,' Phase 3 = ',g9.3)
+--------------------------------^
+module_NMM_INTEGRATE.f90(1500): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 909    FORMAT(' Integrate = ',g9.3,' Phase 3 = ',g9.3)
+---------------------------------------------------^
+module_NMM_INTEGRATE.f90(1498): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 908    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------^
+module_NMM_INTEGRATE.f90(1498): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 908    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------------------------^
+module_NMM_INTEGRATE.f90(1499): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' Phase 3 = ',g9.3)
+------------------------------^
+module_NMM_INTEGRATE.f90(1494): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 907    FORMAT(' Integrate = ',g9.3,                                    &
+--------------------------------^
+module_NMM_INTEGRATE.f90(1495): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' Phase 3 = ',g9.3,                                      &
+------------------------------^
+module_NMM_INTEGRATE.f90(1496): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' cpl compute = ',g9.3,' cpl wait = ',g9.3,              &
+----------------------------------^
+module_NMM_INTEGRATE.f90(1496): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' cpl compute = ',g9.3,' cpl wait = ',g9.3,              &
+------------------------------------------------------^
+module_NMM_INTEGRATE.f90(1497): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' update parent move = ',g9.3)
+-----------------------------------------^
+module_NMM_INTEGRATE.f90(1490): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 906    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------^
+module_NMM_INTEGRATE.f90(1490): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 906    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------------------------^
+module_NMM_INTEGRATE.f90(1491): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' Phase 3 = ',g9.3,                                      &
+------------------------------^
+module_NMM_INTEGRATE.f90(1492): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' cpl compute = ',g9.3,' cpl wait = ',g9.3,              &
+----------------------------------^
+module_NMM_INTEGRATE.f90(1492): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' cpl compute = ',g9.3,' cpl wait = ',g9.3,              &
+------------------------------------------------------^
+module_NMM_INTEGRATE.f90(1493): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' update parent move = ',g9.3)
+-----------------------------------------^
+module_NMM_INTEGRATE.f90(1489): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 905    FORMAT(' Integrate = ',g9.3,' Phase 3 = ',g9.3)
+--------------------------------^
+module_NMM_INTEGRATE.f90(1489): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 905    FORMAT(' Integrate = ',g9.3,' Phase 3 = ',g9.3)
+---------------------------------------------------^
+module_NMM_INTEGRATE.f90(1487): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 904    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------^
+module_NMM_INTEGRATE.f90(1487): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 904    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------------------------^
+module_NMM_INTEGRATE.f90(1488): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' Phase 3 = ',g9.3)
+------------------------------^
+module_NMM_INTEGRATE.f90(1483): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 903    FORMAT(' Integrate = ',g9.3,' Phase 3 = ',g9.3,                 &
+--------------------------------^
+module_NMM_INTEGRATE.f90(1483): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 903    FORMAT(' Integrate = ',g9.3,' Phase 3 = ',g9.3,                 &
+---------------------------------------------------^
+module_NMM_INTEGRATE.f90(1484): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' cpl compute = ',g9.3,' cpl recv = ',g9.3,              &
+----------------------------------^
+module_NMM_INTEGRATE.f90(1484): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' cpl compute = ',g9.3,' cpl recv = ',g9.3,              &
+------------------------------------------------------^
+module_NMM_INTEGRATE.f90(1485): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' upd interior nest = ',g9.3,                            &
+----------------------------------------^
+module_NMM_INTEGRATE.f90(1486): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' upd interior parent = ',g9.3)
+------------------------------------------^
+module_NMM_INTEGRATE.f90(1477): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 902    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------^
+module_NMM_INTEGRATE.f90(1477): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 902    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------------------------^
+module_NMM_INTEGRATE.f90(1478): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' Phase 3 = ',g9.3,' cpl compute = ',g9.3,               &
+------------------------------^
+module_NMM_INTEGRATE.f90(1478): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' Phase 3 = ',g9.3,' cpl compute = ',g9.3,               &
+-----------------------------------------------------^
+module_NMM_INTEGRATE.f90(1479): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' cpl recv = ',g9.3,                                     &
+-------------------------------^
+module_NMM_INTEGRATE.f90(1480): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' upd interior nest = ',g9.3,                            &
+----------------------------------------^
+module_NMM_INTEGRATE.f90(1481): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' upd interior parent = ',g9.3)
+------------------------------------------^
+module_NMM_INTEGRATE.f90(1475): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 901    FORMAT(' Integrate = ',g9.3,' Phase 3 = ',g9.3,                 &
+--------------------------------^
+module_NMM_INTEGRATE.f90(1475): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 901    FORMAT(' Integrate = ',g9.3,' Phase 3 = ',g9.3,                 &
+---------------------------------------------------^
+module_NMM_INTEGRATE.f90(1476): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' update parent move = ',g9.3)
+-----------------------------------------^
+module_NMM_INTEGRATE.f90(1473): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 900    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------^
+module_NMM_INTEGRATE.f90(1473): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 900    FORMAT(' Integrate = ',g9.3,' Filter = ',g9.3,                  &
+--------------------------------------------------^
+module_NMM_INTEGRATE.f90(1474): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' Phase 3 = ',g9.3,' update parent move = ',g9.3)
+------------------------------^
+module_NMM_INTEGRATE.f90(1474): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+               ' Phase 3 = ',g9.3,' update parent move = ',g9.3)
+------------------------------------------------------------^
+module_NMM_INTEGRATE.f90(1472): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 899    FORMAT(' I/O task Phase 3= ',g9.3)
+--------------------------------------^
+module_NMM_INTEGRATE.f90(1471): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 898    FORMAT(' Task 0 time to process move flag = ',g9.3)
+-------------------------------------------------------^
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_NMM_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_NMM_GRID_COMP.f90
+ar -r libnmm.a module_BGRID_INTERP.o module_CLOCKTIMES.o module_CONTROL.o module_SOLVER_GRID_COMP.o module_INIT_READ_BIN.o module_INIT_READ_NEMSIO.o module_OUTPUT.o module_DIAGNOSE.o module_DIGITAL_FILTER_NMM.o module_DM_PARALLEL.o module_DOMAIN_GRID_COMP.o module_DOMAIN_INTERNAL_STATE.o module_EXCHANGE.o module_GET_CONFIG.o module_GET_CONFIG_WRITE.o module_GWD.o module_H_TO_V.o module_MY_DOMAIN_SPECS.o module_NESTING.o module_NMM_GRID_COMP.o module_NMM_INTEGRATE.o module_NMM_INTERNAL_STATE.o module_PARENT_CHILD_CPL_COMP.o module_PRECIP_ADJUST.o module_TIMESERIES.o module_VARS.o module_VARS_STATE.o module_WRITE_GRID_COMP.o module_WRITE_INTERNAL_STATE.o module_WRITE_ROUTINES.o module_CONVECTION.o module_MICROPHYSICS.o module_RADIATION.o module_TURBULENCE.o module_SOLVER_INTERNAL_STATE.o module_DYNAMICS_ROUTINES.o module_FLTBNDS.o n_namelist_physics_def.o n_layout1.o n_resol_def.o n_compns_physics.o n_mpi_def.o n_module_gfs_mpi_def.o n_mpi_quit.o
+gmake[2]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/nmm'
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/nmm'
+cd atmos/gfs           && gmake stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/gfs'
+ar -r libgfs.a module_GFS_GRID_COMP_stub.o
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/gfs'
+cd atmos/gen           && gmake stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/gen'
+makefile:31: warning: overriding commands for target `module_GEN_INTERNAL_STATE.o'
+makefile:28: warning: ignoring old commands for target `module_GEN_INTERNAL_STATE.o'
+ar -r libgen.a module_GEN_INTERNAL_STATE.o module_GEN_GRID_COMP_stub.o 
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/gen'
+cd atmos/fim           && gmake stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/fim'
+ar -r libfimtop.a fim_grid_comp_stub.o
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/fim'
+cd atmos/post          && gmake stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/post'
+ar -r libpost.a post_gfs_stub.o post_nmm_stub.o post_nems_routines_stub.o
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/post'
+cd atmos               && gmake
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos'
+gmake[2]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos'
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -Ishare -Inmm -Igfs -Ifim -Iphys -Igen -c module_ATM_INTERNAL_STATE.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -Ishare -Inmm -Igfs -Ifim -Iphys -Igen -c module_ATM_GRID_COMP.f90
+ar -r libatmos.a module_ATM_INTERNAL_STATE.o module_ATM_GRID_COMP.o
+gmake[2]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos'
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos'
+cd ocean/genocn        && gmake stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean/genocn'
+ar -r libgenocn.a module_GENOCN_GRID_COMP_stub.o
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean/genocn'
+cd ocean/hycom         && gmake stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean/hycom'
+ar -r libhycom.a module_HYCOM_GRID_COMP_stub.o
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean/hycom'
+cd ocean               && gmake stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
+makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
+gmake will now update dependency file.
+makedepf90 -nosrc module_OCN_INTERNAL_STATE.F90 module_OCN_GRID_COMP_stub.F90 > depend
+gmake[2]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
+makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
+gmake[3]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
+makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../atmos/share  -Ihycom  -Igenocn -c module_OCN_INTERNAL_STATE.f90
+ar -r libocean.a module_OCN_INTERNAL_STATE.o hycom/libhycom.a genocn/libgenocn.a
+gmake[3]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+gmake[2]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+cd ENS_Cpl             && gmake stub
+gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ENS_Cpl'
+ar -r ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
+gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ENS_Cpl'
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Thu Nov  1 16:42:11 EDT 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=306' MAIN_NEMS.F90 > MAIN_NEMS.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c MAIN_NEMS.f90
+rm MAIN_NEMS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict  -o ../exe/NEMS.x MAIN_NEMS.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o atmos/libatmos.a atmos/nmm/libnmm.a atmos/gfs/libgfs.a atmos/fim/libfimtop.a atmos/gen/libgen.a atmos/phys/libphys.a atmos/share/libshare.a atmos/post/libpost.a ocean/libocean.a ocean/genocn/libgenocn.a ocean/hycom/libhycom.a ENS_Cpl/ENS_Cpl.a -L/u/Ratko.Vasic/lib_tmp -lnemsio -L/nwprod/lib -lw3nco_4 -lw3emc_4 -L/nwprod/lib -lbacio_4 -L/nwprod/lib -lsp_4 -L/usrx/local/esmf-3.1.0rp5/lib/libO/Linux.intel.64.intelmpi.default -L/usrx/local/intel/impi/4.0.3.008/intel64/lib -L/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usrx/local/intel/composerxe/mkl/lib/intel64 -L/usrx/local/intel/composerxe/ipp/lib/intel64 -L/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21 -L/gpfs/tp2/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usrx/local/intel/composerxe/mkl/lib/intel64 -L/usrx/local/intel/composerxe/ipp/lib/intel64 -L/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../.. -L/lib64 -L/lib -L/usr/lib64 -L/usr/lib -Wl,-rpath,/usrx/local/esmf-3.1.0rp5/lib/libO/Linux.intel.64.intelmpi.default -lesmf  -ldl -ldl -ldl -ldl -lpthread -lpthread -lpthread -lpthread -lrt -limf -lsvml -lm -lipgo -ldecimal -lcilkrts -lstdc++ -lgcc -lgcc_s -lirc -lpthread -lgcc -lgcc_s -lirc_s -ldl -lrt -ldl /usrx/local/netcdf-4.2.1.1/lib/libnetcdf.a  
+../exe/NEMS.x is created for NMM core.
