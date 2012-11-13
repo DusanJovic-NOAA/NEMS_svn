@@ -1,4 +1,4 @@
-Wed Oct 31 18:55:03 UTC 2012
+Sat Nov 10 17:24:50 UTC 2012
 Use the ESMF 3.1.0rp2 library
 cd atmos               && gmake clean
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
@@ -9,9 +9,9 @@ gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
 cd share        && gmake clean
 gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
-makefile:37: depend: No such file or directory
+makefile:38: depend: No such file or directory
 gmake will now build dependency file. Ignore "depend: No such file or directory" message above
-makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 ffsync.F90 idea_composition.f > depend
+makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > depend
 gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 rm -f libshare.a *.f90 *.o *.mod *.lst *.a lm map depend
@@ -860,6 +860,17 @@ Building dependency file gfio___.d
 rm gfio___.F
 gmake[4]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
 gmake[4]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
+gfio___.F:842:23: warning: missing terminating ' character
+gfio___.F:1083:59: warning: missing terminating ' character
+gfio___.F:1554:23: warning: missing terminating ' character
+gfio___.F:1907:23: warning: missing terminating ' character
+gfio___.F:2145:52: warning: missing terminating ' character
+gfio___.F:2157:23: warning: missing terminating ' character
+gfio___.F:2452:21: warning: missing terminating ' character
+gfio___.F:2453:29: warning: missing terminating ' character
+Building dependency file gfio___.d
+gmake[4]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
+gmake[4]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
 ifort -lmpi -extend_source -L/apps/netcdf/3.6.3/intel/lib -lnetcdf -c -DsysLinux -DESMA64    -I/home/Ratko.Vasic/lib_tmp/esmf/mod/modg/Linux.intel.64.mpi.default  -I/home/Ratko.Vasic/lib_tmp/esmf/include -I. -I.. -I/apps/netcdf/3.6.3/intel/include -I/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/include/GMAO_mpeu   -I/home/Ratko.Vasic/lib_tmp/esmf/mod/modg/Linux.intel.64.mpi.default  -I/home/Ratko.Vasic/lib_tmp/esmf/include  -O3 -r8   -cpp   gfio___.F
 ifort -lmpi -extend_source -L/apps/netcdf/3.6.3/intel/lib -lnetcdf -c -DsysLinux -DESMA64    -I/home/Ratko.Vasic/lib_tmp/esmf/mod/modg/Linux.intel.64.mpi.default  -I/home/Ratko.Vasic/lib_tmp/esmf/include -I. -I.. -I/apps/netcdf/3.6.3/intel/include -I/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/include/GMAO_mpeu   -I/home/Ratko.Vasic/lib_tmp/esmf/mod/modg/Linux.intel.64.mpi.default  -I/home/Ratko.Vasic/lib_tmp/esmf/include  -O3 -r8   -cpp   ../diffdate.f
 ifort -lmpi -extend_source -L/apps/netcdf/3.6.3/intel/lib -lnetcdf -c -DsysLinux -DESMA64    -I/home/Ratko.Vasic/lib_tmp/esmf/mod/modg/Linux.intel.64.mpi.default  -I/home/Ratko.Vasic/lib_tmp/esmf/include -I. -I.. -I/apps/netcdf/3.6.3/intel/include -I/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/include/GMAO_mpeu   -I/home/Ratko.Vasic/lib_tmp/esmf/mod/modg/Linux.intel.64.mpi.default  -I/home/Ratko.Vasic/lib_tmp/esmf/include  -O3 -r8   -cpp   ../getdate.f
@@ -1457,9 +1468,9 @@ gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
 cd atmos/share         && gmake
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
-makefile:37: depend: No such file or directory
+makefile:38: depend: No such file or directory
 gmake will now build dependency file. Ignore "depend: No such file or directory" message above
-makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 ffsync.F90 idea_composition.f > depend
+makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > depend
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
@@ -1469,10 +1480,12 @@ ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c module_INCLUDE.f90
 /lib/cpp -P -traditional  module_CONSTANTS.F90 > module_CONSTANTS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c module_CONSTANTS.f90
+/lib/cpp -P -traditional  check_esmf_pet.F90 > check_esmf_pet.f90
+ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c check_esmf_pet.f90
 /lib/cpp -P -traditional  ffsync.F90 > ffsync.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c ffsync.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -fixed  -r8 -c idea_composition.f
-ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o ffsync.o  idea_composition.o
+ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o check_esmf_pet.o ffsync.o  idea_composition.o
 ar: creating libshare.a
 gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
@@ -1728,118 +1741,118 @@ gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -I../share -I../phys -c module_BGRID_INTERP.f90
 /lib/cpp -P -traditional  module_CLOCKTIMES.F90 > module_CLOCKTIMES.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -I../share -I../phys -c module_CLOCKTIMES.f90
-module_CLOCKTIMES.f90(184): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(185): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='(" ntsd= ",I6," total_integration_tim=  ",g10.5)') ntimestep,td%total_integ_tim*factor
 ----------------------------------------------------------------^
-module_CLOCKTIMES.f90(190): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(191): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("  solver_run=            ",g10.5," pct= ",f7.2)') td%solver_run_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(192): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(193): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   solver_init=          ",g10.5," pct= ",f7.2)') td%solver_init_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(196): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(197): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   consts=               ",g10.5," pct= ",f7.2)') td%consts_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(200): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(201): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   pgforce=              ",g10.5," pct= ",f7.2)') td%pgforce_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(202): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(203): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   dht=                  ",g10.5," pct= ",f7.2)') td%dht_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(204): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(205): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   ddamp=                ",g10.5," pct= ",f7.2)') td%ddamp_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(206): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(207): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   pdtsdt=               ",g10.5," pct= ",f7.2)') td%pdtsdt_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(208): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(209): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   vtoa=                 ",g10.5," pct= ",f7.2)') td%vtoa_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(210): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(211): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   adv1=                 ",g10.5," pct= ",f7.2)') td%adv1_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(214): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(215): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   vadv2=                ",g10.5," pct= ",f7.2)') td%vadv2_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(219): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(220): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   hadv2=                ",g10.5," pct= ",f7.2)') td%hadv2_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(224): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(225): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   adv2=                 ",g10.5," pct= ",f7.2)') td%adv2_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(229): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(230): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   mono=                 ",g10.5," pct= ",f7.2)') td%mono_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(233): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(234): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   cdzdt=                ",g10.5," pct= ",f7.2)') td%cdzdt_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(235): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(236): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   cdwdt=                ",g10.5," pct= ",f7.2)') td%cdwdt_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(237): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(238): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   vsound=               ",g10.5," pct= ",f7.2)') td%vsound_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(239): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(240): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   hdiff=                ",g10.5," pct= ",f7.2)') td%hdiff_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(241): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(242): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   bocoh=                ",g10.5," pct= ",f7.2)') td%bocoh_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(243): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(244): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   bocov=                ",g10.5," pct= ",f7.2)') td%bocov_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(245): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(246): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   updatet=              ",g10.5," pct= ",f7.2)') td%updatet_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(249): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(250): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   prefft=               ",g10.5," pct= ",f7.2)') td%prefft_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(251): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(252): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   fftfhn=               ",g10.5," pct= ",f7.2)') td%fftfhn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(253): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(254): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   fftfwn=               ",g10.5," pct= ",f7.2)') td%fftfwn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(255): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(256): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   polewn=               ",g10.5," pct= ",f7.2)') td%polewn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(257): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(258): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   poavhn=               ",g10.5," pct= ",f7.2)') td%poavhn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(262): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(263): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("  presmud=               ",g10.5," pct= ",f7.2)') td%presmud_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(273): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(274): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   cucnvc=               ",g10.5," pct= ",f7.2)') td%cucnvc_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(275): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(276): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   gsmdrive=             ",g10.5," pct= ",f7.2)') td%gsmdrive_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(277): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(278): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   radiation=            ",g10.5," pct= ",f7.2)') td%radiation_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(279): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(280): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   rdtemp=               ",g10.5," pct= ",f7.2)') td%rdtemp_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(281): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(282): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   turbl=                ",g10.5," pct= ",f7.2)') td%turbl_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(283): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(284): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   h_to_v=               ",g10.5," pct= ",f7.2)') td%h_to_v_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(287): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='(" pole_swap=            ",g10.5," pct= ",f7.2)') td%pole_swap_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(293): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(294): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   exch_dyn=             ",g10.5," pct= ",f7.2)') td%exch_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(297): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(298): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   swaphn=               ",g10.5," pct= ",f7.2)') td%swaphn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(302): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(303): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   swapwn=               ",g10.5," pct= ",f7.2)') td%swapwn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(307): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(308): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   polehn=               ",g10.5," pct= ",f7.2)') td%polehn_tim*factor &
 -----------------------------------------------------^
 /lib/cpp -P -traditional  module_CONTROL.F90 > module_CONTROL.f90
@@ -3113,15 +3126,15 @@ ar -r ENS_Cpl.a Lib_ESMFStateAddGetMod.o machine.o ENS_Cpl_InternalState_ESMFMod
 ar: creating ENS_Cpl.a
 gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 18:56:49 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 17:25:21 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_EARTH_INTERNAL_STATE.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 18:56:49 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 17:25:21 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_EARTH_GRID_COMP.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 18:56:49 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 17:25:21 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_NEMS_INTERNAL_STATE.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 18:56:49 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 17:25:21 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_NEMS_GRID_COMP.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 18:56:49 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' MAIN_NEMS.F90 > MAIN_NEMS.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 17:25:21 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' MAIN_NEMS.F90 > MAIN_NEMS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c MAIN_NEMS.f90
 rm MAIN_NEMS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -free  -o ../exe/NEMS.x MAIN_NEMS.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o atmos/libatmos.a atmos/nmm/libnmm.a atmos/gfs/libgfs.a atmos/gen/libgen.a atmos/fim/libfimtop.a atmos/gfs/libutil/gfs_libutil.a atmos/gfs/io/gfs_io.a atmos/gfs/phys/gfs_physics.a atmos/phys/libphys.a atmos/gfs/dyn/gfs_dynamics.a atmos/share/libshare.a atmos/post/libpost.a ocean/libocean.a ocean/genocn/libgenocn.a ocean/hycom/libhycom.a ENS_Cpl/ENS_Cpl.a chem/gocart/Linux/lib/libGOCART_GridComp.a  chem/gocart/Linux/lib/libDU_GridComp.a  chem/gocart/Linux/lib/libCO2_GridComp.a  chem/gocart/Linux/lib/libCO_GridComp.a  chem/gocart/Linux/lib/libCFC_GridComp.a  chem/gocart/Linux/lib/libO3_GridComp.a  chem/gocart/Linux/lib/libOC_GridComp.a  chem/gocart/Linux/lib/libBC_GridComp.a  chem/gocart/Linux/lib/libSS_GridComp.a  chem/gocart/Linux/lib/libSU_GridComp.a  chem/gocart/Linux/lib/libRn_GridComp.a  chem/gocart/Linux/lib/libChem_Base.a  chem/gocart/Linux/lib/libChem_Shared.a  chem/gocart/Linux/lib/libGMAO_gfio_r8.a  chem/gocart/Linux/lib/libGMAO_pilgrim.a  chem/gocart/Linux/lib/libMAPL_Base.a  chem/gocart/Linux/lib/libMAPL_cfio_r4.a  chem/gocart/Linux/lib/libGMAO_mpeu.a   atmos/gfs/phys/gfs_physics.a -L/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio -lnemsio -L/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/w3 -lw3-2.0_4 -L/home/Ratko.Vasic/lib_tmp -lbacio_4 -L/home/Ratko.Vasic/lib_tmp -lsp_4 -L/apps/esmf/3.1.0rp5/lib/libO/Linux.intel.64.mpi.default -L/opt/sgi/mpt/mpt-2.05/lib -L/apps/intel/composerxe-2011.4.191/mkl/lib/intel64 -L/apps/intel/composerxe-2011.4.191/composerxe-2011.4.191/compiler/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/sgi/mpt/mpt-2.05/lib -L/apps/intel/composerxe-2011.4.191/mkl/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../.. -L/lib64 -L/lib -L/usr/lib64 -L/usr/lib -lesmf  -lmpi -lmpi++ -limf -lsvml -lm -lipgo -ldecimal -lcilkrts -lstdc++ -lgcc_s -lgcc -lirc -lpthread -lgcc_s -lgcc -lirc_s -ldl -lrt -ldl /apps/netcdf/3.6.3/intel/lib/libnetcdf.a 
@@ -3417,9 +3430,9 @@ gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/
 rm -f *.f90 *.lst *.o *.mod lm map ../exe/NEMS.x
 cd atmos/share         && gmake
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
-makefile:37: depend: No such file or directory
+makefile:38: depend: No such file or directory
 gmake will now build dependency file. Ignore "depend: No such file or directory" message above
-makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 ffsync.F90 idea_composition.f > depend
+makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > depend
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
@@ -3429,10 +3442,12 @@ ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c module_INCLUDE.f90
 /lib/cpp -P -traditional  module_CONSTANTS.F90 > module_CONSTANTS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c module_CONSTANTS.f90
+/lib/cpp -P -traditional  check_esmf_pet.F90 > check_esmf_pet.f90
+ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c check_esmf_pet.f90
 /lib/cpp -P -traditional  ffsync.F90 > ffsync.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c ffsync.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -fixed  -r8 -c idea_composition.f
-ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o ffsync.o  idea_composition.o
+ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o check_esmf_pet.o ffsync.o  idea_composition.o
 ar: creating libshare.a
 gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
@@ -3688,118 +3703,118 @@ gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -I../share -I../phys -c module_BGRID_INTERP.f90
 /lib/cpp -P -traditional  module_CLOCKTIMES.F90 > module_CLOCKTIMES.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -I../share -I../phys -c module_CLOCKTIMES.f90
-module_CLOCKTIMES.f90(184): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(185): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='(" ntsd= ",I6," total_integration_tim=  ",g10.5)') ntimestep,td%total_integ_tim*factor
 ----------------------------------------------------------------^
-module_CLOCKTIMES.f90(190): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(191): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("  solver_run=            ",g10.5," pct= ",f7.2)') td%solver_run_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(192): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(193): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   solver_init=          ",g10.5," pct= ",f7.2)') td%solver_init_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(196): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(197): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   consts=               ",g10.5," pct= ",f7.2)') td%consts_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(200): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(201): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   pgforce=              ",g10.5," pct= ",f7.2)') td%pgforce_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(202): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(203): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   dht=                  ",g10.5," pct= ",f7.2)') td%dht_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(204): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(205): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   ddamp=                ",g10.5," pct= ",f7.2)') td%ddamp_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(206): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(207): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   pdtsdt=               ",g10.5," pct= ",f7.2)') td%pdtsdt_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(208): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(209): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   vtoa=                 ",g10.5," pct= ",f7.2)') td%vtoa_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(210): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(211): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   adv1=                 ",g10.5," pct= ",f7.2)') td%adv1_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(214): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(215): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   vadv2=                ",g10.5," pct= ",f7.2)') td%vadv2_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(219): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(220): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   hadv2=                ",g10.5," pct= ",f7.2)') td%hadv2_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(224): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(225): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   adv2=                 ",g10.5," pct= ",f7.2)') td%adv2_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(229): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(230): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   mono=                 ",g10.5," pct= ",f7.2)') td%mono_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(233): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(234): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   cdzdt=                ",g10.5," pct= ",f7.2)') td%cdzdt_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(235): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(236): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   cdwdt=                ",g10.5," pct= ",f7.2)') td%cdwdt_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(237): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(238): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   vsound=               ",g10.5," pct= ",f7.2)') td%vsound_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(239): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(240): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   hdiff=                ",g10.5," pct= ",f7.2)') td%hdiff_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(241): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(242): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   bocoh=                ",g10.5," pct= ",f7.2)') td%bocoh_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(243): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(244): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   bocov=                ",g10.5," pct= ",f7.2)') td%bocov_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(245): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(246): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   updatet=              ",g10.5," pct= ",f7.2)') td%updatet_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(249): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(250): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   prefft=               ",g10.5," pct= ",f7.2)') td%prefft_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(251): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(252): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   fftfhn=               ",g10.5," pct= ",f7.2)') td%fftfhn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(253): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(254): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   fftfwn=               ",g10.5," pct= ",f7.2)') td%fftfwn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(255): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(256): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   polewn=               ",g10.5," pct= ",f7.2)') td%polewn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(257): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(258): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   poavhn=               ",g10.5," pct= ",f7.2)') td%poavhn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(262): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(263): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("  presmud=               ",g10.5," pct= ",f7.2)') td%presmud_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(273): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(274): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   cucnvc=               ",g10.5," pct= ",f7.2)') td%cucnvc_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(275): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(276): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   gsmdrive=             ",g10.5," pct= ",f7.2)') td%gsmdrive_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(277): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(278): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   radiation=            ",g10.5," pct= ",f7.2)') td%radiation_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(279): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(280): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   rdtemp=               ",g10.5," pct= ",f7.2)') td%rdtemp_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(281): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(282): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   turbl=                ",g10.5," pct= ",f7.2)') td%turbl_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(283): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(284): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   h_to_v=               ",g10.5," pct= ",f7.2)') td%h_to_v_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(287): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='(" pole_swap=            ",g10.5," pct= ",f7.2)') td%pole_swap_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(293): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(294): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
         write(0,FMT='("   exch_dyn=             ",g10.5," pct= ",f7.2)') td%exch_tim*factor &
 ---------------------------------------------------^
-module_CLOCKTIMES.f90(297): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(298): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   swaphn=               ",g10.5," pct= ",f7.2)') td%swaphn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(302): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(303): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   swapwn=               ",g10.5," pct= ",f7.2)') td%swapwn_tim*factor &
 -----------------------------------------------------^
-module_CLOCKTIMES.f90(307): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+module_CLOCKTIMES.f90(308): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
           write(0,FMT='("   polehn=               ",g10.5," pct= ",f7.2)') td%polehn_tim*factor &
 -----------------------------------------------------^
 /lib/cpp -P -traditional  module_CONTROL.F90 > module_CONTROL.f90
@@ -4175,15 +4190,15 @@ ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.
 ar -r ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:06:57 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:26:12 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_EARTH_INTERNAL_STATE.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:06:57 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:26:12 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_EARTH_GRID_COMP.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:06:57 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:26:12 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_NEMS_INTERNAL_STATE.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:06:57 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:26:12 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_NEMS_GRID_COMP.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:06:57 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' MAIN_NEMS.F90 > MAIN_NEMS.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:26:12 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' MAIN_NEMS.F90 > MAIN_NEMS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c MAIN_NEMS.f90
 rm MAIN_NEMS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -o ../exe/NEMS.x MAIN_NEMS.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o atmos/libatmos.a atmos/nmm/libnmm.a atmos/gfs/libgfs.a atmos/fim/libfimtop.a atmos/gen/libgen.a atmos/phys/libphys.a atmos/share/libshare.a atmos/post/libpost.a ocean/libocean.a ocean/genocn/libgenocn.a ocean/hycom/libhycom.a ENS_Cpl/ENS_Cpl.a -L/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio -lnemsio -L/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/w3 -lw3-2.0_4 -L/home/Ratko.Vasic/lib_tmp -lbacio_4 -L/home/Ratko.Vasic/lib_tmp -lsp_4 -L/apps/esmf/3.1.0rp5/lib/libO/Linux.intel.64.mpi.default -L/opt/sgi/mpt/mpt-2.05/lib -L/apps/intel/composerxe-2011.4.191/mkl/lib/intel64 -L/apps/intel/composerxe-2011.4.191/composerxe-2011.4.191/compiler/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/sgi/mpt/mpt-2.05/lib -L/apps/intel/composerxe-2011.4.191/mkl/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../.. -L/lib64 -L/lib -L/usr/lib64 -L/usr/lib -lesmf  -lmpi -lmpi++ -limf -lsvml -lm -lipgo -ldecimal -lcilkrts -lstdc++ -lgcc_s -lgcc -lirc -lpthread -lgcc_s -lgcc -lirc_s -ldl -lrt -ldl /apps/netcdf/3.6.3/intel/lib/libnetcdf.a  
@@ -4603,9 +4618,9 @@ gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/
 rm -f *.f90 *.lst *.o *.mod lm map ../exe/NEMS.x
 cd atmos/share         && gmake
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
-makefile:37: depend: No such file or directory
+makefile:38: depend: No such file or directory
 gmake will now build dependency file. Ignore "depend: No such file or directory" message above
-makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 ffsync.F90 idea_composition.f > depend
+makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > depend
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
@@ -4615,10 +4630,12 @@ ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c module_INCLUDE.f90
 /lib/cpp -P -traditional  module_CONSTANTS.F90 > module_CONSTANTS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c module_CONSTANTS.f90
+/lib/cpp -P -traditional  check_esmf_pet.F90 > check_esmf_pet.f90
+ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c check_esmf_pet.f90
 /lib/cpp -P -traditional  ffsync.F90 > ffsync.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict  -c ffsync.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -fixed  -r8 -c idea_composition.f
-ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o ffsync.o  idea_composition.o
+ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o check_esmf_pet.o ffsync.o  idea_composition.o
 ar: creating libshare.a
 gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
@@ -5949,15 +5966,15 @@ ar -r ENS_Cpl.a Lib_ESMFStateAddGetMod.o machine.o ENS_Cpl_InternalState_ESMFMod
 ar: creating ENS_Cpl.a
 gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:20:05 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:36:13 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_EARTH_INTERNAL_STATE.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:20:05 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:36:13 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_EARTH_GRID_COMP.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:20:05 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:36:13 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_NEMS_INTERNAL_STATE.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:20:05 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:36:13 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_NEMS_GRID_COMP.f90
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Wed Oct 31 23:20:05 UTC 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=305' MAIN_NEMS.F90 > MAIN_NEMS.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 20:36:13 UTC 2012 r22270M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' MAIN_NEMS.F90 > MAIN_NEMS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c MAIN_NEMS.f90
 rm MAIN_NEMS.f90
 ifort -lmpi -openmp -convert big_endian -assume byterecl -mkl -O3  -I/apps/esmf/3.1.0rp5/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/3.1.0rp5/src/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio/incmod -fp-model strict -free  -o ../exe/NEMS.x MAIN_NEMS.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o atmos/libatmos.a atmos/nmm/libnmm.a atmos/gfs/libgfs.a atmos/gen/libgen.a atmos/fim/libfimtop.a atmos/gfs/libutil/gfs_libutil.a atmos/gfs/io/gfs_io.a atmos/gfs/phys/gfs_physics.a atmos/phys/libphys.a atmos/gfs/dyn/gfs_dynamics.a atmos/share/libshare.a atmos/post/libpost.a ocean/libocean.a ocean/genocn/libgenocn.a ocean/hycom/libhycom.a ENS_Cpl/ENS_Cpl.a  atmos/gfs/phys/gfs_physics.a -L/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nems/lib/nemsio -lnemsio -L/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/w3 -lw3-2.0_4 -L/home/Ratko.Vasic/lib_tmp -lbacio_4 -L/home/Ratko.Vasic/lib_tmp -lsp_4 -L/apps/esmf/3.1.0rp5/lib/libO/Linux.intel.64.mpi.default -L/opt/sgi/mpt/mpt-2.05/lib -L/apps/intel/composerxe-2011.4.191/mkl/lib/intel64 -L/apps/intel/composerxe-2011.4.191/composerxe-2011.4.191/compiler/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/sgi/mpt/mpt-2.05/lib -L/apps/intel/composerxe-2011.4.191/mkl/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../.. -L/lib64 -L/lib -L/usr/lib64 -L/usr/lib -lesmf  -lmpi -lmpi++ -limf -lsvml -lm -lipgo -ldecimal -lcilkrts -lstdc++ -lgcc_s -lgcc -lirc -lpthread -lgcc_s -lgcc -lirc_s -ldl -lrt -ldl /apps/netcdf/3.6.3/intel/lib/libnetcdf.a 

@@ -1,37 +1,965 @@
-Thu Nov  1 16:42:11 EDT 2012
+Sat Nov 10 12:25:19 EST 2012
 Use the ESMF 3.1.0rp2 library
+cd atmos               && gmake clean
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+makefile:35: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_ATM_INTERNAL_STATE.F90 module_ATM_GRID_COMP.F90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+cd share        && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+makefile:38: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+rm -f libshare.a *.f90 *.o *.mod *.lst *.a lm map depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+cd phys         && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+makefile:177: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_LS_LISS.F90 module_LS_NOAHLSM.F90 module_SF_URBAN.F90 machine.f physcons.f funcphys.f module_nst_parameters.f module_nst_water_prop.f module_nst_model.f calpreciptype.f gocart_tracer_config_stub.f module_BL_MYJPBL.F90 module_BL_GFSPBL.F90 module_CU_SAS.F90 module_CU_BMJ.F90 module_MP_ETANEW.F90 module_MP_FER_HIRES.F90 module_MP_WSM6.F90 module_MP_GFS.F90 module_RA_GFDL.F90 module_RA_RRTM.F90 module_SF_JSFC.F90 grrad_nmmb.f radiation_astronomy_nmmb.f iounitdef.f ozne_def.f progtm_module.f date_def.f rascnvv2.f namelist_soilveg.f module_bfmicrophysics.f mersenne_twister.f tracer_const_h.f gfs_phy_tracer_config.f radlw_param.f radlw_datatb.f radlw_main.f radsw_param.f radsw_datatb.f radsw_main.f radiation_astronomy.f radiation_aerosols.f radiation_gases.f radiation_clouds.f radiation_surface.f grrad.f ozphys.f ozinterp.f sfcsub.f gbphys.f dcyc2.f dcyc2.pre.rad.f set_soilveg.f sfc_drv.f sfc_land.f progt2.f sfc_sice.f sfc_ocean.f sfc_nst.f sfc_diff.f sfc_diag.f sflx.f moninp.f moninp1.f moninq.f gwdps.f gwdc.f sascnv.f sascnvn.f cnvc90.f tridi2t3.f shalcv.f shalcv_opr.f shalcnv.f lrgsclr.f gscond.f precpd.f mstadb.f mstadbtn.f mstcnv.f get_prs.f gsmddrive.f co2hc.f idea_solar_heating.f idea_tracer.f h2oc.f h2ohdc.f efield.f ideaca.f idea_co2.f idea_h2o.f idea_ion.f idea_o2_o3.f idea_dissipation.f idea_phys.f num_parthds.F > depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+rm -f libphys.a *.f90 *.o *.mod *.lst lm map depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+cd nmm          && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+makefile:95: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_BGRID_INTERP.F90 module_CLOCKTIMES.F90 module_CONTROL.F90 module_SOLVER_GRID_COMP.F90 module_INIT_READ_BIN.F90 module_INIT_READ_NEMSIO.F90 module_OUTPUT.F90 module_DIAGNOSE.F90 module_DIGITAL_FILTER_NMM.F90 module_DM_PARALLEL.F90 module_DOMAIN_GRID_COMP.F90 module_DOMAIN_INTERNAL_STATE.F90 module_EXCHANGE.F90 module_GET_CONFIG.F90 module_GET_CONFIG_WRITE.F90 module_GWD.F90 module_H_TO_V.F90 module_MY_DOMAIN_SPECS.F90 module_NESTING.F90 module_NMM_GRID_COMP.F90 module_NMM_INTEGRATE.F90 module_NMM_INTERNAL_STATE.F90 module_PARENT_CHILD_CPL_COMP.F90 module_PRECIP_ADJUST.F90 module_TIMESERIES.F90 module_VARS.F90 module_VARS_STATE.F90 module_WRITE_GRID_COMP.F90 module_WRITE_INTERNAL_STATE.F90 module_WRITE_ROUTINES.F90 module_CONVECTION.F90 module_MICROPHYSICS.F90 module_RADIATION.F90 module_TURBULENCE.F90 module_SOLVER_INTERNAL_STATE.F90 module_DYNAMICS_ROUTINES.F90 module_FLTBNDS.F90 n_namelist_physics_def.f n_layout1.f n_resol_def.f n_compns_physics.f n_mpi_def.f n_module_gfs_mpi_def.f n_mpi_quit.f > depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+rm -f libnmm.a *.f90 *.o *.mod *.lst lm map depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+cd gfs          && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs'
+makefile:92: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_GFS_CORE_SETUP.F90 module_GFS_WRITE.F90 module_GFS_INTERNAL_STATE.F90 module_GFS_INTEGRATE.F90 module_GFS_GRID_COMP.F90 > depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs'
+cd libutil && gmake clean && cd ..
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/libutil'
+../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
+makefile:42: warning: ignoring old commands for target `.F90.f90'
+makefile:70: depend: No such file or directory
+/lib/cpp -P -traditional  atmos_phy_chem_cpl_comp_mod_stub.F90 > atmos_phy_chem_cpl_comp_mod_stub.f90
+/lib/cpp -P -traditional  atmos_chem_phy_cpl_comp_mod_stub.F90 > atmos_chem_phy_cpl_comp_mod_stub.f90
+/lib/cpp -P -traditional  module_gfs_machine.F90 > module_gfs_machine.f90
+/lib/cpp -P -traditional  module_include_gfs.F90 > module_include_gfs.f90
+/lib/cpp -P -traditional  module_gfs_mpi_def.F90 > module_gfs_mpi_def.f90
+/lib/cpp -P -traditional  module_gfs_physcons.F90 > module_gfs_physcons.f90
+/lib/cpp -P -traditional  module_gfs_funcphys.F90 > module_gfs_funcphys.f90
+/lib/cpp -P -traditional  module_gfs_tropp.F90 > module_gfs_tropp.f90
+/lib/cpp -P -traditional  module_DM_PARALLEL_GFS.F90 > module_DM_PARALLEL_GFS.f90
+/lib/cpp -P -traditional  module_digital_filter_gfs.F90 > module_digital_filter_gfs.f90
+/lib/cpp -P -traditional  module_export_import_data.F90 > module_export_import_data.f90
+/lib/cpp -P -traditional  gfs_dyn_phy_cpl_comp_mod.F90 > gfs_dyn_phy_cpl_comp_mod.f90
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc atmos_phy_chem_cpl_comp_mod_stub.f90 atmos_chem_phy_cpl_comp_mod_stub.f90 module_gfs_machine.f90 module_include_gfs.f90 module_gfs_mpi_def.f90 module_gfs_physcons.f90 module_gfs_funcphys.f90 module_gfs_tropp.f90 module_DM_PARALLEL_GFS.f90 module_digital_filter_gfs.f90 module_export_import_data.f90 gfs_dyn_phy_cpl_comp_mod.f90 > depend
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/libutil'
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/libutil'
+../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
+makefile:42: warning: ignoring old commands for target `.F90.f90'
+rm -f gfs_libutil.a *.f90 *.o *.mod *.lst lm map depend
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/libutil'
+cd io && gmake clean && cd ..
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/io'
+makefile:31: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_WRITE_INTERNAL_STATE_GFS.F90 module_GET_CONFIG_WRITE_GFS.F90 module_WRITE_ROUTINES_GFS.F90 module_WRITE_GRID_COMP_GFS.F90 > depend
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/io'
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/io'
+rm -f gfs_io.a *.f90 *.o *.mod *.lst lm map depend
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/io'
+cd dyn && gmake clean && cd ..
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/dyn'
+makefile:235: warning: overriding commands for target `gfs_dyn_physcons.o'
+makefile:206: warning: ignoring old commands for target `gfs_dyn_physcons.o'
+makefile:238: warning: overriding commands for target `sigio_module.o'
+makefile:218: warning: ignoring old commands for target `sigio_module.o'
+makefile:241: warning: overriding commands for target `sigio_r_module.o'
+makefile:218: warning: ignoring old commands for target `sigio_r_module.o'
+makefile:247: warning: overriding commands for target `gfs_dynamics_err_msg_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_err_msg_mod.o'
+makefile:250: warning: overriding commands for target `gfs_dynamics_namelist_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_namelist_mod.o'
+makefile:253: warning: overriding commands for target `gfs_dynamics_start_time_get_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_start_time_get_mod.o'
+makefile:256: warning: overriding commands for target `gfs_dynamics_grid_create_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_grid_create_mod.o'
+makefile:259: warning: overriding commands for target `gfs_dynamics_output.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_output.o'
+makefile:262: warning: overriding commands for target `gfs_dynamics_getcf_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_getcf_mod.o'
+makefile:265: warning: overriding commands for target `gfs_dynamics_internal_state_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_internal_state_mod.o'
+makefile:268: warning: overriding commands for target `GFS_AddParameterToStateMod.o'
+makefile:206: warning: ignoring old commands for target `GFS_AddParameterToStateMod.o'
+makefile:271: warning: overriding commands for target `gfs_dynamics_add_get_state_ESMFField_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_add_get_state_ESMFField_mod.o'
+makefile:274: warning: overriding commands for target `gfs_dynamics_states_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_states_mod.o'
+makefile:277: warning: overriding commands for target `gfs_dynamics_initialize_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_initialize_mod.o'
+makefile:280: warning: overriding commands for target `gfs_dynamics_run_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_run_mod.o'
+makefile:283: warning: overriding commands for target `gfs_dynamics_finalize_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_finalize_mod.o'
+makefile:286: warning: overriding commands for target `gfs_dynamics_grid_comp_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_grid_comp_mod.o'
+../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
+makefile:230: warning: ignoring old commands for target `.f.f90'
+makefile:294: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc gfs_dynamics_err_msg_mod.f gfs_dynamics_namelist_mod.f gfs_dynamics_start_time_get_mod.f gfs_dynamics_internal_state_mod.f gfs_dynamics_grid_create_mod.f gfs_dynamics_output.f gfs_dynamics_getcf_mod.f GFS_AddParameterToStateMod.f gfs_dynamics_initialize_mod.f gfs_dynamics_run_mod.f gfs_dynamics_finalize_mod.f gfs_dynamics_add_get_state_ESMFField_mod.f gfs_dynamics_states_mod.f gfs_dyn_physcons.f gfs_dynamics_grid_comp_mod.f gfs_dyn_machine.f gfs_dyn_resol_def.f gfs_dyn_gg_def.f gfs_dyn_vert_def.f gfs_dyn_io_header.f gfs_dyn_date_def.f gfs_dyn_layout1.f namelist_dynamics_def.f gfs_dyn_coordinate_def.f gfs_dyn_lon_lat_para.f gfs_dyn_tracer_const.f gfs_dyn_tracer_config.f gfs_dyn_reduce_lons_grid_module.f gfs_dyn_matrix_sig_def.f gfs_dyn_mpi_def.f gfs_dyn_deldifs_def.f gfs_dyn_bfilt_def.f gfs_dyn_glats.f gfs_dyn_dfi_mod.f nemsio_def.f wrtout_dynamics.f dyn_gocart_tracer_config_stub.f get_cd_hyb.f get_am_bm_hyb.f get_cd_hyb_gc.f get_cd_hyb_gcdp.f get_am_bm_hyb_gc.f get_am_bm_hyb_gcdp.f setlats.f getysk.f getysk_gc.f redist_lats_a.f ifshuff.f shuffle_grid.f grid_collect.f excha.f info.f four2grid_thread.f hpmdummy.f coundummy.f damp_speed.f damp_speed_noq.f deldifs.f deldifs_noq.f idea_deldifs.f idea_deldifs_noq.f idea_getcoef.f input_fields.f input_fields_rst.f delnpe.f delnpo.f dezouv.f impadj_sig.locl.f impadj_hyb.locl.f impadj_hyb.locl_gc.f impadj_hyb.locl_gcdp.f dozeuv.f epslon.f filtereo.f filter1eo.f filter2eo.f filtereo_noq.f filter1eo_noq.f filter2eo_noq.f get_ls_node.f get_lats_node_shuff_a_fix.f getcon_dynamics.f gfidi_sig.f gfidi_hyb.f gfidi_hyb_gc.f gfidi_hyb_gc_h.f gfidi_hyb_gchdp.f gfidi_gchdp_noadv_noq.f ndslfv_pack.f ndslfv_para.f ndslfv_massadvh.f ndslfv_monoadvh.f ndslfv_monoadvv.f grid_to_spect.f gridzz_to_spect.f spect_to_grid.f spect_to_grid_gz.f spect_to_gridxy.f spectpz_to_gridxy.f compns_dynamics.f gozrineo.f pln2eo.f rms_spect.f lats_shuff.f uvoedz.f mpi_quit.f sicdif_sig.f sicdif_hyb.f sicdif_hyb_gc.f sicdif_hyb_gcdp.f common_to_model_vars.f getpwatptot.f sig2press.f hyb2press.f gch2press.f omega_sig.f omega_hyb.f omega_gch.f omega_gcdp.f do_dynamics_mod.f gfs_dficoll_dynamics.f do_dynamics_one_loop.f do_dynamics_two_loop.f model_to_common_vars.f gather_times.f four2fln.f sortrx.f sumfln.f sumder2.f triseori.f uveodz.f matinv.f ver_sig.f ysminv.f fftpack.f four2grid_thread.fftpack.f noblas.f grid_fix.f sigio_module.f sigio_r_module.f treadeo.io.f treadeo_nemsio.f treadg_nemsio.f treads_nemsio.f twrites_rst.f twrites_hst.f twriteg_rst.f grid_to_spect_inp.f setsig.f spect_to_grid_inp.f > depend
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/dyn'
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/dyn'
+makefile:235: warning: overriding commands for target `gfs_dyn_physcons.o'
+makefile:206: warning: ignoring old commands for target `gfs_dyn_physcons.o'
+makefile:238: warning: overriding commands for target `sigio_module.o'
+makefile:218: warning: ignoring old commands for target `sigio_module.o'
+makefile:241: warning: overriding commands for target `sigio_r_module.o'
+makefile:218: warning: ignoring old commands for target `sigio_r_module.o'
+makefile:247: warning: overriding commands for target `gfs_dynamics_err_msg_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_err_msg_mod.o'
+makefile:250: warning: overriding commands for target `gfs_dynamics_namelist_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_namelist_mod.o'
+makefile:253: warning: overriding commands for target `gfs_dynamics_start_time_get_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_start_time_get_mod.o'
+makefile:256: warning: overriding commands for target `gfs_dynamics_grid_create_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_grid_create_mod.o'
+makefile:259: warning: overriding commands for target `gfs_dynamics_output.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_output.o'
+makefile:262: warning: overriding commands for target `gfs_dynamics_getcf_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_getcf_mod.o'
+makefile:265: warning: overriding commands for target `gfs_dynamics_internal_state_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_internal_state_mod.o'
+makefile:268: warning: overriding commands for target `GFS_AddParameterToStateMod.o'
+makefile:206: warning: ignoring old commands for target `GFS_AddParameterToStateMod.o'
+makefile:271: warning: overriding commands for target `gfs_dynamics_add_get_state_ESMFField_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_add_get_state_ESMFField_mod.o'
+makefile:274: warning: overriding commands for target `gfs_dynamics_states_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_states_mod.o'
+makefile:277: warning: overriding commands for target `gfs_dynamics_initialize_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_initialize_mod.o'
+makefile:280: warning: overriding commands for target `gfs_dynamics_run_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_run_mod.o'
+makefile:283: warning: overriding commands for target `gfs_dynamics_finalize_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_finalize_mod.o'
+makefile:286: warning: overriding commands for target `gfs_dynamics_grid_comp_mod.o'
+makefile:206: warning: ignoring old commands for target `gfs_dynamics_grid_comp_mod.o'
+../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
+makefile:230: warning: ignoring old commands for target `.f.f90'
+rm -f gfs_dynamics.a *.o *.mod *.lst *.f90 lm map depend
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/dyn'
+cd phys && gmake clean && cd ..
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/phys'
+makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
+makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
+makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
+makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc_h.o'
+makefile:131: warning: overriding commands for target `mpi_def.o'
+makefile:109: warning: ignoring old commands for target `mpi_def.o'
+makefile:135: warning: overriding commands for target `sfcio_module.o'
+makefile:109: warning: ignoring old commands for target `sfcio_module.o'
+makefile:139: warning: overriding commands for target `gloopr.o'
+makefile:117: warning: ignoring old commands for target `gloopr.o'
+makefile:142: warning: overriding commands for target `gloopb.o'
+makefile:117: warning: ignoring old commands for target `gloopb.o'
+makefile:145: warning: overriding commands for target `gcycle.o'
+makefile:117: warning: ignoring old commands for target `gcycle.o'
+makefile:154: warning: overriding commands for target `fld_collect.o'
+makefile:117: warning: ignoring old commands for target `fld_collect.o'
+makefile:157: warning: overriding commands for target `fld_collect_nst.o'
+makefile:117: warning: ignoring old commands for target `fld_collect_nst.o'
+makefile:160: warning: overriding commands for target `read_fix.o'
+makefile:117: warning: ignoring old commands for target `read_fix.o'
+makefile:163: warning: overriding commands for target `para_fixio_w.o'
+makefile:117: warning: ignoring old commands for target `para_fixio_w.o'
+makefile:166: warning: overriding commands for target `para_nst_w.o'
+makefile:117: warning: ignoring old commands for target `para_nst_w.o'
+makefile:169: warning: overriding commands for target `mpi_more.o'
+makefile:109: warning: ignoring old commands for target `mpi_more.o'
+makefile:173: warning: overriding commands for target `cmp.comm.o'
+makefile:109: warning: ignoring old commands for target `cmp.comm.o'
+makefile:177: warning: overriding commands for target `atm.comm.o'
+makefile:109: warning: ignoring old commands for target `atm.comm.o'
+makefile:181: warning: overriding commands for target `tiles.o'
+makefile:109: warning: ignoring old commands for target `tiles.o'
+makefile:188: warning: overriding commands for target `wrtout_physics.o'
+makefile:117: warning: ignoring old commands for target `wrtout_physics.o'
+makefile:191: warning: overriding commands for target `nstio_module.o'
+makefile:109: warning: ignoring old commands for target `nstio_module.o'
+makefile:195: warning: overriding commands for target `gfs_physics_err_msg_mod.o'
+makefile:113: warning: ignoring old commands for target `gfs_physics_err_msg_mod.o'
+../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
+makefile:106: warning: ignoring old commands for target `.f.f90'
+makefile:201: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc glats_physics.f gcycle.f do_physics_one_step.f get_lats_node_shuff_r_fix.f setlats.f lats_shuff.f getcon_physics.f lon_lat_para.f compns_physics.f info.f coundummy.f sortrx.f mpi_quit.f dfi_fixwr.f hpmdummy.f gloopr.f gloopb.f gbphys_adv_hyb_gc.f gbphys_adv_hyb_gc_h.f fix_fields.f read_fix.f GFS_simple_scatter.f wrtout_physics.f fld_collect.f fld_collect_nst.f para_fixio_w.f para_nst_w.f gfs_physics_err_msg_mod.f gfs_physics_sfc_flx_mod.f gfs_physics_nst_var_mod.f gfs_physics_sfc_flx_set_mod.f gfs_physics_gridgr_mod.f gfs_physics_g2d_mod.f gfs_physics_g3d_mod.f gfs_physics_namelist_mod.f gfs_physics_start_time_get_mod.f gfs_physics_internal_state_mod.f gfs_physics_grid_create_mod.f gfs_physics_output.f gfs_physics_getcf_mod.f gfs_physics_initialize_mod.f gfs_physics_run_mod.f gfs_physics_finalize_mod.f gfs_physics_add_get_state_ESMFField_mod.f gfs_phy_states_mod.f gfs_physics_grid_comp_mod.f resol_def.f layout1.f vert_def.f gg_def.f namelist_physics_def.f coordinate_def.f reduce_lons_grid_module.f mpi_def.f d3d_def.f sfcio_module.f mod_state.f nstio_module.f mpi_more.f cmp.comm.f atm.comm.f tiles.f > depend
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/phys'
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/phys'
+makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
+makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
+makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
+makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc_h.o'
+makefile:131: warning: overriding commands for target `mpi_def.o'
+makefile:109: warning: ignoring old commands for target `mpi_def.o'
+makefile:135: warning: overriding commands for target `sfcio_module.o'
+makefile:109: warning: ignoring old commands for target `sfcio_module.o'
+makefile:139: warning: overriding commands for target `gloopr.o'
+makefile:117: warning: ignoring old commands for target `gloopr.o'
+makefile:142: warning: overriding commands for target `gloopb.o'
+makefile:117: warning: ignoring old commands for target `gloopb.o'
+makefile:145: warning: overriding commands for target `gcycle.o'
+makefile:117: warning: ignoring old commands for target `gcycle.o'
+makefile:154: warning: overriding commands for target `fld_collect.o'
+makefile:117: warning: ignoring old commands for target `fld_collect.o'
+makefile:157: warning: overriding commands for target `fld_collect_nst.o'
+makefile:117: warning: ignoring old commands for target `fld_collect_nst.o'
+makefile:160: warning: overriding commands for target `read_fix.o'
+makefile:117: warning: ignoring old commands for target `read_fix.o'
+makefile:163: warning: overriding commands for target `para_fixio_w.o'
+makefile:117: warning: ignoring old commands for target `para_fixio_w.o'
+makefile:166: warning: overriding commands for target `para_nst_w.o'
+makefile:117: warning: ignoring old commands for target `para_nst_w.o'
+makefile:169: warning: overriding commands for target `mpi_more.o'
+makefile:109: warning: ignoring old commands for target `mpi_more.o'
+makefile:173: warning: overriding commands for target `cmp.comm.o'
+makefile:109: warning: ignoring old commands for target `cmp.comm.o'
+makefile:177: warning: overriding commands for target `atm.comm.o'
+makefile:109: warning: ignoring old commands for target `atm.comm.o'
+makefile:181: warning: overriding commands for target `tiles.o'
+makefile:109: warning: ignoring old commands for target `tiles.o'
+makefile:188: warning: overriding commands for target `wrtout_physics.o'
+makefile:117: warning: ignoring old commands for target `wrtout_physics.o'
+makefile:191: warning: overriding commands for target `nstio_module.o'
+makefile:109: warning: ignoring old commands for target `nstio_module.o'
+makefile:195: warning: overriding commands for target `gfs_physics_err_msg_mod.o'
+makefile:113: warning: ignoring old commands for target `gfs_physics_err_msg_mod.o'
+../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
+makefile:106: warning: ignoring old commands for target `.f.f90'
+rm -f gfs_physics.a *.o *.mod *.lst *.f90 lm map depend
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs/phys'
+rm -f libgfs.a *.f90 *.o *.mod *.lst lm map depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs'
+cd fim          && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+makefile:52: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc fim_internal_state.F90 fim_grid_comp.F90 module_FIM_INTEGRATE.F90 module_DYNAMICS_GRID_COMP.F90 module_DYN_PHY_CPL_COMP.F90 module_PHYSICS_GRID_COMP.F90 > depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+rm -f libfimtop.a *.o *.mod *.f90 *.lst lm map depend
+(cd FIMsrc && ./makefim clean)
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim/FIMsrc'
+rm -f -rf ../FIMsrc_* macros.make
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim/FIMsrc'
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+cd gen          && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gen'
+makefile:31: warning: overriding commands for target `module_GEN_INTERNAL_STATE.o'
+makefile:28: warning: ignoring old commands for target `module_GEN_INTERNAL_STATE.o'
+rm -f libgen.a *.f90 *.o *.mod *.lst lm map depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gen'
+cd post         && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+makefile:52: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc  > depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+rm -f libpost.a *.o *.mod *.lst lm map depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+rm -f libatmos.a *.f90 *.o *.mod *.lst depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+cd ENS_Cpl             && gmake clean
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+makefile:122: depend: No such file or directory
+/lib/cpp -P -traditional  Lib_ESMFStateAddGetMod.f > Lib_ESMFStateAddGetMod.f90
+/lib/cpp -P -traditional  machine.f > machine.f90
+/lib/cpp -P -traditional  ENS_Cpl_InternalState_ESMFMod.f > ENS_Cpl_InternalState_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_bcst_global.f > ENS_bcst_global.f90
+/lib/cpp -P -traditional  ENS_Sto_Per_Scheme_Step2.f > ENS_Sto_Per_Scheme_Step2.f90
+/lib/cpp -P -traditional  DistributeForStep1.f > DistributeForStep1.f90
+/lib/cpp -P -traditional  ENS_CplState_ESMFMod.f > ENS_CplState_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_Cpl_Run_ESMFMod.f > ENS_Cpl_Run_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_Cpl_ESMFMod.f > ENS_Cpl_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_GetParameterFromStateMod.f > ENS_GetParameterFromStateMod.f90
+/lib/cpp -P -traditional  ENS_CplComp_ESMFMod.f > ENS_CplComp_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_Sto_Per_Scheme_Step1.f > ENS_Sto_Per_Scheme_Step1.f90
+/lib/cpp -P -traditional  kinds.f > kinds.f90
+/lib/cpp -P -traditional  peuc.f > peuc.f90
+/lib/cpp -P -traditional  pran.f > pran.f90
+/lib/cpp -P -traditional  prana.f > prana.f90
+/lib/cpp -P -traditional  Cal_Sto_Coef.f > Cal_Sto_Coef.f90
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc Lib_ESMFStateAddGetMod.f90 machine.f90 ENS_Cpl_InternalState_ESMFMod.f90 ENS_bcst_global.f90 ENS_Sto_Per_Scheme_Step2.f90 DistributeForStep1.f90 ENS_CplState_ESMFMod.f90 ENS_Cpl_Run_ESMFMod.f90 ENS_Cpl_ESMFMod.f90 ENS_GetParameterFromStateMod.f90 ENS_CplComp_ESMFMod.f90 ENS_Sto_Per_Scheme_Step1.f90 kinds.f90 peuc.f90 pran.f90 prana.f90 Cal_Sto_Coef.f90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+rm -f ENS_Cpl.a *.f90 *.o *.mod *.lst lm map depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+cd chem                && gmake clean GOCART_MODE=full
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem'
+cd gocart/src   && gmake -f GNUmakefile realclean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
+GNUmakefile:14: /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Config/ESMA_base.mk: No such file or directory
+GNUmakefile:15: /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk: No such file or directory
+gmake -C Config esma_install
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Config'
+ifort -lmpi -extend_source -L/apps/netcdf/3.6.3/intel/lib -lnetcdf -c -DsysLinux -DESMA64    -I/Linux/include/esmf   -I/Linux/include/esmf   -r8    fdp.f90
+/bin/mkdir -p /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/lib /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/include \
+		 /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/etc /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/doc /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config
+/bin/cat ESMA_base.mk   > /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/ESMA_base.mk
+/bin/cat ESMA_arch.mk   > /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/ESMA_arch.mk
+/bin/cat ESMA_post.mk   > /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/ESMA_post.mk
+/bin/cat GMAO_base.mk  > /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/GMAO_base.mk
+echo "I = -I"              > /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+echo "LIB_SDF = " >> /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+/bin/cat NCEP_base.mk         >> /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+echo "BASEDIR: " > /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/etc/BASEDIR.rc
+/bin/cp -f -p protex   mklpath.pl /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin
+./install_fdp ./fdp /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin/fdp
+./install_fdp: installing ./fdp as /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin/fdp (module is fdp.mod)
+./CVSTAG_install.pl /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/etc
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Config'
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
+for d in Config GMAO_Shared Components; \
+	  do			 \
+	      echo Making esma_distclean in $d	;\
+	      gmake -C $d -e esma_distclean	;\
+	      [ $? -ne 0 ] && exit	;\
+	  done || exit 0;
+Making esma_distclean in Config
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Config'
+/bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Config'
+Making esma_distclean in GMAO_Shared
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu
+gmake[4]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
+/bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd] 
+gmake -C mpi0 distclean
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
+/bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
+gmake[4]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_pilgrim
+gmake[4]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_pilgrim'
+/bin/rm -f -f *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[4]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_pilgrim'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio
+gmake[4]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r4'
+/bin/rm -f *___.F *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r4'
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
+/bin/rm -f *___.F *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
+gmake[4]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio
+gmake[4]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
+/bin/rm -f -r *~ *.[aoxd] *.[Mm][Oo][Dd] r4 r8 eos_r4 eos_r8
+gmake[4]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base
+gmake[4]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+/bin/rm -f *~ *.[aox] *.[Mm][Oo][Dd] \
+          *.tex *.dvi *.ps *.pdf *.aux *.toc *.log 
+/bin/rm -f *~ *.tex *.d
+gmake[4]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base
+gmake[4]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base'
+/bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd] *.x
+gmake[4]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared
+gmake[4]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
+/bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[4]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared'
+Making esma_distclean in Components
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp
+gmake[4]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
+/bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
+/bin/rm -f CO_ExportSpec___.h CO_GetPointer___.h CO_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
+/bin/rm -f CO2_ExportSpec___.h CO2_GetPointer___.h CO2_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
+/bin/rm -f CFC_ExportSpec___.h CFC_GetPointer___.h CFC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
+/bin/rm -f DU_ExportSpec___.h DU_GetPointer___.h DU_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
+/bin/rm -f SS_ExportSpec___.h SS_GetPointer___.h SS_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
+/bin/rm -f BC_ExportSpec___.h BC_GetPointer___.h BC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
+/bin/rm -f OC_ExportSpec___.h OC_GetPointer___.h OC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
+/bin/rm -f SU_ExportSpec___.h SU_GetPointer___.h SU_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
+
+Making esma_distclean in /gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
+/bin/rm -f Rn_ExportSpec___.h Rn_GetPointer___.h Rn_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
+gmake local_esma_distclean
+gmake[5]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+/bin/rm -f -f Tests/ExtData Tests/*_Registry.rc Tests/*_GridComp.rc 
+/bin/rm -f -f *~ *.[aoxd] *.[Mm][Oo][Dd] *___.[fF]* 
+gmake[5]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+gmake[4]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components'
+/bin/rm -f -r /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Config 
+/bin/rm -f -r /meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/chem'
+cd ocean               && gmake clean
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
+makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
+makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
+makefile:42: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_OCN_INTERNAL_STATE.F90 module_OCN_GRID_COMP.F90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
+makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
+makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
+cd genocn        && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/genocn'
+makefile:36: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_GENOCN_INTERNAL_STATE.F90 module_GENOCN_GRID_COMP.F90 > depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/genocn'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/genocn'
+rm -f libgenocn.a *.f90 *.o *.mod *.lst depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/genocn'
+cd hycom         && gmake clean
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/hycom'
+makefile:36: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_HYCOM_INTERNAL_STATE.F90 module_HYCOM_GRID_COMP.F90 > depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/hycom'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/hycom'
+rm -f libhycom.a *.f90 *.o *.mod *.lst depend
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/hycom'
+rm -f libocean.a *.f90 *.o *.mod *.lst depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
+rm -f *.f90 *.lst *.o *.mod lm map ../exe/NEMS.x
 cd atmos/share         && gmake
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/share'
-gmake[2]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/share'
-mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict  -c module_ERR_MSG.f90
-ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o ffsync.o  idea_composition.o
-gmake[2]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/share'
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/share'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+makefile:38: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+/lib/cpp -P -traditional  module_ERR_MSG.F90 > module_ERR_MSG.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -c module_ERR_MSG.f90
+/lib/cpp -P -traditional  module_INCLUDE.F90 > module_INCLUDE.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -c module_INCLUDE.f90
+/lib/cpp -P -traditional  module_CONSTANTS.F90 > module_CONSTANTS.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -c module_CONSTANTS.f90
+/lib/cpp -P -traditional  check_esmf_pet.F90 > check_esmf_pet.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -c check_esmf_pet.f90
+/lib/cpp -P -traditional  ffsync.F90 > ffsync.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -c ffsync.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed  -r8 -c idea_composition.f
+ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o check_esmf_pet.o ffsync.o  idea_composition.o
+ar: creating libshare.a
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/share'
 cd atmos/phys          && gmake gocart_stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/phys'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+makefile:177: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_LS_LISS.F90 module_LS_NOAHLSM.F90 module_SF_URBAN.F90 machine.f physcons.f funcphys.f module_nst_parameters.f module_nst_water_prop.f module_nst_model.f calpreciptype.f gocart_tracer_config_stub.f module_BL_MYJPBL.F90 module_BL_GFSPBL.F90 module_CU_SAS.F90 module_CU_BMJ.F90 module_MP_ETANEW.F90 module_MP_FER_HIRES.F90 module_MP_WSM6.F90 module_MP_GFS.F90 module_RA_GFDL.F90 module_RA_RRTM.F90 module_SF_JSFC.F90 grrad_nmmb.f radiation_astronomy_nmmb.f iounitdef.f ozne_def.f progtm_module.f date_def.f rascnvv2.f namelist_soilveg.f module_bfmicrophysics.f mersenne_twister.f tracer_const_h.f gfs_phy_tracer_config.f radlw_param.f radlw_datatb.f radlw_main.f radsw_param.f radsw_datatb.f radsw_main.f radiation_astronomy.f radiation_aerosols.f radiation_gases.f radiation_clouds.f radiation_surface.f grrad.f ozphys.f ozinterp.f sfcsub.f gbphys.f dcyc2.f dcyc2.pre.rad.f set_soilveg.f sfc_drv.f sfc_land.f progt2.f sfc_sice.f sfc_ocean.f sfc_nst.f sfc_diff.f sfc_diag.f sflx.f moninp.f moninp1.f moninq.f gwdps.f gwdc.f sascnv.f sascnvn.f cnvc90.f tridi2t3.f shalcv.f shalcv_opr.f shalcnv.f lrgsclr.f gscond.f precpd.f mstadb.f mstadbtn.f mstcnv.f get_prs.f gsmddrive.f co2hc.f idea_solar_heating.f idea_tracer.f h2oc.f h2ohdc.f efield.f ideaca.f idea_co2.f idea_h2o.f idea_ion.f idea_o2_o3.f idea_dissipation.f idea_phys.f num_parthds.F > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+/lib/cpp -P -traditional  module_LS_LISS.F90 > module_LS_LISS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -c module_LS_LISS.f90
+/lib/cpp -P -traditional  module_LS_NOAHLSM.F90 > module_LS_NOAHLSM.f90
+/lib/cpp -P -traditional  module_SF_URBAN.F90 > module_SF_URBAN.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -c module_SF_URBAN.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -c module_LS_NOAHLSM.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -r8 -c machine.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -r8 -c physcons.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -r8 -c funcphys.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -r8 -c module_nst_parameters.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -r8 -c module_nst_water_prop.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -r8 -c module_nst_model.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -r8 -c calpreciptype.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c co2hc.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c date_def.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c idea_solar_heating.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c idea_tracer.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c h2oc.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c h2ohdc.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c efield.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c ideaca.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c idea_co2.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c idea_h2o.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c idea_ion.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c idea_o2_o3.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c idea_dissipation.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c tracer_const_h.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c idea_phys.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c gocart_tracer_config_stub.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c iounitdef.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c ozne_def.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c progtm_module.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c rascnvv2.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c namelist_soilveg.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c module_bfmicrophysics.f
+module_bfmicrophysics.f(944): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+          write(6,"(f5.3,4e11.4,f6.3,f8.3)") xmdiam,VENTI1(j),VENTI2(j),&
+---------------------^
+module_bfmicrophysics.f(946): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+          write(7,"(f5.3,23f5.2)") xmdiam,(ivel_rime(j,k), k=1,5),      &
+---------------------^
+module_bfmicrophysics.f(969): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+        if (print_diag) write(7,"(f3.1,2x,23f5.2)") 0.1*j,              &
+-----------------------------------^
+module_bfmicrophysics.f(1085): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+        if (print_diag) write(6,"(f5.3,5g12.5,f6.3)") 1000.*mdiam,      &
+-----------------------------------^
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c mersenne_twister.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c gfs_phy_tracer_config.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radlw_param.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radlw_datatb.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radlw_main.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radsw_param.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radsw_datatb.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radsw_main.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radiation_astronomy.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radiation_aerosols.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radiation_gases.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radiation_clouds.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c radiation_surface.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c grrad.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c ozphys.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c ozinterp.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sfcsub.f
+sfcsub.f(3555): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+  100 FORMAT(2X,'LEVEL=',I2,' MAX=',E10.4,' AT I=',I5,
+-------------------------------------^
+sfcsub.f(3556): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &                      ' MIN=',E10.4,' AT I=',I5)
+-------------------------------------^
+sfcsub.f(5065): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+  910       FORMAT(2X,'AT LAT=',F5.1,' LON=',F5.1,' SLIFCS=',F3.1,
+--------------------------------------------------------------^
+sfcsub.f(5066): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+     &          ' SLIMSK=',F3.1,' TSFFCS=',F5.1,' SET TO TSFANL=',F5.1)
+----------------------------^
+sfcsub.f(5628): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-----------------------------------------^
+sfcsub.f(5628): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-------------------------------------------------------^
+sfcsub.f(5601): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-----------------------------------------^
+sfcsub.f(5601): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-------------------------------------------------------^
+sfcsub.f(5575): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-----------------------------------------^
+sfcsub.f(5575): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-------------------------------------------------------^
+sfcsub.f(5548): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-----------------------------------------^
+sfcsub.f(5548): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-------------------------------------------------------^
+sfcsub.f(5522): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-----------------------------------------^
+sfcsub.f(5522): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-------------------------------------------------------^
+sfcsub.f(5496): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4,' to ',E10.4)
+-----------------------------------------^
+sfcsub.f(5496): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4,' to ',E10.4)
+------------------------------------------------------^
+sfcsub.f(5470): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-----------------------------------------^
+sfcsub.f(5470): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-------------------------------------------------------^
+sfcsub.f(5444): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-----------------------------------------^
+sfcsub.f(5444): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E10.4, ' to ',E10.4)
+-------------------------------------------------------^
+sfcsub.f(5418): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E12.6, ' to ',E12.6)
+-----------------------------------------^
+sfcsub.f(5418): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E12.6, ' to ',E12.6)
+-------------------------------------------------------^
+sfcsub.f(5392): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E12.6, ' to ',E12.6)
+-----------------------------------------^
+sfcsub.f(5392): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+     &             ' LON=',F6.1,' FLD=',E12.6, ' to ',E12.6)
+-------------------------------------------------------^
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c gbphys.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c dcyc2.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c dcyc2.pre.rad.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c set_soilveg.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sfc_drv.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sfc_land.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c progt2.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sfc_sice.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sfc_ocean.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sfc_nst.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sfc_diff.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sfc_diag.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sflx.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c moninp.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c moninp1.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c moninq.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c gwdps.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c gwdc.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sascnv.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c sascnvn.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c cnvc90.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c tridi2t3.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c shalcv.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c shalcv_opr.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c shalcnv.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c lrgsclr.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c gscond.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c precpd.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c mstadb.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c mstadbtn.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c mstcnv.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c get_prs.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -fixed -I../share -r8 -c gsmddrive.f
+/lib/cpp -P -traditional  module_BL_MYJPBL.F90 > module_BL_MYJPBL.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_BL_MYJPBL.f90
+/lib/cpp -P -traditional  module_BL_GFSPBL.F90 > module_BL_GFSPBL.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_BL_GFSPBL.f90
+/lib/cpp -P -traditional  module_CU_SAS.F90 > module_CU_SAS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_CU_SAS.f90
+/lib/cpp -P -traditional  module_CU_BMJ.F90 > module_CU_BMJ.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_CU_BMJ.f90
+/lib/cpp -P -traditional  module_MP_ETANEW.F90 > module_MP_ETANEW.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_MP_ETANEW.f90
+/lib/cpp -P -traditional  module_MP_FER_HIRES.F90 > module_MP_FER_HIRES.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_MP_FER_HIRES.f90
+/lib/cpp -P -traditional  module_MP_WSM6.F90 > module_MP_WSM6.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_MP_WSM6.f90
+/lib/cpp -P -traditional  module_MP_GFS.F90 > module_MP_GFS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_MP_GFS.f90
+/lib/cpp -P -traditional  module_RA_GFDL.F90 > module_RA_GFDL.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_RA_GFDL.f90
+module_RA_GFDL.f90(2307): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+  101 FORMAT(5X,1H*,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5, &
+---------------------^
+module_RA_GFDL.f90(2307): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+  101 FORMAT(5X,1H*,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5, &
+------------------------------^
+module_RA_GFDL.f90(2307): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+  101 FORMAT(5X,1H*,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5, &
+---------------------------------------^
+module_RA_GFDL.f90(2307): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+  101 FORMAT(5X,1H*,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5, &
+------------------------------------------------^
+module_RA_GFDL.f90(2307): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+  101 FORMAT(5X,1H*,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5, &
+---------------------------------------------------------^
+module_RA_GFDL.f90(2307): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+  101 FORMAT(5X,1H*,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,,F6.5, &
+------------------------------------------------------------------^
+module_RA_GFDL.f90(2308): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+      1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,)
+-----------^
+module_RA_GFDL.f90(2308): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+      1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,)
+--------------------^
+module_RA_GFDL.f90(2308): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+      1H,,F6.5,1H,,F6.5,1H,,F6.5,1H,)
+-----------------------------^
+module_RA_GFDL.f90(2306): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+ 1033 FORMAT(19F6.5)
+----------------^
+module_RA_GFDL.f90(2303): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+  799 FORMAT(19F6.4)
+----------------^
+module_RA_GFDL.f90(2299): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+   1  FORMAT(10F4.2)
+----------------^
+/lib/cpp -P -traditional  module_RA_RRTM.F90 > module_RA_RRTM.f90
+mpiifort -g -traceback -free -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -r8 -c radiation_astronomy_nmmb.f
+mpiifort -g -traceback -free -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -r8 -c grrad_nmmb.f
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_RA_RRTM.f90
+/lib/cpp -P -traditional  module_SF_JSFC.F90 > module_SF_JSFC.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -c module_SF_JSFC.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -r8  -c num_parthds.F
 ar -r libphys.a module_LS_LISS.o module_LS_NOAHLSM.o module_SF_URBAN.o machine.o physcons.o funcphys.o module_nst_parameters.o module_nst_water_prop.o module_nst_model.o calpreciptype.o co2hc.o idea_solar_heating.o idea_tracer.o h2oc.o h2ohdc.o efield.o ideaca.o idea_co2.o idea_h2o.o idea_ion.o idea_o2_o3.o idea_dissipation.o idea_phys.o gocart_tracer_config_stub.o iounitdef.o ozne_def.o progtm_module.o date_def.o rascnvv2.o namelist_soilveg.o module_bfmicrophysics.o mersenne_twister.o tracer_const_h.o gfs_phy_tracer_config.o radlw_param.o radlw_datatb.o radlw_main.o radsw_param.o radsw_datatb.o radsw_main.o radiation_astronomy.o radiation_aerosols.o radiation_gases.o radiation_clouds.o radiation_surface.o grrad.o ozphys.o ozinterp.o sfcsub.o gbphys.o dcyc2.o dcyc2.pre.rad.o set_soilveg.o sfc_drv.o sfc_land.o progt2.o sfc_sice.o sfc_ocean.o sfc_nst.o sfc_diff.o sfc_diag.o sflx.o moninp.o moninp1.o moninq.o gwdps.o gwdc.o sascnv.o sascnvn.o cnvc90.o tridi2t3.o shalcv.o shalcv_opr.o shalcnv.o lrgsclr.o gscond.o precpd.o mstadb.o mstadbtn.o mstcnv.o get_prs.o gsmddrive.o module_BL_MYJPBL.o module_BL_GFSPBL.o module_CU_SAS.o module_CU_BMJ.o module_MP_ETANEW.o module_MP_FER_HIRES.o module_MP_WSM6.o module_MP_GFS.o module_RA_GFDL.o module_RA_RRTM.o module_SF_JSFC.o grrad_nmmb.o radiation_astronomy_nmmb.o num_parthds.o
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/phys'
+ar: creating libphys.a
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
 cd atmos/nmm           && gmake
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/nmm'
-gmake[2]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/nmm'
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict   -I../share -I../phys -c module_SOLVER_INTERNAL_STATE.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_INIT_READ_NEMSIO.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_INIT_READ_BIN.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_VARS_STATE.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_OUTPUT.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_GET_CONFIG.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_SOLVER_GRID_COMP.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_DIGITAL_FILTER_NMM.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_DOMAIN_INTERNAL_STATE.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_WRITE_INTERNAL_STATE.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_GET_CONFIG_WRITE.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_WRITE_ROUTINES.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_WRITE_GRID_COMP.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_NESTING.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_DOMAIN_GRID_COMP.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_PARENT_CHILD_CPL_COMP.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_TIMESERIES.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_NMM_INTEGRATE.f90
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+makefile:95: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_BGRID_INTERP.F90 module_CLOCKTIMES.F90 module_CONTROL.F90 module_SOLVER_GRID_COMP.F90 module_INIT_READ_BIN.F90 module_INIT_READ_NEMSIO.F90 module_OUTPUT.F90 module_DIAGNOSE.F90 module_DIGITAL_FILTER_NMM.F90 module_DM_PARALLEL.F90 module_DOMAIN_GRID_COMP.F90 module_DOMAIN_INTERNAL_STATE.F90 module_EXCHANGE.F90 module_GET_CONFIG.F90 module_GET_CONFIG_WRITE.F90 module_GWD.F90 module_H_TO_V.F90 module_MY_DOMAIN_SPECS.F90 module_NESTING.F90 module_NMM_GRID_COMP.F90 module_NMM_INTEGRATE.F90 module_NMM_INTERNAL_STATE.F90 module_PARENT_CHILD_CPL_COMP.F90 module_PRECIP_ADJUST.F90 module_TIMESERIES.F90 module_VARS.F90 module_VARS_STATE.F90 module_WRITE_GRID_COMP.F90 module_WRITE_INTERNAL_STATE.F90 module_WRITE_ROUTINES.F90 module_CONVECTION.F90 module_MICROPHYSICS.F90 module_RADIATION.F90 module_TURBULENCE.F90 module_SOLVER_INTERNAL_STATE.F90 module_DYNAMICS_ROUTINES.F90 module_FLTBNDS.F90 n_namelist_physics_def.f n_layout1.f n_resol_def.f n_compns_physics.f n_mpi_def.f n_module_gfs_mpi_def.f n_mpi_quit.f > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+/lib/cpp -P -traditional  module_BGRID_INTERP.F90 > module_BGRID_INTERP.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_BGRID_INTERP.f90
+/lib/cpp -P -traditional  module_CLOCKTIMES.F90 > module_CLOCKTIMES.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_CLOCKTIMES.f90
+module_CLOCKTIMES.f90(185): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='(" ntsd= ",I6," total_integration_tim=  ",g10.5)') ntimestep,td%total_integ_tim*factor
+----------------------------------------------------------------^
+module_CLOCKTIMES.f90(191): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("  solver_run=            ",g10.5," pct= ",f7.2)') td%solver_run_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(193): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   solver_init=          ",g10.5," pct= ",f7.2)') td%solver_init_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(197): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   consts=               ",g10.5," pct= ",f7.2)') td%consts_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(201): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   pgforce=              ",g10.5," pct= ",f7.2)') td%pgforce_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(203): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   dht=                  ",g10.5," pct= ",f7.2)') td%dht_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(205): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   ddamp=                ",g10.5," pct= ",f7.2)') td%ddamp_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(207): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   pdtsdt=               ",g10.5," pct= ",f7.2)') td%pdtsdt_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(209): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   vtoa=                 ",g10.5," pct= ",f7.2)') td%vtoa_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(211): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   adv1=                 ",g10.5," pct= ",f7.2)') td%adv1_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(215): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   vadv2=                ",g10.5," pct= ",f7.2)') td%vadv2_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(220): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   hadv2=                ",g10.5," pct= ",f7.2)') td%hadv2_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(225): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   adv2=                 ",g10.5," pct= ",f7.2)') td%adv2_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(230): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   mono=                 ",g10.5," pct= ",f7.2)') td%mono_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(234): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   cdzdt=                ",g10.5," pct= ",f7.2)') td%cdzdt_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(236): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   cdwdt=                ",g10.5," pct= ",f7.2)') td%cdwdt_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(238): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   vsound=               ",g10.5," pct= ",f7.2)') td%vsound_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(240): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   hdiff=                ",g10.5," pct= ",f7.2)') td%hdiff_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(242): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   bocoh=                ",g10.5," pct= ",f7.2)') td%bocoh_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(244): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   bocov=                ",g10.5," pct= ",f7.2)') td%bocov_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(246): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   updatet=              ",g10.5," pct= ",f7.2)') td%updatet_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(250): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   prefft=               ",g10.5," pct= ",f7.2)') td%prefft_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(252): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   fftfhn=               ",g10.5," pct= ",f7.2)') td%fftfhn_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(254): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   fftfwn=               ",g10.5," pct= ",f7.2)') td%fftfwn_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(256): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   polewn=               ",g10.5," pct= ",f7.2)') td%polewn_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(258): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   poavhn=               ",g10.5," pct= ",f7.2)') td%poavhn_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(263): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("  presmud=               ",g10.5," pct= ",f7.2)') td%presmud_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(274): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   cucnvc=               ",g10.5," pct= ",f7.2)') td%cucnvc_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(276): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   gsmdrive=             ",g10.5," pct= ",f7.2)') td%gsmdrive_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(278): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   radiation=            ",g10.5," pct= ",f7.2)') td%radiation_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(280): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   rdtemp=               ",g10.5," pct= ",f7.2)') td%rdtemp_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(282): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   turbl=                ",g10.5," pct= ",f7.2)') td%turbl_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(284): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   h_to_v=               ",g10.5," pct= ",f7.2)') td%h_to_v_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(288): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='(" pole_swap=            ",g10.5," pct= ",f7.2)') td%pole_swap_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(294): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+        write(0,FMT='("   exch_dyn=             ",g10.5," pct= ",f7.2)') td%exch_tim*factor &
+---------------------------------------------------^
+module_CLOCKTIMES.f90(298): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   swaphn=               ",g10.5," pct= ",f7.2)') td%swaphn_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(303): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   swapwn=               ",g10.5," pct= ",f7.2)') td%swapwn_tim*factor &
+-----------------------------------------------------^
+module_CLOCKTIMES.f90(308): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+          write(0,FMT='("   polehn=               ",g10.5," pct= ",f7.2)') td%polehn_tim*factor &
+-----------------------------------------------------^
+/lib/cpp -P -traditional  module_CONTROL.F90 > module_CONTROL.f90
+/lib/cpp -P -traditional  module_EXCHANGE.F90 > module_EXCHANGE.f90
+/lib/cpp -P -traditional  module_MY_DOMAIN_SPECS.F90 > module_MY_DOMAIN_SPECS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_MY_DOMAIN_SPECS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_EXCHANGE.f90
+/lib/cpp -P -traditional  module_DM_PARALLEL.F90 > module_DM_PARALLEL.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_DM_PARALLEL.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_CONTROL.f90
+/lib/cpp -P -traditional  module_SOLVER_GRID_COMP.F90 > module_SOLVER_GRID_COMP.f90
+mpiifort -g -traceback -O2 -fixed  -I../share -I../phys -c n_resol_def.f
+mpiifort -g -traceback -O2 -fixed  -I../share -I../phys -c n_layout1.f
+mpiifort -g -traceback -O2 -fixed  -I../share -I../phys -c n_namelist_physics_def.f
+/lib/cpp -P -traditional  module_DYNAMICS_ROUTINES.F90 > module_DYNAMICS_ROUTINES.f90
+/lib/cpp -P -traditional  module_FLTBNDS.F90 > module_FLTBNDS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX   -I../share -I../phys -c module_FLTBNDS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX   -I../share -I../phys -c module_DYNAMICS_ROUTINES.f90
+/lib/cpp -P -traditional  module_INIT_READ_NEMSIO.F90 > module_INIT_READ_NEMSIO.f90
+/lib/cpp -P -traditional  module_SOLVER_INTERNAL_STATE.F90 > module_SOLVER_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  module_VARS.F90 > module_VARS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_VARS.f90
+/lib/cpp -P -traditional  module_MICROPHYSICS.F90 > module_MICROPHYSICS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -I../phys -c module_MICROPHYSICS.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX   -I../share -I../phys -c module_SOLVER_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_INIT_READ_NEMSIO.f90
+/lib/cpp -P -traditional  module_INIT_READ_BIN.F90 > module_INIT_READ_BIN.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_INIT_READ_BIN.f90
+/lib/cpp -P -traditional  module_PRECIP_ADJUST.F90 > module_PRECIP_ADJUST.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_PRECIP_ADJUST.f90
+module_PRECIP_ADJUST.f90(163): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+ 1010     FORMAT('ADJPPT-CHKSNOW: TIMES, SR=',F6.0,1X,F6.4)
+-------------------------------------------------------^
+module_PRECIP_ADJUST.f90(294): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1020     FORMAT('ADJPPT: DDATA=',E12.6, ' PREC=',E12.6,' LSPA=',E12.6)
+-----------------------------------^
+module_PRECIP_ADJUST.f90(294): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1020     FORMAT('ADJPPT: DDATA=',E12.6, ' PREC=',E12.6,' LSPA=',E12.6)
+---------------------------------------------------^
+module_PRECIP_ADJUST.f90(294): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
+ 1020     FORMAT('ADJPPT: DDATA=',E12.6, ' PREC=',E12.6,' LSPA=',E12.6)
+------------------------------------------------------------------^
+module_PRECIP_ADJUST.f90(264): remark #8290: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+3'.
+      &   ,2(1X,F6.4))
+-----------------^
+/lib/cpp -P -traditional  module_GWD.F90 > module_GWD.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_GWD.f90
+/lib/cpp -P -traditional  module_H_TO_V.F90 > module_H_TO_V.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_H_TO_V.f90
+/lib/cpp -P -traditional  module_CONVECTION.F90 > module_CONVECTION.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -I../phys -c module_CONVECTION.f90
+/lib/cpp -P -traditional  module_TURBULENCE.F90 > module_TURBULENCE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -I../phys -c module_TURBULENCE.f90
+/lib/cpp -P -traditional  module_RADIATION.F90 > module_RADIATION.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -I../share -I../phys -c module_RADIATION.f90
+/lib/cpp -P -traditional  module_OUTPUT.F90 > module_OUTPUT.f90
+/lib/cpp -P -traditional  module_VARS_STATE.F90 > module_VARS_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_VARS_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_OUTPUT.f90
+/lib/cpp -P -traditional  module_DIAGNOSE.F90 > module_DIAGNOSE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_DIAGNOSE.f90
+/lib/cpp -P -traditional  module_GET_CONFIG.F90 > module_GET_CONFIG.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_GET_CONFIG.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_SOLVER_GRID_COMP.f90
+/lib/cpp -P -traditional  module_DIGITAL_FILTER_NMM.F90 > module_DIGITAL_FILTER_NMM.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_DIGITAL_FILTER_NMM.f90
+/lib/cpp -P -traditional  module_DOMAIN_GRID_COMP.F90 > module_DOMAIN_GRID_COMP.f90
+/lib/cpp -P -traditional  module_WRITE_GRID_COMP.F90 > module_WRITE_GRID_COMP.f90
+/lib/cpp -P -traditional  module_DOMAIN_INTERNAL_STATE.F90 > module_DOMAIN_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_DOMAIN_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  module_GET_CONFIG_WRITE.F90 > module_GET_CONFIG_WRITE.f90
+/lib/cpp -P -traditional  module_WRITE_INTERNAL_STATE.F90 > module_WRITE_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_WRITE_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_GET_CONFIG_WRITE.f90
+/lib/cpp -P -traditional  module_WRITE_ROUTINES.F90 > module_WRITE_ROUTINES.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_WRITE_ROUTINES.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_WRITE_GRID_COMP.f90
+/lib/cpp -P -traditional  module_NESTING.F90 > module_NESTING.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_NESTING.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_DOMAIN_GRID_COMP.f90
+/lib/cpp -P -traditional  module_NMM_GRID_COMP.F90 > module_NMM_GRID_COMP.f90
+/lib/cpp -P -traditional  module_PARENT_CHILD_CPL_COMP.F90 > module_PARENT_CHILD_CPL_COMP.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_PARENT_CHILD_CPL_COMP.f90
+/lib/cpp -P -traditional  module_NMM_INTEGRATE.F90 > module_NMM_INTEGRATE.f90
+/lib/cpp -P -traditional  module_TIMESERIES.F90 > module_TIMESERIES.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_TIMESERIES.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_NMM_INTEGRATE.f90
 module_NMM_INTEGRATE.f90(1501): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
  910    FORMAT(' Child send 2-way data = ',g9.3)
 --------------------------------------------^
@@ -164,68 +1092,172 @@ module_NMM_INTEGRATE.f90(1472): remark #8291: Recommended relationship between f
 module_NMM_INTEGRATE.f90(1471): remark #8291: Recommended relationship between field width 'W' and the number of fractional digits 'D' in this edit descriptor is 'W>=D+7'.
  898    FORMAT(' Task 0 time to process move flag = ',g9.3)
 -------------------------------------------------------^
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_NMM_INTERNAL_STATE.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../share -I../phys -c module_NMM_GRID_COMP.f90
+/lib/cpp -P -traditional  module_NMM_INTERNAL_STATE.F90 > module_NMM_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_NMM_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -I../phys -c module_NMM_GRID_COMP.f90
+mpiifort -g -traceback -O2 -fixed  -I../share -I../phys -c n_module_gfs_mpi_def.f
+mpiifort -g -traceback -O2 -fixed  -I../share -I../phys -c n_mpi_def.f
+mpiifort -g -traceback -O2 -fixed  -I../share -I../phys -c n_compns_physics.f
+mpiifort -g -traceback -O2 -fixed  -I../share -I../phys -c n_mpi_quit.f
 ar -r libnmm.a module_BGRID_INTERP.o module_CLOCKTIMES.o module_CONTROL.o module_SOLVER_GRID_COMP.o module_INIT_READ_BIN.o module_INIT_READ_NEMSIO.o module_OUTPUT.o module_DIAGNOSE.o module_DIGITAL_FILTER_NMM.o module_DM_PARALLEL.o module_DOMAIN_GRID_COMP.o module_DOMAIN_INTERNAL_STATE.o module_EXCHANGE.o module_GET_CONFIG.o module_GET_CONFIG_WRITE.o module_GWD.o module_H_TO_V.o module_MY_DOMAIN_SPECS.o module_NESTING.o module_NMM_GRID_COMP.o module_NMM_INTEGRATE.o module_NMM_INTERNAL_STATE.o module_PARENT_CHILD_CPL_COMP.o module_PRECIP_ADJUST.o module_TIMESERIES.o module_VARS.o module_VARS_STATE.o module_WRITE_GRID_COMP.o module_WRITE_INTERNAL_STATE.o module_WRITE_ROUTINES.o module_CONVECTION.o module_MICROPHYSICS.o module_RADIATION.o module_TURBULENCE.o module_SOLVER_INTERNAL_STATE.o module_DYNAMICS_ROUTINES.o module_FLTBNDS.o n_namelist_physics_def.o n_layout1.o n_resol_def.o n_compns_physics.o n_mpi_def.o n_module_gfs_mpi_def.o n_mpi_quit.o
-gmake[2]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/nmm'
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/nmm'
+ar: creating libnmm.a
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
 cd atmos/gfs           && gmake stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/gfs'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs'
+makefile:92: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_GFS_CORE_SETUP.F90 module_GFS_WRITE.F90 module_GFS_INTERNAL_STATE.F90 module_GFS_INTEGRATE.F90 module_GFS_GRID_COMP.F90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs'
+/lib/cpp -P -traditional  module_GFS_GRID_COMP_stub.F90 > module_GFS_GRID_COMP_stub.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -Ilibutil -Iio -c module_GFS_GRID_COMP_stub.f90
 ar -r libgfs.a module_GFS_GRID_COMP_stub.o
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/gfs'
+ar: creating libgfs.a
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gfs'
 cd atmos/gen           && gmake stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/gen'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gen'
 makefile:31: warning: overriding commands for target `module_GEN_INTERNAL_STATE.o'
 makefile:28: warning: ignoring old commands for target `module_GEN_INTERNAL_STATE.o'
+/lib/cpp -P -traditional  module_GEN_INTERNAL_STATE.F90 > module_GEN_INTERNAL_STATE.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -Ilibutil -Iio -c module_GEN_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  module_GEN_GRID_COMP_stub.F90 > module_GEN_GRID_COMP_stub.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -Ilibutil -Iio -c module_GEN_GRID_COMP_stub.f90
 ar -r libgen.a module_GEN_INTERNAL_STATE.o module_GEN_GRID_COMP_stub.o 
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/gen'
+ar: creating libgen.a
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/gen'
 cd atmos/fim           && gmake stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/fim'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+makefile:52: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc fim_internal_state.F90 fim_grid_comp.F90 module_FIM_INTEGRATE.F90 module_DYNAMICS_GRID_COMP.F90 module_DYN_PHY_CPL_COMP.F90 module_PHYSICS_GRID_COMP.F90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+/lib/cpp -P -traditional  fim_grid_comp_stub.F90 > fim_grid_comp_stub.f90
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -c fim_grid_comp_stub.f90
 ar -r libfimtop.a fim_grid_comp_stub.o
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/fim'
+ar: creating libfimtop.a
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
 cd atmos/post          && gmake stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/post'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+makefile:52: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc  > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -c post_gfs_stub.f
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -c post_nmm_stub.f
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../share -c post_nems_routines_stub.f
 ar -r libpost.a post_gfs_stub.o post_nmm_stub.o post_nems_routines_stub.o
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos/post'
+ar: creating libpost.a
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos/post'
 cd atmos               && gmake
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos'
-gmake[2]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos'
-mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -Ishare -Inmm -Igfs -Ifim -Iphys -Igen -c module_ATM_INTERNAL_STATE.f90
-mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -Ishare -Inmm -Igfs -Ifim -Iphys -Igen -c module_ATM_GRID_COMP.f90
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+makefile:35: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_ATM_INTERNAL_STATE.F90 module_ATM_GRID_COMP.F90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+/lib/cpp -P -traditional  module_ATM_INTERNAL_STATE.F90 > module_ATM_INTERNAL_STATE.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -Ishare -Inmm -Igfs -Ifim -Iphys -Igen -c module_ATM_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  module_ATM_GRID_COMP.F90 > module_ATM_GRID_COMP.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -Ishare -Inmm -Igfs -Ifim -Iphys -Igen -c module_ATM_GRID_COMP.f90
 ar -r libatmos.a module_ATM_INTERNAL_STATE.o module_ATM_GRID_COMP.o
-gmake[2]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos'
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/atmos'
+ar: creating libatmos.a
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/atmos'
 cd ocean/genocn        && gmake stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean/genocn'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/genocn'
+makefile:36: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_GENOCN_INTERNAL_STATE.F90 module_GENOCN_GRID_COMP.F90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/genocn'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/genocn'
+/lib/cpp -P -traditional  module_GENOCN_GRID_COMP_stub.F90 > module_GENOCN_GRID_COMP_stub.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../../atmos/share -c module_GENOCN_GRID_COMP_stub.f90
 ar -r libgenocn.a module_GENOCN_GRID_COMP_stub.o
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean/genocn'
+ar: creating libgenocn.a
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/genocn'
 cd ocean/hycom         && gmake stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean/hycom'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/hycom'
+makefile:36: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_HYCOM_INTERNAL_STATE.F90 module_HYCOM_GRID_COMP.F90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/hycom'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/hycom'
+/lib/cpp -P -traditional  module_HYCOM_GRID_COMP_stub.F90 > module_HYCOM_GRID_COMP_stub.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../../atmos/share -c module_HYCOM_GRID_COMP_stub.f90
 ar -r libhycom.a module_HYCOM_GRID_COMP_stub.o
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean/hycom'
+ar: creating libhycom.a
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean/hycom'
 cd ocean               && gmake stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
+makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
+makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
+makefile:42: depend: No such file or directory
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc module_OCN_INTERNAL_STATE.F90 module_OCN_GRID_COMP.F90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
 makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
 makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
 gmake will now update dependency file.
 makedepf90 -nosrc module_OCN_INTERNAL_STATE.F90 module_OCN_GRID_COMP_stub.F90 > depend
-gmake[2]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+gmake[2]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
 makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
 makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
-gmake[3]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+gmake[3]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
 makefile:33: warning: overriding commands for target `module_OCN_INTERNAL_STATE.o'
 makefile:30: warning: ignoring old commands for target `module_OCN_INTERNAL_STATE.o'
-mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -I../atmos/share  -Ihycom  -Igenocn -c module_OCN_INTERNAL_STATE.f90
-ar -r libocean.a module_OCN_INTERNAL_STATE.o hycom/libhycom.a genocn/libgenocn.a
-gmake[3]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
-gmake[2]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ocean'
+/lib/cpp -P -traditional  module_OCN_INTERNAL_STATE.F90 > module_OCN_INTERNAL_STATE.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../atmos/share  -Ihycom  -Igenocn -c module_OCN_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  module_OCN_GRID_COMP.F90 > module_OCN_GRID_COMP.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -I../atmos/share  -Ihycom  -Igenocn -c module_OCN_GRID_COMP.f90
+ar -r libocean.a module_OCN_INTERNAL_STATE.o module_OCN_GRID_COMP.o hycom/libhycom.a genocn/libgenocn.a
+ar: creating libocean.a
+gmake[3]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
+gmake[2]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ocean'
 cd ENS_Cpl             && gmake stub
-gmake[1]: Entering directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ENS_Cpl'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+makefile:122: depend: No such file or directory
+/lib/cpp -P -traditional  Lib_ESMFStateAddGetMod.f > Lib_ESMFStateAddGetMod.f90
+/lib/cpp -P -traditional  machine.f > machine.f90
+/lib/cpp -P -traditional  ENS_Cpl_InternalState_ESMFMod.f > ENS_Cpl_InternalState_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_bcst_global.f > ENS_bcst_global.f90
+/lib/cpp -P -traditional  ENS_Sto_Per_Scheme_Step2.f > ENS_Sto_Per_Scheme_Step2.f90
+/lib/cpp -P -traditional  DistributeForStep1.f > DistributeForStep1.f90
+/lib/cpp -P -traditional  ENS_CplState_ESMFMod.f > ENS_CplState_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_Cpl_Run_ESMFMod.f > ENS_Cpl_Run_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_Cpl_ESMFMod.f > ENS_Cpl_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_GetParameterFromStateMod.f > ENS_GetParameterFromStateMod.f90
+/lib/cpp -P -traditional  ENS_CplComp_ESMFMod.f > ENS_CplComp_ESMFMod.f90
+/lib/cpp -P -traditional  ENS_Sto_Per_Scheme_Step1.f > ENS_Sto_Per_Scheme_Step1.f90
+/lib/cpp -P -traditional  kinds.f > kinds.f90
+/lib/cpp -P -traditional  peuc.f > peuc.f90
+/lib/cpp -P -traditional  pran.f > pran.f90
+/lib/cpp -P -traditional  prana.f > prana.f90
+/lib/cpp -P -traditional  Cal_Sto_Coef.f > Cal_Sto_Coef.f90
+gmake will now build dependency file. Ignore "depend: No such file or directory" message above
+makedepf90 -nosrc Lib_ESMFStateAddGetMod.f90 machine.f90 ENS_Cpl_InternalState_ESMFMod.f90 ENS_bcst_global.f90 ENS_Sto_Per_Scheme_Step2.f90 DistributeForStep1.f90 ENS_CplState_ESMFMod.f90 ENS_Cpl_Run_ESMFMod.f90 ENS_Cpl_ESMFMod.f90 ENS_GetParameterFromStateMod.f90 ENS_CplComp_ESMFMod.f90 ENS_Sto_Per_Scheme_Step1.f90 kinds.f90 peuc.f90 pran.f90 prana.f90 Cal_Sto_Coef.f90 > depend
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+gmake[1]: Entering directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+/lib/cpp -P -traditional  ENS_CplComp_ESMFMod_STUB.F90 > ENS_CplComp_ESMFMod_STUB.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -c ENS_CplComp_ESMFMod_STUB.f90
 ar -r ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
-gmake[1]: Leaving directory `/gpfs/thm/u/Ratko.Vasic/TEST/src/ENS_Cpl'
-/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Thu Nov  1 16:42:11 EDT 2012 r22031M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=306' MAIN_NEMS.F90 > MAIN_NEMS.f90
-mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c MAIN_NEMS.f90
+ar: creating ENS_Cpl.a
+gmake[1]: Leaving directory `/gpfs/td1/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 12:25:25 EST 2012 r22268M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_EARTH_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 12:25:25 EST 2012 r22268M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_EARTH_GRID_COMP.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 12:25:25 EST 2012 r22268M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_NEMS_INTERNAL_STATE.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 12:25:25 EST 2012 r22268M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c module_NEMS_GRID_COMP.f90
+/lib/cpp -P -traditional  -D'SVN_INFO="(Ratko.Vasic) Sat Nov 10 12:25:25 EST 2012 r22268M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2012' -D'CMP_JD=315' MAIN_NEMS.F90 > MAIN_NEMS.f90
+mpiifort -g -traceback  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX -Iatmos -Iocean -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gfs -Iatmos/phys -Iatmos/gen -Iocean/hycom -Iocean/genocn -c MAIN_NEMS.f90
 rm MAIN_NEMS.f90
-mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/u/Ratko.Vasic/lib_tmp/incmod/nemsio -convert big_endian -assume byterecl -fp-model strict  -o ../exe/NEMS.x MAIN_NEMS.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o atmos/libatmos.a atmos/nmm/libnmm.a atmos/gfs/libgfs.a atmos/fim/libfimtop.a atmos/gen/libgen.a atmos/phys/libphys.a atmos/share/libshare.a atmos/post/libpost.a ocean/libocean.a ocean/genocn/libgenocn.a ocean/hycom/libhycom.a ENS_Cpl/ENS_Cpl.a -L/u/Ratko.Vasic/lib_tmp -lnemsio -L/nwprod/lib -lw3nco_4 -lw3emc_4 -L/nwprod/lib -lbacio_4 -L/nwprod/lib -lsp_4 -L/usrx/local/esmf-3.1.0rp5/lib/libO/Linux.intel.64.intelmpi.default -L/usrx/local/intel/impi/4.0.3.008/intel64/lib -L/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usrx/local/intel/composerxe/mkl/lib/intel64 -L/usrx/local/intel/composerxe/ipp/lib/intel64 -L/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21 -L/gpfs/tp2/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usrx/local/intel/composerxe/mkl/lib/intel64 -L/usrx/local/intel/composerxe/ipp/lib/intel64 -L/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../.. -L/lib64 -L/lib -L/usr/lib64 -L/usr/lib -Wl,-rpath,/usrx/local/esmf-3.1.0rp5/lib/libO/Linux.intel.64.intelmpi.default -lesmf  -ldl -ldl -ldl -ldl -lpthread -lpthread -lpthread -lpthread -lrt -limf -lsvml -lm -lipgo -ldecimal -lcilkrts -lstdc++ -lgcc -lgcc_s -lirc -lpthread -lgcc -lgcc_s -lirc_s -ldl -lrt -ldl /usrx/local/netcdf-4.2.1.1/lib/libnetcdf.a  
+mpiifort -g -traceback -O2  -I/usrx/local/esmf-3.1.0rp5/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-3.1.0rp5/include -I/nwprod/lib/incmod/nemsio -convert big_endian -assume byterecl -fp-model precise -xAVX  -o ../exe/NEMS.x MAIN_NEMS.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o atmos/libatmos.a atmos/nmm/libnmm.a atmos/gfs/libgfs.a atmos/fim/libfimtop.a atmos/gen/libgen.a atmos/phys/libphys.a atmos/share/libshare.a atmos/post/libpost.a ocean/libocean.a ocean/genocn/libgenocn.a ocean/hycom/libhycom.a ENS_Cpl/ENS_Cpl.a -L/nwprod/lib -lnemsio -L/nwprod/lib -lw3nco_4 -lw3emc_4 -L/nwprod/lib -lbacio_4 -L/nwprod/lib -lsp_4 -L/usrx/local/esmf-3.1.0rp5/lib/libO/Linux.intel.64.intelmpi.default -L/usrx/local/intel/impi/4.0.3.008/intel64/lib -L/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usrx/local/intel/composerxe/mkl/lib/intel64 -L/usrx/local/intel/composerxe/ipp/lib/intel64 -L/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21 -L/gpfs/tp2/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usrx/local/intel/composer_xe_2011_sp1.11.339/compiler/lib/intel64 -L/usrx/local/intel/composerxe/mkl/lib/intel64 -L/usrx/local/intel/composerxe/ipp/lib/intel64 -L/usrx/local/intel/composerxe/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.6/../../.. -L/lib64 -L/lib -L/usr/lib64 -L/usr/lib -Wl,-rpath,/usrx/local/esmf-3.1.0rp5/lib/libO/Linux.intel.64.intelmpi.default -lesmf  -ldl -ldl -ldl -ldl -lpthread -lpthread -lpthread -lpthread -lrt -limf -lsvml -lm -lipgo -ldecimal -lcilkrts -lstdc++ -lgcc -lgcc_s -lirc -lpthread -lgcc -lgcc_s -lirc_s -ldl -lrt -ldl /usrx/local/netcdf-4.2.1.1/lib/libnetcdf.a  
 ../exe/NEMS.x is created for NMM core.
