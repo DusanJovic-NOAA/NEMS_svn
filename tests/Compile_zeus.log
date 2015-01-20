@@ -122,26 +122,6 @@ cd libutil && gmake clean && cd ..
 gmake[3]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/libutil'
 ../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
 makefile:42: warning: ignoring old commands for target `.F90.f90'
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D atmos_phy_chem_cpl_comp_mod_stub.F90 > atmos_phy_chem_cpl_comp_mod_stub.f90
-In file included from ../../../ESMFVersionDefine.h:16,
-                 from atmos_phy_chem_cpl_comp_mod_stub.F90:2:
-../../.././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
-In file included from atmos_phy_chem_cpl_comp_mod_stub.F90:2:
-../../../ESMFVersionDefine.h:11: warning: this is the location of the previous definition
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D atmos_chem_phy_cpl_comp_mod_stub.F90 > atmos_chem_phy_cpl_comp_mod_stub.f90
-In file included from ../../../ESMFVersionDefine.h:16,
-                 from atmos_chem_phy_cpl_comp_mod_stub.F90:2:
-../../.././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
-In file included from atmos_chem_phy_cpl_comp_mod_stub.F90:2:
-../../../ESMFVersionDefine.h:11: warning: this is the location of the previous definition
-ls -1 atmos_phy_chem_cpl_comp_mod_stub.f90 atmos_chem_phy_cpl_comp_mod_stub.f90 module_gfs_machine.f90 module_include_gfs.f90 module_gfs_mpi_def.f90 module_gfs_physcons.f90 module_gfs_funcphys.f90 module_gfs_tropp.f90 module_DM_PARALLEL_GFS.f90 module_digital_filter_gfs.f90 module_export_import_data.f90 gfs_dyn_phy_cpl_comp_mod.f90 > Srcfiles
-echo "." > Filepath
-../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
-rm -f Filepath Srcfiles
-gmake[3]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/libutil'
-gmake[3]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/libutil'
-../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
-makefile:42: warning: ignoring old commands for target `.F90.f90'
 rm -f gfs_libutil.a *.f90 *.o *.mod *.lst lm map depend
 gmake[3]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/libutil'
 cd dyn && gmake clean && cd ..
@@ -271,6 +251,32 @@ gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black
 cd chem                && gmake clean GOCART_MODE=full
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem'
 cd gocart/src   && gmake -f GNUmakefile realclean
+gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src'
+GNUmakefile:14: /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Config/ESMA_base.mk: No such file or directory
+GNUmakefile:15: /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Config/ESMA_arch.mk: No such file or directory
+gmake -C Config esma_install
+gmake[3]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Config'
+ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+GNUmakefile:35: - Node not know, disabling build environment check
+ifort -c -DsysLinux -DESMA64   -DHAVE_SHMEM -DMAPL_IMPORT_HAS_PRECISION -DMAPL_EXPORT_HAS_PRECISION  -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default   -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default   -r8    -fPIC -fp-model source  -align dcommons fdp.f90
+/bin/mkdir -p /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/lib /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include \
+		 /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/etc /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/doc /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config
+/bin/cat ESMA_base.mk   > /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/ESMA_base.mk
+/bin/cat ESMA_arch.mk   > /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/ESMA_arch.mk
+/bin/cat ESMA_post.mk   > /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/ESMA_post.mk
+/bin/cat GMAO_base.mk  > /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/GMAO_base.mk
+echo "I = -I"              > /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+echo "LIB_SDF = /apps/netcdf/4.1.3-intel/lib/libnetcdff.a /apps/netcdf/4.1.3-intel/lib/libnetcdf.a /apps/hdf5/1.8.8-intel/lib/libhdf5_hl.a /apps/hdf5/1.8.8-intel/lib/libhdf5.a /contrib/nceplibs_ext/lib/libz.a" >> /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+/bin/cat NCEP_base.mk         >> /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+echo "BASEDIR: /usr/local" > /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/etc/BASEDIR.rc
+/bin/cp -f -p protex /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../src/g5_modules /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../src/g5_modules.sh  mklpath.pl endiantest.pl OScheck.pl esma_timer.sh esma_tgraph.pl /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin
+/bin/cp -f /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../src/Assert.pl /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin/Assert
+./install_fdp ./fdp /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin/fdp
+./install_fdp: installing ./fdp as /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin/fdp (module is fdp.mod)
+./CVSTAG_install.pl /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/etc
+./OScheck.pl -q -cp /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/etc
+gmake[3]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Config'
+gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src'
 gmake[2]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src'
 /scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 for d in Config GMAO_Shared Components Applications; \
@@ -709,19 +715,6 @@ Building dependency file gfio___.d
 rm gfio___.F gfioutil___.F
 gmake[4]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r4'
 gmake[4]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r4'
-Building dependency file gfioutil___.d
-gfio___.F:1015:23: warning: missing terminating ' character
-gfio___.F:1256:59: warning: missing terminating ' character
-gfio___.F:1460:23: warning: missing terminating ' character
-gfio___.F:1709:60: warning: missing terminating ' character
-gfio___.F:1715:18: warning: missing terminating ' character
-gfio___.F:2185:23: warning: missing terminating ' character
-gfio___.F:2548:23: warning: missing terminating ' character
-gfio___.F:2795:52: warning: missing terminating ' character
-gfio___.F:2807:23: warning: missing terminating ' character
-Building dependency file gfio___.d
-gmake[4]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r4'
-gmake[4]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r4'
 ifort -c -DsysLinux -DESMA64   -DHAVE_SHMEM -DMAPL_IMPORT_HAS_PRECISION -DMAPL_EXPORT_HAS_PRECISION  -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I. -I.. -I/apps/netcdf/4.1.3-intel/include -I/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include/GMAO_mpeu   -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I. -I/apps/netcdf/4.1.3-intel/include -I/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include/GMAO_mpeu  -O -g -traceback    -fpp   -fPIC -extend_source -fp-model source  -align dcommons gfio___.F
 ifort -c -DsysLinux -DESMA64   -DHAVE_SHMEM -DMAPL_IMPORT_HAS_PRECISION -DMAPL_EXPORT_HAS_PRECISION  -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I. -I.. -I/apps/netcdf/4.1.3-intel/include -I/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include/GMAO_mpeu   -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I. -I/apps/netcdf/4.1.3-intel/include -I/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include/GMAO_mpeu  -O -g -traceback    -fpp   -fPIC -extend_source -fp-model source  -align dcommons ../gfioCF.F
 ifort -c -DsysLinux -DESMA64   -DHAVE_SHMEM -DMAPL_IMPORT_HAS_PRECISION -DMAPL_EXPORT_HAS_PRECISION  -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I. -I.. -I/apps/netcdf/4.1.3-intel/include -I/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include/GMAO_mpeu   -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I. -I/apps/netcdf/4.1.3-intel/include -I/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include/GMAO_mpeu  -O -g -traceback    -fpp   -fPIC -extend_source -fp-model source  -align dcommons ../diffdate.f
@@ -764,18 +757,6 @@ gfio___.F:2795:52: warning: missing terminating ' character
 gfio___.F:2807:23: warning: missing terminating ' character
 Building dependency file gfio___.d
 rm gfio___.F gfioutil___.F
-gmake[4]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
-gmake[4]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
-gfio___.F:1015:23: warning: missing terminating ' character
-gfio___.F:1256:59: warning: missing terminating ' character
-gfio___.F:1460:23: warning: missing terminating ' character
-gfio___.F:1709:60: warning: missing terminating ' character
-gfio___.F:1715:18: warning: missing terminating ' character
-gfio___.F:2185:23: warning: missing terminating ' character
-gfio___.F:2548:23: warning: missing terminating ' character
-gfio___.F:2795:52: warning: missing terminating ' character
-gfio___.F:2807:23: warning: missing terminating ' character
-Building dependency file gfio___.d
 gmake[4]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
 gmake[4]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio/r8'
 ifort -c -DsysLinux -DESMA64   -DHAVE_SHMEM -DMAPL_IMPORT_HAS_PRECISION -DMAPL_EXPORT_HAS_PRECISION  -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I. -I.. -I/apps/netcdf/4.1.3-intel/include -I/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include/GMAO_mpeu   -I/apps/esmf/6.3.0r/intel/mpt/include  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I. -I/apps/netcdf/4.1.3-intel/include -I/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include/GMAO_mpeu  -O -g -traceback -r8   -fpp   -fPIC -extend_source -fp-model source  -align dcommons gfio___.F
@@ -3604,7 +3585,7 @@ ar -r ENS_Cpl.a Lib_ESMFStateAddGetMod.o machine.o ENS_Cpl_InternalState_ESMFMod
 ar: creating ENS_Cpl.a
 gmake[2]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
 gmake[1]: Leaving directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Fri Jan  9 01:01:18 EST 2015 r49679M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=009' module_MEDIATOR.F90 > module_MEDIATOR.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Thu Jan 15 21:53:31 EST 2015 r50079M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=015' module_MEDIATOR.F90 > module_MEDIATOR.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_MEDIATOR.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3613,7 +3594,7 @@ In file included from module_MEDIATOR.F90:2:
 ifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -lmpi -openmp -convert big_endian -assume byterecl -mkl=sequential  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/6.3.0r/intel/mpt/include -I/apps/netcdf/4.1.3-intel/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nceplibs/src/nemsio/nemsgfs_newrad/incmod -I/apps/netcdf/4.1.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_MEDIATOR.f90
 ifort: warning #10315: specifying -lm before files may supercede the Intel(R) math library and affect performance
 rm module_MEDIATOR.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Fri Jan  9 01:01:18 EST 2015 r49679M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=009' module_EARTH_GENERIC_COMP.F90 > module_EARTH_GENERIC_COMP.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Thu Jan 15 21:53:31 EST 2015 r50079M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=015' module_EARTH_GENERIC_COMP.F90 > module_EARTH_GENERIC_COMP.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_EARTH_GENERIC_COMP.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3622,7 +3603,7 @@ In file included from module_EARTH_GENERIC_COMP.F90:2:
 ifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -lmpi -openmp -convert big_endian -assume byterecl -mkl=sequential  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/6.3.0r/intel/mpt/include -I/apps/netcdf/4.1.3-intel/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nceplibs/src/nemsio/nemsgfs_newrad/incmod -I/apps/netcdf/4.1.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_EARTH_GENERIC_COMP.f90
 ifort: warning #10315: specifying -lm before files may supercede the Intel(R) math library and affect performance
 rm module_EARTH_GENERIC_COMP.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Fri Jan  9 01:01:18 EST 2015 r49679M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=009' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Thu Jan 15 21:53:31 EST 2015 r50079M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=015' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_EARTH_INTERNAL_STATE.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3631,7 +3612,7 @@ In file included from module_EARTH_INTERNAL_STATE.F90:2:
 ifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -lmpi -openmp -convert big_endian -assume byterecl -mkl=sequential  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/6.3.0r/intel/mpt/include -I/apps/netcdf/4.1.3-intel/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nceplibs/src/nemsio/nemsgfs_newrad/incmod -I/apps/netcdf/4.1.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_EARTH_INTERNAL_STATE.f90
 ifort: warning #10315: specifying -lm before files may supercede the Intel(R) math library and affect performance
 rm module_EARTH_INTERNAL_STATE.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Fri Jan  9 01:01:18 EST 2015 r49679M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=009' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Thu Jan 15 21:53:31 EST 2015 r50079M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=015' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_EARTH_GRID_COMP.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3640,7 +3621,7 @@ In file included from module_EARTH_GRID_COMP.F90:2:
 ifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -lmpi -openmp -convert big_endian -assume byterecl -mkl=sequential  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/6.3.0r/intel/mpt/include -I/apps/netcdf/4.1.3-intel/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nceplibs/src/nemsio/nemsgfs_newrad/incmod -I/apps/netcdf/4.1.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_EARTH_GRID_COMP.f90
 ifort: warning #10315: specifying -lm before files may supercede the Intel(R) math library and affect performance
 rm module_EARTH_GRID_COMP.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Fri Jan  9 01:01:18 EST 2015 r49679M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=009' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Thu Jan 15 21:53:31 EST 2015 r50079M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=015' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_NEMS_INTERNAL_STATE.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3649,7 +3630,7 @@ In file included from module_NEMS_INTERNAL_STATE.F90:2:
 ifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -lmpi -openmp -convert big_endian -assume byterecl -mkl=sequential  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/6.3.0r/intel/mpt/include -I/apps/netcdf/4.1.3-intel/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nceplibs/src/nemsio/nemsgfs_newrad/incmod -I/apps/netcdf/4.1.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_NEMS_INTERNAL_STATE.f90
 ifort: warning #10315: specifying -lm before files may supercede the Intel(R) math library and affect performance
 rm module_NEMS_INTERNAL_STATE.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Fri Jan  9 01:01:18 EST 2015 r49679M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=009' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Thu Jan 15 21:53:31 EST 2015 r50079M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=015' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_NEMS_GRID_COMP.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3658,7 +3639,7 @@ In file included from module_NEMS_GRID_COMP.F90:2:
 ifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -lmpi -openmp -convert big_endian -assume byterecl -mkl=sequential  -I/apps/esmf/6.3.0r/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/6.3.0r/intel/mpt/include -I/apps/netcdf/4.1.3-intel/include -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nceplibs/src/nemsio/nemsgfs_newrad/incmod -I/apps/netcdf/4.1.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_NEMS_GRID_COMP.f90
 ifort: warning #10315: specifying -lm before files may supercede the Intel(R) math library and affect performance
 rm module_NEMS_GRID_COMP.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Fri Jan  9 01:01:18 EST 2015 r49679M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=009' MAIN_NEMS.F90 > MAIN_NEMS.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Thu Jan 15 21:53:31 EST 2015 r50079M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=015' MAIN_NEMS.F90 > MAIN_NEMS.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from MAIN_NEMS.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
