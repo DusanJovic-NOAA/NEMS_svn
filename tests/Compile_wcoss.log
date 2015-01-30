@@ -4,10 +4,10 @@
 Use an ESMF 6.3.0r library
 ++ module purge
 +++ /usrx/local/Modules/3.2.10/bin/modulecmd sh purge
-++ eval MANPATH=/usr/share/man ';export' 'MANPATH;PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Weiyu.Yang/bin:/nwprod/util/ush:/nwprod/util/exec:/nwprod/ush:/nwprod/exec:.' ';export' 'PATH;unset' 'CLASSPATH;unset' 'CPATH;unset' 'CPRO_PATH;unset' 'FPATH;unset' 'IDB_HOME;unset' 'INCLUDE;unset' 'INSTALL_DIR;unset' 'INTEL_LICENSE_FILE;unset' 'IPPROOT;unset' 'I_MPI_ROOT;unset' 'LANG;unset' 'LAUNCH;unset' 'LD_LIBRARY_PATH;unset' 'LIBRARY_PATH;unset' 'LOADEDMODULES;unset' 'LSF_BINDIR;unset' 'LSF_ENVDIR;unset' 'LSF_LIBDIR;unset' 'LSF_SERVERDIR;unset' 'MKLROOT;unset' 'MKL_TARGET_ARCH;unset' 'MP_CLOCK_SOURCE;unset' 'MP_COMPILER;unset' 'MP_CONFIG;unset' 'MP_EUILIB;unset' 'MP_MPILIB;unset' 'NLSPATH;unset' 'OMP_NUM_THREADS;unset' 'PROD_DIR;unset' 'RUBYLIB;unset' 'RUBY_LOC;unset' 'TBBROOT;unset' 'VT_LIB_DIR;unset' 'VT_ROOT;unset' 'VT_SLIB_DIR;unset' 'XLSF_UIDDIR;unset' '_LMFILES_;'
+++ eval MANPATH=/usr/share/man ';export' 'MANPATH;PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Dusan.Jovic/bin:/u/Dusan.Jovic/local/bin:/u/Dusan.Jovic/git/bin:/nwprod/util/exec:/usrx/local/NCL_NCARG-6.1.0_gcc446/OpenNDAPenabled/bin:/usrx/local/hpss:/u/Christopher.W.Harrop/opt/rocoto-1.1/bin' ';export' 'PATH;unset' 'CLASSPATH;unset' 'CPATH;unset' 'CPRO_PATH;unset' 'FPATH;unset' 'IDB_HOME;unset' 'INCLUDE;unset' 'INSTALL_DIR;unset' 'INTEL_LICENSE_FILE;unset' 'IPPROOT;unset' 'I_MPI_ROOT;unset' 'LANG;unset' 'LAUNCH;unset' 'LD_LIBRARY_PATH;unset' 'LIBRARY_PATH;unset' 'LOADEDMODULES;unset' 'LSF_BINDIR;unset' 'LSF_ENVDIR;unset' 'LSF_LIBDIR;unset' 'LSF_SERVERDIR;unset' 'MKLROOT;unset' 'MKL_TARGET_ARCH;unset' 'MP_CLOCK_SOURCE;unset' 'MP_COMPILER;unset' 'MP_CONFIG;unset' 'MP_EUILIB;unset' 'MP_MPILIB;unset' 'NLSPATH;unset' 'OMP_NUM_THREADS;unset' 'PROD_DIR;unset' 'TBBROOT;unset' 'VT_LIB_DIR;unset' 'VT_ROOT;unset' 'VT_SLIB_DIR;unset' 'XLSF_UIDDIR;unset' '_LMFILES_;'
 +++ MANPATH=/usr/share/man
 +++ export MANPATH
-+++ PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Weiyu.Yang/bin:/nwprod/util/ush:/nwprod/util/exec:/nwprod/ush:/nwprod/exec:.
++++ PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Dusan.Jovic/bin:/u/Dusan.Jovic/local/bin:/u/Dusan.Jovic/git/bin:/nwprod/util/exec:/usrx/local/NCL_NCARG-6.1.0_gcc446/OpenNDAPenabled/bin:/usrx/local/hpss:/u/Christopher.W.Harrop/opt/rocoto-1.1/bin
 +++ export PATH
 +++ unset CLASSPATH
 +++ unset CPATH
@@ -38,8 +38,6 @@ Use an ESMF 6.3.0r library
 +++ unset NLSPATH
 +++ unset OMP_NUM_THREADS
 +++ unset PROD_DIR
-+++ unset RUBYLIB
-+++ unset RUBY_LOC
 +++ unset TBBROOT
 +++ unset VT_LIB_DIR
 +++ unset VT_ROOT
@@ -48,7 +46,7 @@ Use an ESMF 6.3.0r library
 +++ unset _LMFILES_
 ++ module load EnvVars/1.0.0 ibmpe lsf ics/14.0.1 NetCDF/3.6.3 ESMF/630rp1
 +++ /usrx/local/Modules/3.2.10/bin/modulecmd sh load EnvVars/1.0.0 ibmpe lsf ics/14.0.1 NetCDF/3.6.3 ESMF/630rp1
-++ eval ADVISOR_XE_2013_DIR=/usrx/local/intel/14.0.1/advisor_xe_2013 ';export' 'ADVISOR_XE_2013_DIR;BIN_DIR=bin64' ';export' 'BIN_DIR;CLASSPATH=/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/itac/lib_impi4' ';export' 'CLASSPATH;CPATH=/usrx/local/intel/14.0.1/composerxe/mkl/include:/usrx/local/intel/14.0.1/composerxe/tbb/include' ';export' 'CPATH;ESMFMKFILE=/usrx/local/esmf-6.3.0rp1/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk' ';export' 'ESMFMKFILE;GDBSERVER_MIC=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/target/mic/bin/gdbserver' ';export' 'GDBSERVER_MIC;GDB_CROSS=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64_mic/py26/bin/gdb-mic' ';export' 'GDB_CROSS;IDB_HOME=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64' ';export' 'IDB_HOME;INCLUDE=/usrx/local/intel/14.0.1/composerxe/mkl/include' ';export' 'INCLUDE;INSPECTOR_2013_DIR=/usrx/local/intel/14.0.1/inspector_xe_2013' ';export' 'INSPECTOR_2013_DIR;INTEL_LICENSE_FILE=/usrx/local/intel/licenses' ';export' 'INTEL_LICENSE_FILE;IPPROOT=/usrx/local/intel/14.0.1/composerxe/ipp' ';export' 'IPPROOT;I_MPI_ROOT=/usrx/local/intel/14.0.1/impi/4.1.1.036' ';export' 'I_MPI_ROOT;LANG=en_US' ';export' 'LANG;LANGUAGE_TERRITORY=en_US' ';export' 'LANGUAGE_TERRITORY;LD_LIBRARY_PATH=/usrx/local/esmf-6.3.0rp1/lib/libO/Linux.intel.64.intelmpi.default/:/usrx/local/NetCDF/3.6.3/lib:/usrx/local/intel/14.0.1/impi/4.1.1.036/intel64/lib:/usrx/local/intel/14.0.1/itac/8.1.3.037/mic/itac/slib_impi4:/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/itac/slib_impi4:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/compiler/lib/intel64:/usrx/local/intel/14.0.1/composerxe/mpirt/lib/intel64:/usrx/local/intel/14.0.1/composerxe/ipp/lib/intel64:/usrx/local/intel/14.0.1/composerxe/mkl/lib/intel64:/usrx/local/intel/14.0.1/composerxe/tbb/lib/intel64/gcc4.4:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib' ';export' 'LD_LIBRARY_PATH;LIBRARY_PATH=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/compiler/lib/intel64:/usrx/local/intel/14.0.1/composerxe/ipp/lib/intel64:/usrx/local/intel/14.0.1/composerxe/mkl/lib/intel64:/usrx/local/intel/14.0.1/composerxe/tbb/lib/intel64/gcc4.4:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib' ';export' 'LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.0:ibmpe/1.3.0.8:lsf/9.1:ics/14.0.1:NetCDF/3.6.3:ESMF/630rp1' ';export' 'LOADEDMODULES;LSF_BINDIR=/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin' ';export' 'LSF_BINDIR;LSF_ENVDIR=/usrx/local/lsf/conf' ';export' 'LSF_ENVDIR;LSF_LIBDIR=/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib' ';export' 'LSF_LIBDIR;LSF_SERVERDIR=/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc' ';export' 'LSF_SERVERDIR;MANPATH=/usrx/local/NetCDF/3.6.3/share/man:/usrx/local/intel/14.0.1/impi/4.1.1.036/man:/usrx/local/intel/14.0.1/itac/8.1.3.037/man:/usrx/local/intel/14.0.1/composerxe/man/en_US:/usrx/local/lsf/9.1/man:/opt/ibmhpc/pe1308/ppe.man:/usr/share/man:/usrx/local/intel/14.0.1/inspector_xe_2013/man:/usrx/local/intel/14.0.1/vtune_amplifier_xe_2013/man:/usrx/local/intel/14.0.1/advisor_xe_2013/man' ';export' 'MANPATH;MIC_LD_LIBRARY_PATH=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/compiler/lib/mic:/usrx/local/intel/14.0.1/composerxe/mpirt/lib/mic:/usrx/local/intel/14.0.1/composerxe/mkl/lib/mic:/usrx/local/intel/14.0.1/composerxe/tbb/lib/mic' ';export' 'MIC_LD_LIBRARY_PATH;MKLROOT=/usrx/local/intel/14.0.1/composerxe/mkl' ';export' 'MKLROOT;MP_CLOCK_SOURCE=OS' ';export' 'MP_CLOCK_SOURCE;MP_COMPILER=intel' ';export' 'MP_COMPILER;MP_CONFIG=1308' ';export' 'MP_CONFIG;MP_EUILIB=us' ';export' 'MP_EUILIB;MP_MPILIB=mpich2' ';export' 'MP_MPILIB;NETCDF=/usrx/local/NetCDF/3.6.3' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/3.6.3/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/3.6.3/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/3.6.3/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/3.6.3/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/3.6.3/lib\' -lnetcdf ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/3.6.3/lib\' -lnetcdf ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/3.6.3/lib\' '-lnetcdf_c++\' -lnetcdf ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/3.6.3/lib\' -lnetcdf ';export' 'NETCDF_LDFLAGS_F;NLSPATH=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/compiler/lib/intel64/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composerxe/ipp/lib/intel64/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composerxe/mkl/lib/intel64/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64_mic/py26/share/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64/py26/share/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/intel64/locale/%l_%t/%N:/opt/ibmhpc/pe1308/base/msg/%L/%N:/usr/share/locale/%L/%N' ';export' 'NLSPATH;OMP_NUM_THREADS=1' ';export' 'OMP_NUM_THREADS;PATH=/usrx/local/NetCDF/3.6.3/bin:/usrx/local/intel/14.0.1/icsxe/2013.1.039/bin:/usrx/local/intel/14.0.1/advisor_xe_2013/bin64:/usrx/local/intel/14.0.1/vtune_amplifier_xe_2013/bin64:/usrx/local/intel/14.0.1/inspector_xe_2013/bin64:/usrx/local/intel/14.0.1/impi/4.1.1.036/intel64/bin:/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64:/usrx/local/intel/14.0.1/composerxe/mpirt/bin/intel64:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64_mic/py26/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64/py26/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64_mic:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gui/intel64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/opt/ibmhpc/pe1308/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Weiyu.Yang/bin:/nwprod/util/ush:/nwprod/util/exec:/nwprod/ush:/nwprod/exec:.' ';export' 'PATH;PROD_DIR=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106' ';export' 'PROD_DIR;ROOTPATH=/usrx/local/intel/14.0.1' ';export' 'ROOTPATH;SCRIPTPATH=/usrx/local/intel/14.0.1/icsxe/2013.1.039' ';export' 'SCRIPTPATH;TBBROOT=/usrx/local/intel/14.0.1/composerxe/tbb' ';export' 'TBBROOT;VTUNE_AMPLIFIER_XE_2013_DIR=/usrx/local/intel/14.0.1/vtune_amplifier_xe_2013' ';export' 'VTUNE_AMPLIFIER_XE_2013_DIR;VT_ADD_LIBS=-ldwarf\' '-lelf\' '-lvtunwind\' '-lnsl\' '-lm\' '-ldl\' -lpthread ';export' 'VT_ADD_LIBS;VT_ARCH=intel64' ';export' 'VT_ARCH;VT_LIB_DIR=/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/itac/lib_impi4' ';export' 'VT_LIB_DIR;VT_MIC_SLIB_DIR=/usrx/local/intel/14.0.1/itac/8.1.3.037/mic/itac/slib_impi4' ';export' 'VT_MIC_SLIB_DIR;VT_MPI=impi4' ';export' 'VT_MPI;VT_ROOT=/usrx/local/intel/14.0.1/itac/8.1.3.037' ';export' 'VT_ROOT;VT_SLIB_DIR=/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/itac/slib_impi4' ';export' 'VT_SLIB_DIR;XLSF_UIDDIR=/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib/uid' ';export' 'XLSF_UIDDIR;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.0:/usrx/local/modulefiles/ibmpe/1.3.0.8:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/ics/14.0.1:/usrx/local/modulefiles/NetCDF/3.6.3:/usrx/local/modulefiles/ESMF/630rp1' ';export' '_LMFILES_;unset' 'LAUNCH;'
+++ eval ADVISOR_XE_2013_DIR=/usrx/local/intel/14.0.1/advisor_xe_2013 ';export' 'ADVISOR_XE_2013_DIR;BIN_DIR=bin64' ';export' 'BIN_DIR;CLASSPATH=/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/itac/lib_impi4' ';export' 'CLASSPATH;CPATH=/usrx/local/intel/14.0.1/composerxe/mkl/include:/usrx/local/intel/14.0.1/composerxe/tbb/include' ';export' 'CPATH;ESMFMKFILE=/usrx/local/esmf-6.3.0rp1/lib/libO/Linux.intel.64.intelmpi.default/esmf.mk' ';export' 'ESMFMKFILE;GDBSERVER_MIC=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/target/mic/bin/gdbserver' ';export' 'GDBSERVER_MIC;GDB_CROSS=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64_mic/py26/bin/gdb-mic' ';export' 'GDB_CROSS;IDB_HOME=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64' ';export' 'IDB_HOME;INCLUDE=/usrx/local/intel/14.0.1/composerxe/mkl/include' ';export' 'INCLUDE;INSPECTOR_2013_DIR=/usrx/local/intel/14.0.1/inspector_xe_2013' ';export' 'INSPECTOR_2013_DIR;INTEL_LICENSE_FILE=/usrx/local/intel/licenses' ';export' 'INTEL_LICENSE_FILE;IPPROOT=/usrx/local/intel/14.0.1/composerxe/ipp' ';export' 'IPPROOT;I_MPI_ROOT=/usrx/local/intel/14.0.1/impi/4.1.1.036' ';export' 'I_MPI_ROOT;LANG=en_US' ';export' 'LANG;LANGUAGE_TERRITORY=en_US' ';export' 'LANGUAGE_TERRITORY;LD_LIBRARY_PATH=/usrx/local/esmf-6.3.0rp1/lib/libO/Linux.intel.64.intelmpi.default/:/usrx/local/NetCDF/3.6.3/lib:/usrx/local/intel/14.0.1/impi/4.1.1.036/intel64/lib:/usrx/local/intel/14.0.1/itac/8.1.3.037/mic/itac/slib_impi4:/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/itac/slib_impi4:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/compiler/lib/intel64:/usrx/local/intel/14.0.1/composerxe/mpirt/lib/intel64:/usrx/local/intel/14.0.1/composerxe/ipp/lib/intel64:/usrx/local/intel/14.0.1/composerxe/mkl/lib/intel64:/usrx/local/intel/14.0.1/composerxe/tbb/lib/intel64/gcc4.4:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib' ';export' 'LD_LIBRARY_PATH;LIBRARY_PATH=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/compiler/lib/intel64:/usrx/local/intel/14.0.1/composerxe/ipp/lib/intel64:/usrx/local/intel/14.0.1/composerxe/mkl/lib/intel64:/usrx/local/intel/14.0.1/composerxe/tbb/lib/intel64/gcc4.4:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib' ';export' 'LIBRARY_PATH;LOADEDMODULES=EnvVars/1.0.0:ibmpe/1.3.0.8:lsf/9.1:ics/14.0.1:NetCDF/3.6.3:ESMF/630rp1' ';export' 'LOADEDMODULES;LSF_BINDIR=/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin' ';export' 'LSF_BINDIR;LSF_ENVDIR=/usrx/local/lsf/conf' ';export' 'LSF_ENVDIR;LSF_LIBDIR=/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib' ';export' 'LSF_LIBDIR;LSF_SERVERDIR=/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc' ';export' 'LSF_SERVERDIR;MANPATH=/usrx/local/NetCDF/3.6.3/share/man:/usrx/local/intel/14.0.1/impi/4.1.1.036/man:/usrx/local/intel/14.0.1/itac/8.1.3.037/man:/usrx/local/intel/14.0.1/composerxe/man/en_US:/usrx/local/lsf/9.1/man:/opt/ibmhpc/pe1308/ppe.man:/usr/share/man:/usrx/local/intel/14.0.1/inspector_xe_2013/man:/usrx/local/intel/14.0.1/vtune_amplifier_xe_2013/man:/usrx/local/intel/14.0.1/advisor_xe_2013/man' ';export' 'MANPATH;MIC_LD_LIBRARY_PATH=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/compiler/lib/mic:/usrx/local/intel/14.0.1/composerxe/mpirt/lib/mic:/usrx/local/intel/14.0.1/composerxe/mkl/lib/mic:/usrx/local/intel/14.0.1/composerxe/tbb/lib/mic' ';export' 'MIC_LD_LIBRARY_PATH;MKLROOT=/usrx/local/intel/14.0.1/composerxe/mkl' ';export' 'MKLROOT;MP_CLOCK_SOURCE=OS' ';export' 'MP_CLOCK_SOURCE;MP_COMPILER=intel' ';export' 'MP_COMPILER;MP_CONFIG=1308' ';export' 'MP_CONFIG;MP_EUILIB=us' ';export' 'MP_EUILIB;MP_MPILIB=mpich2' ';export' 'MP_MPILIB;NETCDF=/usrx/local/NetCDF/3.6.3' ';export' 'NETCDF;NETCDF_CFLAGS=-I/usrx/local/NetCDF/3.6.3/include' ';export' 'NETCDF_CFLAGS;NETCDF_CXXFLAGS=-I/usrx/local/NetCDF/3.6.3/include' ';export' 'NETCDF_CXXFLAGS;NETCDF_FFLAGS=-I/usrx/local/NetCDF/3.6.3/include' ';export' 'NETCDF_FFLAGS;NETCDF_INCLUDE=-I/usrx/local/NetCDF/3.6.3/include' ';export' 'NETCDF_INCLUDE;NETCDF_LDFLAGS=-L/usrx/local/NetCDF/3.6.3/lib\' -lnetcdf ';export' 'NETCDF_LDFLAGS;NETCDF_LDFLAGS_C=-L/usrx/local/NetCDF/3.6.3/lib\' -lnetcdf ';export' 'NETCDF_LDFLAGS_C;NETCDF_LDFLAGS_CXX=-L/usrx/local/NetCDF/3.6.3/lib\' '-lnetcdf_c++\' -lnetcdf ';export' 'NETCDF_LDFLAGS_CXX;NETCDF_LDFLAGS_F=-L/usrx/local/NetCDF/3.6.3/lib\' -lnetcdf ';export' 'NETCDF_LDFLAGS_F;NLSPATH=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/compiler/lib/intel64/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composerxe/ipp/lib/intel64/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composerxe/mkl/lib/intel64/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64_mic/py26/share/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64/py26/share/locale/%l_%t/%N:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/intel64/locale/%l_%t/%N:/opt/ibmhpc/pe1308/base/msg/%L/%N:/usr/share/locale/%L/%N' ';export' 'NLSPATH;OMP_NUM_THREADS=1' ';export' 'OMP_NUM_THREADS;PATH=/usrx/local/NetCDF/3.6.3/bin:/usrx/local/intel/14.0.1/icsxe/2013.1.039/bin:/usrx/local/intel/14.0.1/advisor_xe_2013/bin64:/usrx/local/intel/14.0.1/vtune_amplifier_xe_2013/bin64:/usrx/local/intel/14.0.1/inspector_xe_2013/bin64:/usrx/local/intel/14.0.1/impi/4.1.1.036/intel64/bin:/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64:/usrx/local/intel/14.0.1/composerxe/mpirt/bin/intel64:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64_mic/py26/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64/py26/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64_mic:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gui/intel64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/opt/ibmhpc/pe1308/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Dusan.Jovic/bin:/u/Dusan.Jovic/local/bin:/u/Dusan.Jovic/git/bin:/nwprod/util/exec:/usrx/local/NCL_NCARG-6.1.0_gcc446/OpenNDAPenabled/bin:/usrx/local/hpss:/u/Christopher.W.Harrop/opt/rocoto-1.1/bin' ';export' 'PATH;PROD_DIR=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106' ';export' 'PROD_DIR;ROOTPATH=/usrx/local/intel/14.0.1' ';export' 'ROOTPATH;SCRIPTPATH=/usrx/local/intel/14.0.1/icsxe/2013.1.039' ';export' 'SCRIPTPATH;TBBROOT=/usrx/local/intel/14.0.1/composerxe/tbb' ';export' 'TBBROOT;VTUNE_AMPLIFIER_XE_2013_DIR=/usrx/local/intel/14.0.1/vtune_amplifier_xe_2013' ';export' 'VTUNE_AMPLIFIER_XE_2013_DIR;VT_ADD_LIBS=-ldwarf\' '-lelf\' '-lvtunwind\' '-lnsl\' '-lm\' '-ldl\' -lpthread ';export' 'VT_ADD_LIBS;VT_ARCH=intel64' ';export' 'VT_ARCH;VT_LIB_DIR=/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/itac/lib_impi4' ';export' 'VT_LIB_DIR;VT_MIC_SLIB_DIR=/usrx/local/intel/14.0.1/itac/8.1.3.037/mic/itac/slib_impi4' ';export' 'VT_MIC_SLIB_DIR;VT_MPI=impi4' ';export' 'VT_MPI;VT_ROOT=/usrx/local/intel/14.0.1/itac/8.1.3.037' ';export' 'VT_ROOT;VT_SLIB_DIR=/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/itac/slib_impi4' ';export' 'VT_SLIB_DIR;XLSF_UIDDIR=/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/lib/uid' ';export' 'XLSF_UIDDIR;_LMFILES_=/usrx/local/modulefiles/EnvVars/1.0.0:/usrx/local/modulefiles/ibmpe/1.3.0.8:/usrx/local/modulefiles/lsf/9.1:/usrx/local/modulefiles/ics/14.0.1:/usrx/local/modulefiles/NetCDF/3.6.3:/usrx/local/modulefiles/ESMF/630rp1' ';export' '_LMFILES_;unset' 'LAUNCH;'
 +++ ADVISOR_XE_2013_DIR=/usrx/local/intel/14.0.1/advisor_xe_2013
 +++ export ADVISOR_XE_2013_DIR
 +++ BIN_DIR=bin64
@@ -131,7 +129,7 @@ Use an ESMF 6.3.0r library
 +++ export NLSPATH
 +++ OMP_NUM_THREADS=1
 +++ export OMP_NUM_THREADS
-+++ PATH=/usrx/local/NetCDF/3.6.3/bin:/usrx/local/intel/14.0.1/icsxe/2013.1.039/bin:/usrx/local/intel/14.0.1/advisor_xe_2013/bin64:/usrx/local/intel/14.0.1/vtune_amplifier_xe_2013/bin64:/usrx/local/intel/14.0.1/inspector_xe_2013/bin64:/usrx/local/intel/14.0.1/impi/4.1.1.036/intel64/bin:/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64:/usrx/local/intel/14.0.1/composerxe/mpirt/bin/intel64:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64_mic/py26/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64/py26/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64_mic:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gui/intel64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/opt/ibmhpc/pe1308/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Weiyu.Yang/bin:/nwprod/util/ush:/nwprod/util/exec:/nwprod/ush:/nwprod/exec:.
++++ PATH=/usrx/local/NetCDF/3.6.3/bin:/usrx/local/intel/14.0.1/icsxe/2013.1.039/bin:/usrx/local/intel/14.0.1/advisor_xe_2013/bin64:/usrx/local/intel/14.0.1/vtune_amplifier_xe_2013/bin64:/usrx/local/intel/14.0.1/inspector_xe_2013/bin64:/usrx/local/intel/14.0.1/impi/4.1.1.036/intel64/bin:/usrx/local/intel/14.0.1/itac/8.1.3.037/intel64/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64:/usrx/local/intel/14.0.1/composerxe/mpirt/bin/intel64:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64_mic/py26/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gdb/intel64/py26/bin:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/bin/intel64_mic:/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106/debugger/gui/intel64:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/etc:/usrx/local/lsf/9.1/linux2.6-glibc2.3-x86_64/bin:/opt/ibmhpc/pe1308/base/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/ibutils/bin:/u/Dusan.Jovic/bin:/u/Dusan.Jovic/local/bin:/u/Dusan.Jovic/git/bin:/nwprod/util/exec:/usrx/local/NCL_NCARG-6.1.0_gcc446/OpenNDAPenabled/bin:/usrx/local/hpss:/u/Christopher.W.Harrop/opt/rocoto-1.1/bin
 +++ export PATH
 +++ PROD_DIR=/usrx/local/intel/14.0.1/composer_xe_2013_sp1.1.106
 +++ export PROD_DIR
@@ -168,34 +166,34 @@ Currently Loaded Modulefiles:
   2) ibmpe/1.3.0.8   4) ics/14.0.1      6) ESMF/630rp1
 + eval
 cd atmos               && gmake clean
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos'
 cd share        && gmake clean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/share'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/share'
 rm -f libshare.a *.f90 *.o *.mod *.lst *.a lm map depend
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/share'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/share'
 cd phys         && gmake clean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/phys'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/phys'
 rm -f libphys.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/phys'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/phys'
 cd nmm          && gmake clean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/nmm'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/nmm'
 rm -f libnmm.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/nmm'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/nmm'
 cd io           && gmake clean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
 makefile:36: depend: No such file or directory
 ls -1 module_include_io.F90 module_io_mpi_def.F90 module_GFS_WRITE.F90 module_WRITE_INTERNAL_STATE_GFS.F90 module_GET_CONFIG_WRITE_GFS.F90 module_WRITE_ROUTINES_GFS.F90 module_WRITE_GRID_COMP_GFS.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
 rm -f libio.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
 cd gsm       && gmake clean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm'
 cd libutil && gmake clean && cd ..
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/libutil'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/libutil'
 ../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
 makefile:42: warning: ignoring old commands for target `.F90.f90'
 makefile:72: depend: No such file or directory
@@ -240,14 +238,14 @@ ls -1 atmos_phy_chem_cpl_comp_mod_stub.f90 atmos_chem_phy_cpl_comp_mod_stub.f90 
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/libutil'
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/libutil'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/libutil'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/libutil'
 ../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
 makefile:42: warning: ignoring old commands for target `.F90.f90'
 rm -f gfs_libutil.a *.f90 *.o *.mod *.lst lm map depend
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/libutil'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/libutil'
 cd dyn && gmake clean && cd ..
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
 makefile:284: warning: overriding commands for target `gfs_dyn_physcons.o'
 makefile:251: warning: ignoring old commands for target `gfs_dyn_physcons.o'
 makefile:287: warning: overriding commands for target `sigio_module.o'
@@ -291,8 +289,8 @@ ls -1 num_parthds.f gfs_dynamics_err_msg_mod.f gfs_dynamics_namelist_mod.f gfs_d
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
 makefile:284: warning: overriding commands for target `gfs_dyn_physcons.o'
 makefile:251: warning: ignoring old commands for target `gfs_dyn_physcons.o'
 makefile:287: warning: overriding commands for target `sigio_module.o'
@@ -332,9 +330,9 @@ makefile:251: warning: ignoring old commands for target `gfs_dynamics_grid_comp_
 ../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
 makefile:277: warning: ignoring old commands for target `.f.f90'
 rm -f gfs_dynamics.a *.o *.mod *.lst *.f90 lm map depend
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
 cd phys && gmake clean && cd ..
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
 makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
 makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
 makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
@@ -380,8 +378,8 @@ ls -1 glats_physics.f gcycle.f do_physics_one_step.f get_lats_node_shuff_r_fix.f
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
 makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
 makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
 makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
@@ -423,25 +421,25 @@ makefile:113: warning: ignoring old commands for target `gfs_physics_err_msg_mod
 ../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
 makefile:106: warning: ignoring old commands for target `.f.f90'
 rm -f gfs_physics.a *.o *.mod *.lst *.f90 lm map depend
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
 rm -f libgfs.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm'
 cd fim          && gmake clean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/fim'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/fim'
 rm -f libfimtop.a *.o *.mod *.f90 *.lst lm map depend
 (cd FIMsrc && ./makefim clean)
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/fim/FIMsrc'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/fim/FIMsrc'
 rm -f -rf ../FIMsrc_* macros.make
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/fim/FIMsrc'
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/fim'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/fim/FIMsrc'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/fim'
 cd gen          && gmake clean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gen'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gen'
 makefile:31: warning: overriding commands for target `module_GEN_INTERNAL_STATE.o'
 makefile:28: warning: ignoring old commands for target `module_GEN_INTERNAL_STATE.o'
 rm -f libgen.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gen'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gen'
 cd post         && gmake clean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/post'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/post'
 makefile:39: warning: overriding commands for target `post_nmm.o'
 makefile:36: warning: ignoring old commands for target `post_nmm.o'
 makefile:39: warning: overriding commands for target `post_nems_routines.o'
@@ -455,44 +453,44 @@ makefile:39: warning: ignoring old commands for target `post_gfs_stub.o'
 makefile:45: warning: overriding commands for target `post_nmm_stub.o'
 makefile:42: warning: ignoring old commands for target `post_nmm_stub.o'
 rm -f libpost.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/post'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/post'
 rm -f libatmos.a *.f90 *.o *.mod *.lst depend
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos'
 cd ENS_Cpl             && gmake clean
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/ENS_Cpl'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/ENS_Cpl'
 rm -f ENS_Cpl.a *.f90 *.o *.mod *.lst lm map depend
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/ENS_Cpl'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/ENS_Cpl'
 cd chem                && gmake clean GOCART_MODE=full
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem'
 cd gocart/src   && gmake -f GNUmakefile realclean
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src'
-GNUmakefile:14: /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_base.mk: No such file or directory
-GNUmakefile:15: /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk: No such file or directory
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src'
+GNUmakefile:14: /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_base.mk: No such file or directory
+GNUmakefile:15: /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk: No such file or directory
 gmake -C Config esma_install
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Config'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Config'
 ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 GNUmakefile:35: - Node not know, disabling build environment check
 mpiifort -c -DsysLinux -DESMA64   -DHAVE_SHMEM -DMAPL_IMPORT_HAS_PRECISION -DMAPL_EXPORT_HAS_PRECISION  -I/usrx/local/esmf-6.3.0rp1/include  -I/usrx/local/esmf-6.3.0rp1/mod/modO/Linux.intel.64.intelmpi.default/   -I/usrx/local/esmf-6.3.0rp1/include  -I/usrx/local/esmf-6.3.0rp1/mod/modO/Linux.intel.64.intelmpi.default/   -r8    -fPIC -fp-model source  -align dcommons fdp.f90
-/bin/mkdir -p /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/bin /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/lib /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/include \
-		 /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/etc /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/doc /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/Config
-/bin/cat ESMA_base.mk   > /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/Config/ESMA_base.mk
-/bin/cat ESMA_arch.mk   > /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/Config/ESMA_arch.mk
-/bin/cat ESMA_post.mk   > /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/Config/ESMA_post.mk
-/bin/cat GMAO_base.mk  > /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/Config/GMAO_base.mk
-echo "I = -I"              > /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
-echo "LIB_SDF = /usrx/local/NetCDF/4.2/serial/lib/libnetcdff.a /usrx/local/NetCDF/4.2/serial/lib/libnetcdf.a /usrx/local/HDF5/1.8.9/serial/lib/libhdf5_hl.a /usrx/local/HDF5/1.8.9/serial/lib/libhdf5.a /usrx/local/zlib-1.2.7/lib/libz.a" >> /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
-/bin/cat NCEP_base.mk         >> /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
-echo "BASEDIR: " > /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/etc/BASEDIR.rc
-/bin/cp -f -p protex /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../src/g5_modules /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../src/g5_modules.sh  mklpath.pl endiantest.pl OScheck.pl esma_timer.sh esma_tgraph.pl /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/bin
-/bin/cp -f /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../src/Assert.pl /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/bin/Assert
-./install_fdp ./fdp /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/bin/fdp
-./install_fdp: installing ./fdp as /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/bin/fdp (module is fdp.mod)
-./CVSTAG_install.pl /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/etc
-./OScheck.pl -q -cp /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux/etc
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Config'
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src'
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+/bin/mkdir -p /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/bin /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/lib /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/include \
+		 /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/etc /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/doc /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/Config
+/bin/cat ESMA_base.mk   > /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/Config/ESMA_base.mk
+/bin/cat ESMA_arch.mk   > /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/Config/ESMA_arch.mk
+/bin/cat ESMA_post.mk   > /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/Config/ESMA_post.mk
+/bin/cat GMAO_base.mk  > /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/Config/GMAO_base.mk
+echo "I = -I"              > /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+echo "LIB_SDF = /usrx/local/NetCDF/4.2/serial/lib/libnetcdff.a /usrx/local/NetCDF/4.2/serial/lib/libnetcdf.a /usrx/local/HDF5/1.8.9/serial/lib/libhdf5_hl.a /usrx/local/HDF5/1.8.9/serial/lib/libhdf5.a /usrx/local/zlib-1.2.7/lib/libz.a" >> /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+/bin/cat NCEP_base.mk         >> /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+echo "BASEDIR: " > /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/etc/BASEDIR.rc
+/bin/cp -f -p protex /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../src/g5_modules /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../src/g5_modules.sh  mklpath.pl endiantest.pl OScheck.pl esma_timer.sh esma_tgraph.pl /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/bin
+/bin/cp -f /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../src/Assert.pl /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/bin/Assert
+./install_fdp ./fdp /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/bin/fdp
+./install_fdp: installing ./fdp as /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/bin/fdp (module is fdp.mod)
+./CVSTAG_install.pl /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/etc
+./OScheck.pl -q -cp /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux/etc
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Config'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 for d in Config GMAO_Shared Components Applications; \
 	  do			 \
 	      echo Making esma_distclean in $d	;\
@@ -500,163 +498,163 @@ for d in Config GMAO_Shared Components Applications; \
 	      [ $? -ne 0 ] && exit	;\
 	  done || exit 0;
 Making esma_distclean in Config
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Config'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Config'
 ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 GNUmakefile:35: - Node not know, disabling build environment check
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Config'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Config'
 Making esma_distclean in GMAO_Shared
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu
-gmake[4]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu
+gmake[4]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd] 
 gmake -C mpi0 distclean
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
-gmake[4]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
+gmake[4]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/GMAO_gfio
-gmake[4]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio
+gmake[4]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f -r *~ *.[aoxd] *.mod *.pyf *.so r4 r8
-gmake[4]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
+gmake[4]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/MAPL_cfio
-gmake[4]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio
+gmake[4]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f -r *~ *.[aoxd] *.[Mm][Oo][Dd] r4 r8 
-gmake[4]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
+gmake[4]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/MAPL_Base
-gmake[4]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base
+gmake[4]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 GNUmakefile:168: warning: overriding commands for target `lib'
 GNUmakefile:165: warning: ignoring old commands for target `lib'
 gmake local_esma_distclean
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 GNUmakefile:168: warning: overriding commands for target `lib'
 GNUmakefile:165: warning: ignoring old commands for target `lib'
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd] *___.f90
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
-gmake[4]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+gmake[4]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/Chem_Base
-gmake[4]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/Chem_Base'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base
+gmake[4]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd] *.xx
-gmake[4]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/Chem_Base'
+gmake[4]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/Chem_Shared
-gmake[4]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared
+gmake[4]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[4]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/GMAO_Shared'
+gmake[4]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/GMAO_Shared'
 Making esma_distclean in Components
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp
-gmake[4]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp
+gmake[4]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f O3_ExportSpec___.h O3_GetPointer___.h O3_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f CO_ExportSpec___.h CO_GetPointer___.h CO_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f CO2_ExportSpec___.h CO2_GetPointer___.h CO2_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f CFC_ExportSpec___.h CFC_GetPointer___.h CFC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f DU_ExportSpec___.h DU_GetPointer___.h DU_History___.rc DU_DeclarePointer___.h *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f SS_ExportSpec___.h SS_GetPointer___.h SS_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f BC_ExportSpec___.h BC_GetPointer___.h BC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f OC_ExportSpec___.h OC_GetPointer___.h OC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f SU_ExportSpec___.h SU_GetPointer___.h SU_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f Rn_ExportSpec___.h Rn_GetPointer___.h Rn_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
 
-Making esma_distclean in /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+Making esma_distclean in /gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f CH4_ExportSpec___.h CH4_GetPointer___.h CH4_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp'
 gmake local_esma_distclean
-gmake[5]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+gmake[5]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 /bin/rm -f -f Tests/ExtData Tests/*_Registry.rc Tests/*_GridComp.rc 
 /bin/rm -f -f *~ *.[aoxd] *.[Mm][Oo][Dd] *___.[fF]* 
-gmake[5]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp'
-gmake[4]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components/GOCART_GridComp'
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Components'
+gmake[5]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+gmake[4]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Components'
 Making esma_distclean in Applications
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Applications'
-/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/Applications'
-/bin/rm -f -r /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Config 
-/bin/rm -f -r /gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src/../Linux
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem/gocart/src'
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/chem'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Applications'
+/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/Applications'
+/bin/rm -f -r /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Config 
+/bin/rm -f -r /meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src/../Linux
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem/gocart/src'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/chem'
 rm -f *.f90 *.lst *.o *.mod lm map ../exe/NEMS.x
 cd atmos/share         && gmake
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/share'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/share'
 makefile:43: depend: No such file or directory
 ls -1 module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 module_CPLFIELDS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/share'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/share'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/share'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/share'
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 module_ERR_MSG.F90 > module_ERR_MSG.f90
 In file included from ../../ESMFVersionDefine.h:16,
                  from module_ERR_MSG.F90:2:
@@ -696,16 +694,16 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o module_CPLFIELDS.o check_esmf_pet.o ffsync.o  idea_composition.o
 ar: creating libshare.a
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/share'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/share'
 cd atmos/phys          && gmake gocart_stub
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/phys'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/phys'
 makefile:210: depend: No such file or directory
 ls -1 module_BL_GFSPBL.F90 module_BL_GFSPBLHUR.F90 module_BL_MYJPBL.F90 module_CU_BMJ.F90 module_CU_SAS.F90 module_CU_SASHUR.F90 module_LS_LISS.F90 module_LS_NOAHLSM.F90 module_MP_ETANEW.F90 module_MP_FER_HIRES.F90 module_mp_thompson.F90 module_mp_radar.F90 module_MP_GFS.F90 module_MP_WSM6.F90 module_RA_GFDL.F90 module_RA_RRTM.F90 module_SF_JSFC.F90 module_SF_GFDL.F90 module_SF_URBAN.F90 machine.f physparam.f physcons.f funcphys.f module_nst_parameters.f module_nst_water_prop.f module_nst_model.f calpreciptype.f gocart_tracer_config_stub.f grrad_nmmb.f radiation_astronomy_nmmb.f radiation_aerosols_nmmb.f radiation_gases_nmmb.f radiation_clouds_nmmb.f radiation_surface_nmmb.f rad_initialize_nmmb.f radlw_param_nmmb.f radlw_datatb_nmmb.f radlw_main_nmmb.f radsw_param_nmmb.f radsw_datatb_nmmb.f radsw_main_nmmb.f radiation_astronomy_gfs.f radiation_aerosols_gfs.f radiation_gases_gfs.f radiation_clouds_gfs.f radiation_surface_gfs.f precpd_nmmb.f iounitdef.f ozne_def.f progtm_module.f date_def.f rascnvv2.f namelist_soilveg.f module_bfmicrophysics.f mersenne_twister.f tracer_const_h.f gfs_phy_tracer_config.f rad_initialize.f radlw_param.f radlw_datatb.f radlw_main.f radsw_param.f radsw_datatb.f radsw_main.f radiation_astronomy.f radiation_aerosols.f radiation_gases.f radiation_clouds.f radiation_surface.f grrad.f ozphys.f ozinterp.f sfcsub.f gbphys.f dcyc2.f dcyc2.pre.rad.f set_soilveg.f sfc_drv.f sfc_land.f progt2.f sfc_sice.f sfc_ocean.f sfc_nst.f sfc_diff.f sfc_diag.f sflx.f moninp.f moninp1.f moninq.f moninedmf.f mfpbl.f gwdps.f gwdc.f rayleigh_damp.f rayleigh_damp_mesopause.f sascnv.f sascnvn.f cnvc90.f tridi2t3.f shalcv.f shalcv_opr.f shalcnv.f lrgsclr.f gscond.f gscondp.f precpd.f precpdp.f mstadb.f mstadbtn.f mstcnv.f get_prs.f gsmddrive.f co2hc.f idea_solar_heating.f idea_tracer.f h2oc.f h2ohdc.f efield.f ideaca.f idea_co2.f idea_h2o.f idea_ion.f idea_o2_o3.f idea_dissipation.f idea_phys.f num_parthds.F > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/phys'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/phys'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/phys'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/phys'
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 module_BL_GFSPBL.F90 > module_BL_GFSPBL.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -O3  -I/usrx/local/esmf-6.3.0rp1/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-6.3.0rp1/include  -I/nems/save/Jun.Wang/nceplibs/nemsio/nemsgfs_newrad/incmod -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share -fpp -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 -r8 -c machine.f
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
@@ -1153,16 +1151,16 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libphys.a module_BL_GFSPBL.o module_BL_GFSPBLHUR.o module_BL_MYJPBL.o module_CU_BMJ.o module_CU_SAS.o module_CU_SASHUR.o module_LS_LISS.o module_LS_NOAHLSM.o module_MP_ETANEW.o module_MP_FER_HIRES.o module_mp_thompson.o module_mp_radar.o module_MP_GFS.o module_MP_WSM6.o module_RA_GFDL.o module_RA_RRTM.o module_SF_JSFC.o module_SF_GFDL.o module_SF_URBAN.o machine.o physparam.o physcons.o funcphys.o module_nst_parameters.o module_nst_water_prop.o module_nst_model.o calpreciptype.o co2hc.o idea_solar_heating.o idea_tracer.o h2oc.o h2ohdc.o efield.o ideaca.o idea_co2.o idea_h2o.o idea_ion.o idea_o2_o3.o idea_dissipation.o idea_phys.o gocart_tracer_config_stub.o iounitdef.o ozne_def.o progtm_module.o date_def.o rascnvv2.o namelist_soilveg.o module_bfmicrophysics.o mersenne_twister.o tracer_const_h.o gfs_phy_tracer_config.o rad_initialize.o radlw_param.o radlw_datatb.o radlw_main.o radsw_param.o radsw_datatb.o radsw_main.o radiation_astronomy.o radiation_aerosols.o radiation_gases.o radiation_clouds.o radiation_surface.o grrad.o ozphys.o ozinterp.o sfcsub.o gbphys.o dcyc2.o dcyc2.pre.rad.o set_soilveg.o sfc_drv.o sfc_land.o progt2.o sfc_sice.o sfc_ocean.o sfc_nst.o sfc_diff.o sfc_diag.o sflx.o moninp.o moninp1.o moninq.o moninedmf.o mfpbl.o gwdps.o gwdc.o rayleigh_damp.o rayleigh_damp_mesopause.o sascnv.o sascnvn.o cnvc90.o tridi2t3.o shalcv.o shalcv_opr.o shalcnv.o lrgsclr.o gscond.o gscondp.o precpd.o precpdp.o mstadb.o mstadbtn.o mstcnv.o get_prs.o gsmddrive.o grrad_nmmb.o radiation_astronomy_nmmb.o radiation_aerosols_nmmb.o radiation_gases_nmmb.o radiation_clouds_nmmb.o radiation_surface_nmmb.o rad_initialize_nmmb.o radlw_param_nmmb.o radlw_datatb_nmmb.o radlw_main_nmmb.o radsw_param_nmmb.o radsw_datatb_nmmb.o radsw_main_nmmb.o radiation_astronomy_gfs.o radiation_aerosols_gfs.o radiation_gases_gfs.o radiation_clouds_gfs.o radiation_surface_gfs.o precpd_nmmb.o num_parthds.o
 ar: creating libphys.a
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/phys'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/phys'
 cd atmos/nmm           && gmake stub
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/nmm'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/nmm'
 makefile:89: depend: No such file or directory
 ls -1 module_BGRID_INTERP.F90 module_CLOCKTIMES.F90 module_CONTROL.F90 module_CONVECTION.F90 module_DERIVED_TYPES.F90 module_DIAGNOSE.F90 module_DIGITAL_FILTER_NMM.F90 module_DM_PARALLEL.F90 module_DOMAIN_GRID_COMP.F90 module_DOMAIN_INTERNAL_STATE.F90 module_DYNAMICS_ROUTINES.F90 module_EXCHANGE.F90 module_FLTBNDS.F90 module_GET_CONFIG.F90 module_GET_CONFIG_WRITE.F90 module_GWD.F90 module_H_TO_V.F90 module_INIT_READ_BIN.F90 module_INIT_READ_NEMSIO.F90 module_MICROPHYSICS.F90 module_MY_DOMAIN_SPECS.F90 module_NESTING.F90 module_NMM_GRID_COMP.F90 module_NMM_INTEGRATE.F90 module_NMM_INTERNAL_STATE.F90 module_OUTPUT.F90 module_PARENT_CHILD_CPL_COMP.F90 module_PRECIP_ADJUST.F90 module_RADIATION.F90 module_SOLVER_GRID_COMP.F90 module_SOLVER_INTERNAL_STATE.F90 module_TIMESERIES.F90 module_TURBULENCE.F90 module_VARS.F90 module_VARS_STATE.F90 module_WRITE_GRID_COMP.F90 module_WRITE_INTERNAL_STATE.F90 module_WRITE_ROUTINES.F90 n_namelist_physics_def.f n_layout1.f n_resol_def.f n_compns_physics.f n_mpi_def.f n_module_gfs_mpi_def.f n_mpi_quit.f > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/nmm'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/nmm'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/nmm'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/nmm'
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 module_NMM_GRID_COMP_stub.F90 > module_NMM_GRID_COMP_stub.f90
 In file included from ../../ESMFVersionDefine.h:16,
                  from module_NMM_GRID_COMP_stub.F90:2:
@@ -1174,9 +1172,9 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libnmm.a module_NMM_GRID_COMP_stub.o
 ar: creating libnmm.a
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/nmm'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/nmm'
 cd atmos/gen           && gmake stub
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gen'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gen'
 makefile:31: warning: overriding commands for target `module_GEN_INTERNAL_STATE.o'
 makefile:28: warning: ignoring old commands for target `module_GEN_INTERNAL_STATE.o'
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 module_GEN_INTERNAL_STATE.F90 > module_GEN_INTERNAL_STATE.f90
@@ -1199,17 +1197,17 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libgen.a module_GEN_INTERNAL_STATE.o module_GEN_GRID_COMP_stub.o 
 ar: creating libgen.a
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gen'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gen'
 cd atmos/io            && gmake
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
 makefile:36: depend: No such file or directory
 ls -1 module_include_io.F90 module_io_mpi_def.F90 module_GFS_WRITE.F90 module_WRITE_INTERNAL_STATE_GFS.F90 module_GET_CONFIG_WRITE_GFS.F90 module_WRITE_ROUTINES_GFS.F90 module_WRITE_GRID_COMP_GFS.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 module_include_io.F90 > module_include_io.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -O3  -I/usrx/local/esmf-6.3.0rp1/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-6.3.0rp1/include  -I/nems/save/Jun.Wang/nceplibs/nemsio/nemsgfs_newrad/incmod -convert big_endian -assume byterecl -fp-model precise -xAVX -free -I../share  -c module_include_io.f90
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
@@ -1265,19 +1263,19 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libio.a module_include_io.o module_io_mpi_def.o module_GFS_WRITE.o module_WRITE_INTERNAL_STATE_GFS.o module_GET_CONFIG_WRITE_GFS.o module_WRITE_ROUTINES_GFS.o module_WRITE_GRID_COMP_GFS.o
 ar: creating libio.a
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/io'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/io'
 cd atmos/gsm           && gmake gocart_stub
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm'
 makefile:91: depend: No such file or directory
 ls -1 module_GFS_CORE_SETUP.F90 module_GFS_INTERNAL_STATE.F90 module_GFS_INTEGRATE.F90 module_GFS_GRID_COMP.F90  > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm'
 cd libutil && gmake gocart_stub && cd ..
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/libutil'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/libutil'
 ../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
 makefile:42: warning: ignoring old commands for target `.F90.f90'
 makefile:72: depend: No such file or directory
@@ -1322,8 +1320,8 @@ ls -1 atmos_phy_chem_cpl_comp_mod_stub.f90 atmos_chem_phy_cpl_comp_mod_stub.f90 
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/libutil'
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/libutil'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/libutil'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/libutil'
 ../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
 makefile:42: warning: ignoring old commands for target `.F90.f90'
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -O3  -I/usrx/local/esmf-6.3.0rp1/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-6.3.0rp1/include  -I/nems/save/Jun.Wang/nceplibs/nemsio/nemsgfs_newrad/incmod -convert big_endian -assume byterecl -fp-model precise -xAVX -free -O3 -r8 -free  -I../../share -c atmos_phy_chem_cpl_comp_mod_stub.f90
@@ -1364,9 +1362,9 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r gfs_libutil.a atmos_phy_chem_cpl_comp_mod_stub.o atmos_chem_phy_cpl_comp_mod_stub.o module_gfs_machine.o module_include_gfs.o module_gfs_mpi_def.o module_gfs_physcons.o module_gfs_funcphys.o module_gfs_tropp.o module_DM_PARALLEL_GFS.o module_digital_filter_gfs.o module_export_import_data.o gfs_dyn_phy_cpl_comp_mod.o    
 ar: creating gfs_libutil.a
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/libutil'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/libutil'
 cd dyn && gmake && cd ..
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
 makefile:284: warning: overriding commands for target `gfs_dyn_physcons.o'
 makefile:251: warning: ignoring old commands for target `gfs_dyn_physcons.o'
 makefile:287: warning: overriding commands for target `sigio_module.o'
@@ -1410,8 +1408,8 @@ ls -1 num_parthds.f gfs_dynamics_err_msg_mod.f gfs_dynamics_namelist_mod.f gfs_d
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
 makefile:284: warning: overriding commands for target `gfs_dyn_physcons.o'
 makefile:251: warning: ignoring old commands for target `gfs_dyn_physcons.o'
 makefile:287: warning: overriding commands for target `sigio_module.o'
@@ -1450,7 +1448,7 @@ makefile:338: warning: overriding commands for target `gfs_dynamics_grid_comp_mo
 makefile:251: warning: ignoring old commands for target `gfs_dynamics_grid_comp_mod.o'
 ../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
 makefile:277: warning: ignoring old commands for target `.f.f90'
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
 makefile:284: warning: overriding commands for target `gfs_dyn_physcons.o'
 makefile:251: warning: ignoring old commands for target `gfs_dyn_physcons.o'
 makefile:287: warning: overriding commands for target `sigio_module.o'
@@ -2391,10 +2389,10 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r gfs_dynamics.a bfilt_def.o gfs_dyn_machine.o gfs_dyn_resol_def.o gfs_dyn_gg_def.o gfs_dyn_vert_def.o gfs_dyn_io_header.o gfs_dyn_date_def.o slgshr.o pmgrid.o layout_grid_tracers.o layout_lag.o gfs_dyn_layout1.o namelist_dynamics_def.o gfs_dyn_coordinate_def.o gfs_dyn_lon_lat_para.o gfs_dyn_tracer_const.o gfs_dyn_tracer_config.o gfs_dyn_reduce_lons_grid_module.o gfs_dyn_matrix_sig_def.o gfs_dyn_mpi_def.o gfs_dyn_deldifs_def.o gfs_dyn_bfilt_def.o gfs_dyn_glats.o gfs_dyn_dfi_mod.o nemsio_def.o wrtout_dynamics.o wrtout_dynamics_slg_nemsio.o deldifs_def.o dyn_gocart_tracer_config_stub.o num_parthds.o gfs_dynamics_err_msg_mod.o gfs_dynamics_namelist_mod.o gfs_dynamics_start_time_get_mod.o gfs_dynamics_internal_state_mod.o gfs_dynamics_grid_create_mod.o gfs_dynamics_output.o gfs_dynamics_getcf_mod.o GFS_AddParameterToStateMod.o gfs_dynamics_initialize_mod.o gfs_dynamics_initialize_slg_mod.o gfs_dynamics_run_mod.o gfs_dynamics_finalize_mod.o gfs_dynamics_add_get_state_ESMFField_mod.o gfs_dynamics_states_mod.o gfs_dyn_physcons.o mpi_GV.o gfs_dynamics_grid_comp_mod.o get_cd_hyb.o get_am_bm_hyb.o get_cd_hyb_gc.o get_cd_hyb_gcdp.o get_am_bm_hyb_gc.o get_am_bm_hyb_gcdp.o sltini_all.o set_halos_lag_sn.o setlats.o setlats_slg.o getysk.o getysk_gc.o redist_lats_a.o ifshuff.o shuffle_grid.o grid_collect.o excha.o info.o four2grid_thread.o hpmdummy.o coundummy.o damp_speed.o damp_speed_noq.o deldifs.o deldifs_noq.o idea_deldifs_init.o idea_deldifs.o idea_deldifs_noq.o idea_getcoef.o input_fields.o input_fields_slg.o input_fields_rst.o delnpe.o delnpo.o dezouv.o impadj_sig.locl.o impadj_hyb.locl.o impadj_hyb.locl_gc.o impadj_hyb.locl_gcdp.o impadj_slg.locl.o dozeuv.o epslon.o filtereo.o filter1eo.o filter2eo.o filtereo_noq.o filter1eo_noq.o filter2eo_noq.o setlats_lag.o get_ls_node.o get_lats_node_shuff_a_fix.o getcon_lag.o getcon_dynamics.o gfidi_tracers.o gfidi_speed.o gfidi_sig.o gfidi_hyb.o gfidi_hyb_gc.o gfidi_hyb_gc_h.o gfidi_hyb_gchdp.o gfidi_gchdp_noadv_noq.o ndslfv_pack.o ndslfv_para.o ndslfv_monoadvh2.o ndslfv_monoadvh.o ndslfv_monoadvv.o grid_to_spect.o grid_to_spect_slg.o grid_to_spect_rqt.o gridzz_to_spect.o spect_to_grid.o spect_to_grid_slg.o spect_to_grid_gz.o spect_to_grid_rqt.o spect_to_gridxy.o spectpz_to_gridxy.o compns_dynamics.o gozrineo.o pln2eo.o rms_spect.o lats_shuff.o uvoedz.o mpi_quit.o sicdif_sig.o sicdif_hyb.o sicdif_hyb_gc.o sicdif_hyb_gcdp.o common_to_model_vars.o getpwatptot.o sig2press.o hyb2press.o gch2press.o omega_sig.o omega_hyb.o omega_gch.o omega_gcdp.o slgscan_all_redgg.o do_dynamics_mod.o get_cd_hyb_slg.o gfs_dficoll_dynamics.o sicdif_hyb_slg.o deldifs_tracers.o gloopa_tracers.o do_dynamics_slg_loop.o do_dynamics_one_loop.o do_dynamics_two_loop.o model_to_common_vars.o gather_times.o four_to_grid.o four2fln_gg.o four2fln.o sortrx.o sumder2_slg_gg.o sumfln_slg_gg.o sumfln.o sumder2.o triseori.o uveodz.o matinv.o ver_sig.o sig_io.o get_topo_grid_grad.o ysminv.o grid_fix.o sigio_module.o sigio_r_module.o treadeo.io.o treadeo.io_slg.o treadeo_nemsio.o treadg_nemsio.o treads_nemsio.o twrites_rst.o twrites_hst.o twriteg_rst.o grid_to_spect_inp.o setsig.o spect_to_grid_inp.o
 ar: creating gfs_dynamics.a
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/dyn'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/dyn'
 cd phys && gmake && cd ..
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
 makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
 makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
 makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
@@ -2440,8 +2438,8 @@ ls -1 glats_physics.f gcycle.f do_physics_one_step.f get_lats_node_shuff_r_fix.f
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
 makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
 makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
 makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
@@ -2482,7 +2480,7 @@ makefile:188: warning: overriding commands for target `gfs_physics_err_msg_mod.o
 makefile:113: warning: ignoring old commands for target `gfs_physics_err_msg_mod.o'
 ../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
 makefile:106: warning: ignoring old commands for target `.f.f90'
-gmake[3]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
+gmake[3]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
 makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
 makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
 makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
@@ -2840,8 +2838,8 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r gfs_physics.a resol_def.o layout1.o vert_def.o gg_def.o namelist_physics_def.o coordinate_def.o reduce_lons_grid_module.o mpi_def.o d3d_def.o sfcio_module.o mod_state.o nstio_module.o gfs_physics_err_msg_mod.o gfs_physics_sfc_flx_mod.o gfs_physics_nst_var_mod.o gfs_physics_sfc_flx_set_mod.o gfs_physics_gridgr_mod.o gfs_physics_g2d_mod.o gfs_physics_g3d_mod.o gfs_physics_aoi_var_mod.o gfs_physics_namelist_mod.o gfs_physics_start_time_get_mod.o gfs_physics_internal_state_mod.o gfs_physics_grid_create_mod.o gfs_physics_output.o gfs_physics_getcf_mod.o gfs_physics_initialize_mod.o gfs_physics_run_mod.o gfs_physics_finalize_mod.o gfs_physics_add_get_state_ESMFField_mod.o gfs_phy_states_mod.o gfs_physics_grid_comp_mod.o glats_physics.o gcycle.o do_physics_one_step.o get_lats_node_shuff_r_fix.o setlats.o setlats_r_slg.o lats_shuff.o getcon_physics.o lon_lat_para.o compns_physics.o info.o coundummy.o sortrx.o mpi_quit.o dfi_fixwr.o hpmdummy.o gloopr.o gloopb.o gbphys_adv_hyb_gc.o gbphys_adv_hyb_gc_h.o fix_fields.o read_fix.o GFS_simple_scatter.o wrtout_physics.o fld_collect.o fld_collect_nst.o gribit_gsm.o wrt3d_hyb.o wrt3d.o aoicpl_prep.o para_fixio_w.o para_nst_w.o
 ar: creating gfs_physics.a
-gmake[3]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm/phys'
+gmake[3]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm/phys'
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 module_GOCART_ROUTINES_stub.F90 > module_GOCART_ROUTINES_stub.f90
 In file included from ../../ESMFVersionDefine.h:16,
                  from module_GOCART_ROUTINES_stub.F90:2:
@@ -2889,16 +2887,16 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libgfs.a  module_GOCART_ROUTINES_stub.o module_GFS_CORE_SETUP.o module_GFS_INTERNAL_STATE.o module_GFS_INTEGRATE.o module_GFS_GRID_COMP.o
 ar: creating libgfs.a
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/gsm'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/gsm'
 cd atmos/fim           && gmake stub
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/fim'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/fim'
 makefile:54: depend: No such file or directory
 ls -1 fim_internal_state.F90 fim_grid_comp.F90 module_FIM_INTEGRATE.F90 module_DYNAMICS_GRID_COMP.F90 module_DYN_PHY_CPL_COMP.F90 module_PHYSICS_GRID_COMP.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/fim'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/fim'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/fim'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/fim'
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 fim_grid_comp_stub.F90 > fim_grid_comp_stub.f90
 In file included from ../../ESMFVersionDefine.h:16,
                  from fim_grid_comp_stub.F90:5:
@@ -2910,9 +2908,9 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libfimtop.a fim_grid_comp_stub.o
 ar: creating libfimtop.a
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/fim'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/fim'
 cd atmos/post          && gmake stub
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/post'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/post'
 makefile:39: warning: overriding commands for target `post_nmm.o'
 makefile:36: warning: ignoring old commands for target `post_nmm.o'
 makefile:39: warning: overriding commands for target `post_nems_routines.o'
@@ -2930,8 +2928,8 @@ ls -1 post_gfs.F90 post_nmm.F90 post_nems_routines.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/post'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/post'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/post'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/post'
 makefile:39: warning: overriding commands for target `post_nmm.o'
 makefile:36: warning: ignoring old commands for target `post_nmm.o'
 makefile:39: warning: overriding commands for target `post_nems_routines.o'
@@ -2958,16 +2956,16 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libpost.a post_gfs_stub.o post_nmm_stub.o post_nems_routines_stub.o
 ar: creating libpost.a
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos/post'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos/post'
 cd atmos               && gmake
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos'
 makefile:39: depend: No such file or directory
 ls -1 module_ATM_INTERNAL_STATE.F90 module_ATM_GRID_COMP.F90 > Srcfiles
 echo "." > Filepath
 ../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos'
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 module_ATM_INTERNAL_STATE.F90 > module_ATM_INTERNAL_STATE.f90
 In file included from ../ESMFVersionDefine.h:16,
                  from module_ATM_INTERNAL_STATE.F90:2:
@@ -2988,9 +2986,9 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r libatmos.a module_ATM_INTERNAL_STATE.o module_ATM_GRID_COMP.o
 ar: creating libatmos.a
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/atmos'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/atmos'
 cd ENS_Cpl             && gmake
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/ENS_Cpl'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/ENS_Cpl'
 makefile:124: depend: No such file or directory
 /lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8 Lib_ESMFStateAddGetMod.f > Lib_ESMFStateAddGetMod.f90
 In file included from ../ESMFVersionDefine.h:16,
@@ -3063,9 +3061,9 @@ ls -1 Lib_ESMFStateAddGetMod.f90 machine.f90 ENS_Cpl_InternalState_ESMFMod.f90 E
 echo "." > Filepath
 ../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/ENS_Cpl'
-gmake[1]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/ENS_Cpl'
-gmake[2]: Entering directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/ENS_Cpl'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/ENS_Cpl'
+gmake[1]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/ENS_Cpl'
+gmake[2]: Entering directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/ENS_Cpl'
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -O3  -I/usrx/local/esmf-6.3.0rp1/mod/modO/Linux.intel.64.intelmpi.default -I/usrx/local/esmf-6.3.0rp1/include  -I/nems/save/Jun.Wang/nceplibs/nemsio/nemsgfs_newrad/incmod -convert big_endian -assume byterecl -fp-model precise -xAVX -free -r8   -free -c Lib_ESMFStateAddGetMod.f90
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
@@ -3119,9 +3117,9 @@ ifort: warning #10315: specifying -lm before files may supersede the Intel(R) ma
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 ar -r ENS_Cpl.a Lib_ESMFStateAddGetMod.o machine.o ENS_Cpl_InternalState_ESMFMod.o ENS_bcst_global.o ENS_Sto_Per_Scheme_Step2.o DistributeForStep1.o ENS_CplState_ESMFMod.o ENS_Cpl_Run_ESMFMod.o ENS_Cpl_ESMFMod.o ENS_GetParameterFromStateMod.o ENS_CplComp_ESMFMod.o ENS_Sto_Per_Scheme_Step1.o kinds.o peuc.o pran.o prana.o Cal_Sto_Coef.o
 ar: creating ENS_Cpl.a
-gmake[2]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/ENS_Cpl'
-gmake[1]: Leaving directory `/gpfs/td1/emc/nems/save/Weiyu.Yang/svn_nems_trunk/trunk_50245_nemsio/src/ENS_Cpl'
-/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Weiyu.Yang) Fri Jan 23 00:03:03 UTC 2015 r50246 https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=023' module_MEDIATOR.F90 > module_MEDIATOR.f90
+gmake[2]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/ENS_Cpl'
+gmake[1]: Leaving directory `/gpfs/td1/emc/meso/save/Dusan.Jovic/sref_branch_merge/trunk/src/ENS_Cpl'
+/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Dusan.Jovic) Wed Jan 28 21:04:08 UTC 2015 r50622M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=028' module_MEDIATOR.F90 > module_MEDIATOR.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_MEDIATOR.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3131,7 +3129,7 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 rm module_MEDIATOR.f90
-/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Weiyu.Yang) Fri Jan 23 00:03:03 UTC 2015 r50246 https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=023' module_EARTH_GENERIC_COMP.F90 > module_EARTH_GENERIC_COMP.f90
+/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Dusan.Jovic) Wed Jan 28 21:04:08 UTC 2015 r50622M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=028' module_EARTH_GENERIC_COMP.F90 > module_EARTH_GENERIC_COMP.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_EARTH_GENERIC_COMP.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3141,7 +3139,7 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 rm module_EARTH_GENERIC_COMP.f90
-/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Weiyu.Yang) Fri Jan 23 00:03:03 UTC 2015 r50246 https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=023' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
+/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Dusan.Jovic) Wed Jan 28 21:04:08 UTC 2015 r50622M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=028' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_EARTH_INTERNAL_STATE.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3151,7 +3149,7 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 rm module_EARTH_INTERNAL_STATE.f90
-/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Weiyu.Yang) Fri Jan 23 00:03:03 UTC 2015 r50246 https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=023' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
+/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Dusan.Jovic) Wed Jan 28 21:04:08 UTC 2015 r50622M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=028' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_EARTH_GRID_COMP.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3161,7 +3159,7 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 rm module_EARTH_GRID_COMP.f90
-/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Weiyu.Yang) Fri Jan 23 00:03:03 UTC 2015 r50246 https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=023' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
+/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Dusan.Jovic) Wed Jan 28 21:04:08 UTC 2015 r50622M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=028' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_NEMS_INTERNAL_STATE.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3171,7 +3169,7 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 rm module_NEMS_INTERNAL_STATE.f90
-/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Weiyu.Yang) Fri Jan 23 00:03:03 UTC 2015 r50246 https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=023' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
+/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Dusan.Jovic) Wed Jan 28 21:04:08 UTC 2015 r50622M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=028' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from module_NEMS_GRID_COMP.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
@@ -3181,7 +3179,7 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 ifort: warning #10315: specifying -lm before files may supersede the Intel(R) math library and affect performance
 ifort: command line warning #10212: -fp-model precise evaluates in source precision with Fortran.
 rm module_NEMS_GRID_COMP.f90
-/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Weiyu.Yang) Fri Jan 23 00:03:03 UTC 2015 r50246 https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=023' MAIN_NEMS.F90 > MAIN_NEMS.f90
+/lib/cpp -P -traditional -DENABLE_SMP -DTHREAD_2D -DCHNK_RRTM=8  -D'SVN_INFO="(Dusan.Jovic) Wed Jan 28 21:04:08 UTC 2015 r50622M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=028' MAIN_NEMS.F90 > MAIN_NEMS.f90
 In file included from ./ESMFVersionDefine.h:16,
                  from MAIN_NEMS.F90:2:
 ././ESMFVersionLogic.h:20: warning: "ESMF_MAJOR_VERSION" redefined
