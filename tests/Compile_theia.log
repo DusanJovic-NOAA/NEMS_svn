@@ -4,87 +4,225 @@
 + cp ESMFVersionDefine_ESMF_630rAPI.h ESMFVersionDefine.h
 Use an ESMF 6.3.0rp1 series library on theia
 ++ module purge
-+++ /usr/Modules/3.2.10/bin/modulecmd sh purge
-impi/5.0.3.048(26):ERROR:102: Tcl command execution failed: family mpi
-
-intel/15.1.133(78):ERROR:102: Tcl command execution failed: family compiler
-
-++ eval
++++ /apps/lmod/lmod/libexec/lmod bash purge
+++ eval 'LMOD_DEFAULT_MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/apps/modules/modulefamilies/intel";' export 'MODULEPATH;' unset 'CAPTH;' unset 'CPATH;' unset 'GDB_CROSS;' unset 'GDB_SERVERMIC;' unset 'IDB_HOME;' unset 'INCLUDE;' unset 'INTEL_LICENSE_FILE;' unset 'LANGUAGE_TERRITORY;' 'LD_LIBRARY_PATH="/apps/moab/default/lib:/apps/torque/default/lib";' export 'LD_LIBRARY_PATH;' unset 'LIBRARY_PATH;' 'LMOD_DEFAULT_MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles";' export 'LMOD_DEFAULT_MODULEPATH;' unset 'LMOD_FAMILY_COMPILER;' unset 'LOADEDMODULES;' 'MANPATH="/apps/lmod/lmod/share/man::/apps/moab/default/share/man:/apps/torque/default/share/man:/apps/local/man";' export 'MANPATH;' unset 'MIC_LD_LIBRARY_PATH;' unset 'MIC_LIBRARY_PATH;' unset 'MKLROOT;' unset 'MKL_MIC_ARCH;' unset 'MKL_TARGET_ARCH;' 'MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles";' export 'MODULEPATH;' unset 'NCARG_RANGS;' unset 'NCARG_ROOT;' unset 'NETCDF;' unset 'NLSPATH;' 'PATH="/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/apps/moab/default/moab/tools:/apps/moab/default/bin:/apps/moab/default/sbin:/apps/torque/default/bin:/apps/torque/default/sbin:/apps/mam/default/bin:/apps/mam/default/sbin:/apps/local/bin:/apps/local/sbin";' export 'PATH;' unset 'TACC_FAMILY_COMPILER;' unset 'TBBROOT;' unset '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MCxiYXNlTXBhdGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsfSxbImNfcmVidWlsZFRpbWUiXT1mYWxzZSxbImNfc2hvcnRUaW1lIl09ZmFsc2UsZmFtaWx5PXt9LGluYWN0aXZlPXt9LG1UPXt9LG1wYXRoQT17Ii9hcHBzL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eCIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L2FwcHMv";' export '_ModuleTable001_;' '_ModuleTable002_="bW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eDovYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzIixbInZlcnNpb24iXT0yLH0=";' export '_ModuleTable002_;' '_ModuleTable_Sz_="2";' export '_ModuleTable_Sz_;' unset '_ModuleTable003_;'
++++ LMOD_DEFAULT_MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/apps/modules/modulefamilies/intel
++++ export MODULEPATH
++++ unset CAPTH
++++ unset CPATH
++++ unset GDB_CROSS
++++ unset GDB_SERVERMIC
++++ unset IDB_HOME
++++ unset INCLUDE
++++ unset INTEL_LICENSE_FILE
++++ unset LANGUAGE_TERRITORY
++++ LD_LIBRARY_PATH=/apps/moab/default/lib:/apps/torque/default/lib
++++ export LD_LIBRARY_PATH
++++ unset LIBRARY_PATH
++++ LMOD_DEFAULT_MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles
++++ export LMOD_DEFAULT_MODULEPATH
++++ unset LMOD_FAMILY_COMPILER
++++ unset LOADEDMODULES
++++ MANPATH=/apps/lmod/lmod/share/man::/apps/moab/default/share/man:/apps/torque/default/share/man:/apps/local/man
++++ export MANPATH
++++ unset MIC_LD_LIBRARY_PATH
++++ unset MIC_LIBRARY_PATH
++++ unset MKLROOT
++++ unset MKL_MIC_ARCH
++++ unset MKL_TARGET_ARCH
++++ MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles
++++ export MODULEPATH
++++ unset NCARG_RANGS
++++ unset NCARG_ROOT
++++ unset NETCDF
++++ unset NLSPATH
++++ PATH=/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/apps/moab/default/moab/tools:/apps/moab/default/bin:/apps/moab/default/sbin:/apps/torque/default/bin:/apps/torque/default/sbin:/apps/mam/default/bin:/apps/mam/default/sbin:/apps/local/bin:/apps/local/sbin
++++ export PATH
++++ unset TACC_FAMILY_COMPILER
++++ unset TBBROOT
++++ unset _LMFILES_
++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MCxiYXNlTXBhdGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsfSxbImNfcmVidWlsZFRpbWUiXT1mYWxzZSxbImNfc2hvcnRUaW1lIl09ZmFsc2UsZmFtaWx5PXt9LGluYWN0aXZlPXt9LG1UPXt9LG1wYXRoQT17Ii9hcHBzL2xtb2QvbG1vZC9tb2R1bGVmaWxlcy9Db3JlIiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eCIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L2FwcHMv
++++ export _ModuleTable001_
++++ _ModuleTable002_=bW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eDovYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzIixbInZlcnNpb24iXT0yLH0=
++++ export _ModuleTable002_
++++ _ModuleTable_Sz_=2
++++ export _ModuleTable_Sz_
++++ unset _ModuleTable003_
 ++ module load intel/15.1.133 impi/5.0.3.048 netcdf/3.6.3
-+++ /usr/Modules/3.2.10/bin/modulecmd sh load intel/15.1.133 impi/5.0.3.048 netcdf/3.6.3
-intel/15.1.133(78):ERROR:102: Tcl command execution failed: family compiler
++++ /apps/lmod/lmod/libexec/lmod bash load intel/15.1.133 impi/5.0.3.048 netcdf/3.6.3
+++ eval 'LMOD_DEFAULT_MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles";' export 'MODULEPATH;' 'CAPTH="/apps/intel/composer_xe_2015.1.133/mkl/include";' export 'CAPTH;' 'CPATH="/apps/intel/composer_xe_2015.1.133/ipp/include:/apps/intel/composer_xe_2015.1.133/tbb/include";' export 'CPATH;' 'GDB_CROSS="/apps/intel/composer_xe_2015.1.133/debugger/gdb/intel64_mic/py27/bin/gdb-mic";' export 'GDB_CROSS;' 'GDB_SERVERMIC="/apps/intel/composer_xe_2015.1.133/debugger/gdb/target/mic/bin/gdbserver";' export 'GDB_SERVERMIC;' 'IDB_HOME="/apps/intel/composer_xe_2015.1.133/bin/intel64";' export 'IDB_HOME;' 'INCLUDE="/apps/intel/composer_xe_2015.1.133/mkl/include";' export 'INCLUDE;' 'INTEL_LICENSE_FILE="/apps/intel/composer_xe_2015.1.133/licenses";' export 'INTEL_LICENSE_FILE;' 'I_MPI_FABRICS="shm:tmi";' export 'I_MPI_FABRICS;' 'I_MPI_ROOT="/apps/intel/impi/5.0.3.048";' export 'I_MPI_ROOT;' 'I_MPI_TMI_PROVIDER="psm";' export 'I_MPI_TMI_PROVIDER;' 'LANGUAGE_TERRITORY="en_US";' export 'LANGUAGE_TERRITORY;' 'LD_LIBRARY_PATH="/apps/intel/impi/5.0.3.048/intel64/lib:/apps/intel/composer_xe_2015.1.133/mpirt/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/ipp/lib/intel64:/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/tbb/lib/intel64/gcc4.4:/apps/moab/default/lib:/apps/torque/default/lib";' export 'LD_LIBRARY_PATH;' 'LIBRARY_PATH="/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/ipp/intel64:/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/tbb/lib/intel64/gcc4.4";' export 'LIBRARY_PATH;' 'LMOD_DEFAULT_MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles";' export 'LMOD_DEFAULT_MODULEPATH;' 'LMOD_FAMILY_COMPILER="intel";' export 'LMOD_FAMILY_COMPILER;' 'LMOD_FAMILY_MPI="impi";' export 'LMOD_FAMILY_MPI;' 'LOADEDMODULES="intel/15.1.133:impi/5.0.3.048:netcdf/3.6.3";' export 'LOADEDMODULES;' 'MANPATH="/apps/netcdf/3.6.3-intel/share/man:/apps/intel/impi/5.0.3.048/man:/apps/intel/composer_xe_2015.1.133/man/en_US:/apps/intel/composer_xe_2015.1.133/man/en_US:/apps/lmod/lmod/share/man::/apps/moab/default/share/man:/apps/torque/default/share/man:/apps/local/man";' export 'MANPATH;' 'MIC_LD_LIBRARY_PATH="/apps/intel/composer_xe_2015.1.133/mpirt/lib/mic:/apps/intel/composer_xe_2015.1.133/compiler.lib/mic:/apps/intel/composer_xe_2015.1.133/mkl/lib/mic:/apps/intel/composer_xe_2015.1.133/compiler/lib/mic:/apps/intel/composer_xe_2015.1.133/tbb/lib/mic";' export 'MIC_LD_LIBRARY_PATH;' 'MIC_LIBRARY_PATH="/apps/intel/composer_xe_2015.1.133/tbb/lib/mic";' export 'MIC_LIBRARY_PATH;' 'MKLROOT="/apps/intel/composer_xe_2015.1.133/mkl";' export 'MKLROOT;' 'MKL_MIC_ARCH="mic";' export 'MKL_MIC_ARCH;' 'MKL_TARGET_ARCH="intel64";' export 'MKL_TARGET_ARCH;' 'MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi";' export 'MODULEPATH;' 'NETCDF="/apps/netcdf/3.6.3-intel";' export 'NETCDF;' 'NLSPATH="/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/ipp/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/debugger/gdb/intel64/py27/share/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/debugger/intel64/locale/%l_%t/%N";' export 'NLSPATH;' 'PATH="/apps/netcdf/3.6.3-intel/bin:/apps/intel/impi/5.0.3.048/intel64/bin:/apps/intel/composer_xe_2015.1.133/mpirt/bin/intel64:/apps/intel/composer_xe_2015.1.133/bin/intel64:/apps/intel/composer_xe_2015.1.133/debugger/gdb/intel64_mic/py27/py27/bin:/apps/intel/composer_xe_2015.1.133/debugger/gdb/intel64/py27/bin:/apps/intel/composer_xe_2015.1.133/debugger/gui/intel64:/apps/intel/composer_xe_2015.1.133/bin/intel64_mic:/apps/intel/composer_xe_2015.1.133/bin/intel64:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/apps/moab/default/moab/tools:/apps/moab/default/bin:/apps/moab/default/sbin:/apps/torque/default/bin:/apps/torque/default/sbin:/apps/mam/default/bin:/apps/mam/default/sbin:/apps/local/bin:/apps/local/sbin";' export 'PATH;' 'TACC_FAMILY_COMPILER="intel";' export 'TACC_FAMILY_COMPILER;' 'TACC_FAMILY_MPI="impi";' export 'TACC_FAMILY_MPI;' 'TBBROOT="/apps/intel/composer_xe_2015.1.133/tbb";' export 'TBBROOT;' '_LMFILES_="/apps/modules/modulefiles/intel/15.1.133:/apps/modules/modulefamilies/intel/impi/5.0.3.048:/apps/modules/modulefamilies/intel/netcdf/3.6.3";' export '_LMFILES_;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MyxiYXNlTXBhdGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsfSxbImNfcmVidWlsZFRpbWUiXT1mYWxzZSxbImNfc2hvcnRUaW1lIl09ZmFsc2UsZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIixbIm1waSJdPSJpbXBpIix9LGluYWN0aXZlPXt9LG1UPXtpbXBpPXtbIkZOIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwvaW1waS81LjAuMy4wNDgiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJpbXBpLzUuMC4zLjA0OCIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9";' export '_ModuleTable001_;' '_ModuleTable002_="LFsic2hvcnQiXT0iaW1waSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGludGVsPXtbIkZOIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMvaW50ZWwvMTUuMS4xMzMiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJpbnRlbC8xNS4xLjEzMyIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iaW50ZWwiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxuZXRjZGY9e1siRk4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9uZXRjZGYvMy42LjMiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJuZXRjZGYvMy42LjMiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInNob3J0Il09Im5ldGNkZiIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LH0sbXBh";' export '_ModuleTable002_;' '_ModuleTable003_="dGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsX2ltcGkiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eDovYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzIixbInZlcnNpb24iXT0yLH0=";' export '_ModuleTable003_;' '_ModuleTable_Sz_="3";' export '_ModuleTable_Sz_;'
++++ LMOD_DEFAULT_MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles
++++ export LMOD_DEFAULT_MODULEPATH
++++ MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles
++++ export MODULEPATH
++++ CAPTH=/apps/intel/composer_xe_2015.1.133/mkl/include
++++ export CAPTH
++++ CPATH=/apps/intel/composer_xe_2015.1.133/ipp/include:/apps/intel/composer_xe_2015.1.133/tbb/include
++++ export CPATH
++++ GDB_CROSS=/apps/intel/composer_xe_2015.1.133/debugger/gdb/intel64_mic/py27/bin/gdb-mic
++++ export GDB_CROSS
++++ GDB_SERVERMIC=/apps/intel/composer_xe_2015.1.133/debugger/gdb/target/mic/bin/gdbserver
++++ export GDB_SERVERMIC
++++ IDB_HOME=/apps/intel/composer_xe_2015.1.133/bin/intel64
++++ export IDB_HOME
++++ INCLUDE=/apps/intel/composer_xe_2015.1.133/mkl/include
++++ export INCLUDE
++++ INTEL_LICENSE_FILE=/apps/intel/composer_xe_2015.1.133/licenses
++++ export INTEL_LICENSE_FILE
++++ I_MPI_FABRICS=shm:tmi
++++ export I_MPI_FABRICS
++++ I_MPI_ROOT=/apps/intel/impi/5.0.3.048
++++ export I_MPI_ROOT
++++ I_MPI_TMI_PROVIDER=psm
++++ export I_MPI_TMI_PROVIDER
++++ LANGUAGE_TERRITORY=en_US
++++ export LANGUAGE_TERRITORY
++++ LD_LIBRARY_PATH=/apps/intel/impi/5.0.3.048/intel64/lib:/apps/intel/composer_xe_2015.1.133/mpirt/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/ipp/lib/intel64:/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/tbb/lib/intel64/gcc4.4:/apps/moab/default/lib:/apps/torque/default/lib
++++ export LD_LIBRARY_PATH
++++ LIBRARY_PATH=/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/ipp/intel64:/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64:/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64:/apps/intel/composer_xe_2015.1.133/tbb/lib/intel64/gcc4.4
++++ export LIBRARY_PATH
++++ LMOD_DEFAULT_MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles
++++ export LMOD_DEFAULT_MODULEPATH
++++ LMOD_FAMILY_COMPILER=intel
++++ export LMOD_FAMILY_COMPILER
++++ LMOD_FAMILY_MPI=impi
++++ export LMOD_FAMILY_MPI
++++ LOADEDMODULES=intel/15.1.133:impi/5.0.3.048:netcdf/3.6.3
++++ export LOADEDMODULES
++++ MANPATH=/apps/netcdf/3.6.3-intel/share/man:/apps/intel/impi/5.0.3.048/man:/apps/intel/composer_xe_2015.1.133/man/en_US:/apps/intel/composer_xe_2015.1.133/man/en_US:/apps/lmod/lmod/share/man::/apps/moab/default/share/man:/apps/torque/default/share/man:/apps/local/man
++++ export MANPATH
++++ MIC_LD_LIBRARY_PATH=/apps/intel/composer_xe_2015.1.133/mpirt/lib/mic:/apps/intel/composer_xe_2015.1.133/compiler.lib/mic:/apps/intel/composer_xe_2015.1.133/mkl/lib/mic:/apps/intel/composer_xe_2015.1.133/compiler/lib/mic:/apps/intel/composer_xe_2015.1.133/tbb/lib/mic
++++ export MIC_LD_LIBRARY_PATH
++++ MIC_LIBRARY_PATH=/apps/intel/composer_xe_2015.1.133/tbb/lib/mic
++++ export MIC_LIBRARY_PATH
++++ MKLROOT=/apps/intel/composer_xe_2015.1.133/mkl
++++ export MKLROOT
++++ MKL_MIC_ARCH=mic
++++ export MKL_MIC_ARCH
++++ MKL_TARGET_ARCH=intel64
++++ export MKL_TARGET_ARCH
++++ MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi
++++ export MODULEPATH
++++ NETCDF=/apps/netcdf/3.6.3-intel
++++ export NETCDF
++++ NLSPATH=/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/ipp/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/debugger/gdb/intel64/py27/share/locale/%l_%t/%N:/apps/intel/composer_xe_2015.1.133/debugger/intel64/locale/%l_%t/%N
++++ export NLSPATH
++++ PATH=/apps/netcdf/3.6.3-intel/bin:/apps/intel/impi/5.0.3.048/intel64/bin:/apps/intel/composer_xe_2015.1.133/mpirt/bin/intel64:/apps/intel/composer_xe_2015.1.133/bin/intel64:/apps/intel/composer_xe_2015.1.133/debugger/gdb/intel64_mic/py27/py27/bin:/apps/intel/composer_xe_2015.1.133/debugger/gdb/intel64/py27/bin:/apps/intel/composer_xe_2015.1.133/debugger/gui/intel64:/apps/intel/composer_xe_2015.1.133/bin/intel64_mic:/apps/intel/composer_xe_2015.1.133/bin/intel64:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/apps/moab/default/moab/tools:/apps/moab/default/bin:/apps/moab/default/sbin:/apps/torque/default/bin:/apps/torque/default/sbin:/apps/mam/default/bin:/apps/mam/default/sbin:/apps/local/bin:/apps/local/sbin
++++ export PATH
++++ TACC_FAMILY_COMPILER=intel
++++ export TACC_FAMILY_COMPILER
++++ TACC_FAMILY_MPI=impi
++++ export TACC_FAMILY_MPI
++++ TBBROOT=/apps/intel/composer_xe_2015.1.133/tbb
++++ export TBBROOT
++++ _LMFILES_=/apps/modules/modulefiles/intel/15.1.133:/apps/modules/modulefamilies/intel/impi/5.0.3.048:/apps/modules/modulefamilies/intel/netcdf/3.6.3
++++ export _LMFILES_
++++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MyxiYXNlTXBhdGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsfSxbImNfcmVidWlsZFRpbWUiXT1mYWxzZSxbImNfc2hvcnRUaW1lIl09ZmFsc2UsZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIixbIm1waSJdPSJpbXBpIix9LGluYWN0aXZlPXt9LG1UPXtpbXBpPXtbIkZOIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwvaW1waS81LjAuMy4wNDgiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJpbXBpLzUuMC4zLjA0OCIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9
++++ export _ModuleTable001_
++++ _ModuleTable002_=LFsic2hvcnQiXT0iaW1waSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGludGVsPXtbIkZOIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMvaW50ZWwvMTUuMS4xMzMiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJpbnRlbC8xNS4xLjEzMyIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iaW50ZWwiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxuZXRjZGY9e1siRk4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9uZXRjZGYvMy42LjMiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJuZXRjZGYvMy42LjMiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInNob3J0Il09Im5ldGNkZiIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LH0sbXBh
++++ export _ModuleTable002_
++++ _ModuleTable003_=dGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsX2ltcGkiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eDovYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzIixbInZlcnNpb24iXT0yLH0=
++++ export _ModuleTable003_
++++ _ModuleTable_Sz_=3
++++ export _ModuleTable_Sz_
+++ /apps/lmod/lmod/libexec/lmod bash list
++ eval 'LMOD_DEFAULT_MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi";' export 'MODULEPATH;' echo ''\'''\'';' echo ''\''Currently'\''' ''\''Loaded'\''' ''\''Modules:'\'';' echo ''\'''\''' ''\'''\''' ''\''1)'\''' ''\''intel/15.1.133'\''' ''\'''\''' ''\'''\''' ''\''2)'\''' ''\''impi/5.0.3.048'\''' ''\'''\''' ''\'''\''' ''\''3)'\''' ''\''netcdf/3.6.3'\'';' echo ''\'''\'';' echo ''\'''\'';' echo ''\'''\'';' echo ''\'''\'';' 'LMOD_DEFAULT_MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles";' export 'LMOD_DEFAULT_MODULEPATH;' 'MODULEPATH="/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi";' export 'MODULEPATH;' '_ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MyxiYXNlTXBhdGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsfSxbImNfcmVidWlsZFRpbWUiXT1mYWxzZSxbImNfc2hvcnRUaW1lIl09ZmFsc2UsZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIixbIm1waSJdPSJpbXBpIix9LGluYWN0aXZlPXt9LG1UPXtpbXBpPXtbIkZOIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwvaW1waS81LjAuMy4wNDgiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJpbXBpLzUuMC4zLjA0OCIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9";' export '_ModuleTable001_;' '_ModuleTable002_="LFsic2hvcnQiXT0iaW1waSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGludGVsPXtbIkZOIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMvaW50ZWwvMTUuMS4xMzMiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJpbnRlbC8xNS4xLjEzMyIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iaW50ZWwiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxuZXRjZGY9e1siRk4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9uZXRjZGYvMy42LjMiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJuZXRjZGYvMy42LjMiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInNob3J0Il09Im5ldGNkZiIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LH0sbXBh";' export '_ModuleTable002_;' '_ModuleTable003_="dGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsX2ltcGkiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eDovYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzIixbInZlcnNpb24iXT0yLH0=";' export '_ModuleTable003_;' '_ModuleTable_Sz_="3";' export '_ModuleTable_Sz_;'
+++ LMOD_DEFAULT_MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles
+++ export LMOD_DEFAULT_MODULEPATH
+++ MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi
+++ export MODULEPATH
+++ echo ''
 
-impi/5.0.3.048(26):ERROR:102: Tcl command execution failed: family mpi
-
-++ eval
-++ /usr/Modules/3.2.10/bin/modulecmd sh list
-Currently Loaded Modulefiles:
+++ echo Currently Loaded Modules:
+Currently Loaded Modules:
+++ echo '' '' '1)' intel/15.1.133 '' '' '2)' impi/5.0.3.048 '' '' '3)' netcdf/3.6.3
   1) intel/15.1.133   2) impi/5.0.3.048   3) netcdf/3.6.3
-+ eval
+++ echo ''
+
+++ echo ''
+
+++ echo ''
+
+++ echo ''
+
+++ LMOD_DEFAULT_MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles
+++ export LMOD_DEFAULT_MODULEPATH
+++ MODULEPATH=/apps/lmod/lmod/modulefiles/Core:/apps/modules/modulefiles/Linux:/apps/modules/modulefiles:/apps/modules/modulefamilies/intel:/apps/modules/modulefamilies/intel_impi
+++ export MODULEPATH
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJhY3RpdmVTaXplIl09MyxiYXNlTXBhdGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsfSxbImNfcmVidWlsZFRpbWUiXT1mYWxzZSxbImNfc2hvcnRUaW1lIl09ZmFsc2UsZmFtaWx5PXtbImNvbXBpbGVyIl09ImludGVsIixbIm1waSJdPSJpbXBpIix9LGluYWN0aXZlPXt9LG1UPXtpbXBpPXtbIkZOIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwvaW1waS81LjAuMy4wNDgiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJpbXBpLzUuMC4zLjA0OCIsWyJsb2FkT3JkZXIiXT0yLHByb3BUPXt9
+++ export _ModuleTable001_
+++ _ModuleTable002_=LFsic2hvcnQiXT0iaW1waSIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LGludGVsPXtbIkZOIl09Ii9hcHBzL21vZHVsZXMvbW9kdWxlZmlsZXMvaW50ZWwvMTUuMS4xMzMiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJpbnRlbC8xNS4xLjEzMyIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic2hvcnQiXT0iaW50ZWwiLFsic3RhdHVzIl09ImFjdGl2ZSIsfSxuZXRjZGY9e1siRk4iXT0iL2FwcHMvbW9kdWxlcy9tb2R1bGVmYW1pbGllcy9pbnRlbC9uZXRjZGYvMy42LjMiLFsiZGVmYXVsdCJdPTAsWyJmdWxsTmFtZSJdPSJuZXRjZGYvMy42LjMiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInNob3J0Il09Im5ldGNkZiIsWyJzdGF0dXMiXT0iYWN0aXZlIix9LH0sbXBh
+++ export _ModuleTable002_
+++ _ModuleTable003_=dGhBPXsiL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmUiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzL0xpbnV4IiwiL2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcyIsIi9hcHBzL21vZHVsZXMvbW9kdWxlZmFtaWxpZXMvaW50ZWwiLCIvYXBwcy9tb2R1bGVzL21vZHVsZWZhbWlsaWVzL2ludGVsX2ltcGkiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL2FwcHMvbG1vZC9sbW9kL21vZHVsZWZpbGVzL0NvcmU6L2FwcHMvbW9kdWxlcy9tb2R1bGVmaWxlcy9MaW51eDovYXBwcy9tb2R1bGVzL21vZHVsZWZpbGVzIixbInZlcnNpb24iXT0yLH0=
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
 cd atmos               && gmake clean
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
 makefile:39: depend: No such file or directory
 ls -1 module_ATM_INTERNAL_STATE.F90 module_ATM_GRID_COMP.F90 > Srcfiles
 echo "." > Filepath
 ../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
 cd share        && gmake clean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/share'
 makefile:43: depend: No such file or directory
 ls -1 module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 module_CPLFIELDS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/share'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/share'
 rm -f libshare.a *.f90 *.o *.mod *.lst *.a lm map depend
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/share'
 cd phys         && gmake clean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/phys'
 makefile:210: depend: No such file or directory
 ls -1 module_BL_GFSPBL.F90 module_BL_GFSPBLHUR.F90 module_BL_MYJPBL.F90 module_CU_BMJ.F90 module_CU_SAS.F90 module_CU_SASHUR.F90 module_LS_LISS.F90 module_LS_NOAHLSM.F90 module_MP_ETANEW.F90 module_MP_FER_HIRES.F90 module_mp_thompson.F90 module_mp_radar.F90 module_MP_GFS.F90 module_MP_WSM6.F90 module_RA_GFDL.F90 module_RA_RRTM.F90 module_SF_JSFC.F90 module_SF_GFDL.F90 module_SF_URBAN.F90 machine.f physparam.f physcons.f funcphys.f module_nst_parameters.f module_nst_water_prop.f module_nst_model.f calpreciptype.f gocart_tracer_config_stub.f grrad_nmmb.f radiation_astronomy_nmmb.f radiation_aerosols_nmmb.f radiation_gases_nmmb.f radiation_clouds_nmmb.f radiation_surface_nmmb.f rad_initialize_nmmb.f radlw_param_nmmb.f radlw_datatb_nmmb.f radlw_main_nmmb.f radsw_param_nmmb.f radsw_datatb_nmmb.f radsw_main_nmmb.f radiation_astronomy_gfs.f radiation_aerosols_gfs.f radiation_gases_gfs.f radiation_clouds_gfs.f radiation_surface_gfs.f precpd_nmmb.f iounitdef.f ozne_def.f progtm_module.f date_def.f rascnvv2.f namelist_soilveg.f module_bfmicrophysics.f mersenne_twister.f tracer_const_h.f gfs_phy_tracer_config.f rad_initialize.f radlw_param.f radlw_datatb.f radlw_main.f radsw_param.f radsw_datatb.f radsw_main.f radiation_astronomy.f radiation_aerosols.f radiation_gases.f radiation_clouds.f radiation_surface.f grrad.f ozphys.f ozinterp.f sfcsub.f gbphys.f dcyc2.f dcyc2.pre.rad.f set_soilveg.f sfc_drv.f sfc_land.f progt2.f sfc_sice.f sfc_ocean.f sfc_nst.f sfc_diff.f sfc_diag.f sflx.f moninp.f moninp1.f moninq.f moninedmf.f mfpbl.f gwdps.f gwdc.f rayleigh_damp.f rayleigh_damp_mesopause.f sascnv.f sascnvn.f cnvc90.f tridi2t3.f shalcv.f shalcv_opr.f shalcnv.f lrgsclr.f gscond.f gscondp.f precpd.f precpdp.f mstadb.f mstadbtn.f mstcnv.f get_prs.f gsmddrive.f co2hc.f idea_solar_heating.f idea_tracer.f h2oc.f h2ohdc.f efield.f ideaca.f idea_co2.f idea_h2o.f idea_ion.f idea_o2_o3.f idea_dissipation.f idea_phys.f num_parthds.F > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/phys'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/phys'
 rm -f libphys.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/phys'
 cd nmm          && gmake clean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/nmm'
 makefile:89: depend: No such file or directory
 ls -1 module_BGRID_INTERP.F90 module_CLOCKTIMES.F90 module_CONTROL.F90 module_CONVECTION.F90 module_DERIVED_TYPES.F90 module_DIAGNOSE.F90 module_DIGITAL_FILTER_NMM.F90 module_DM_PARALLEL.F90 module_DOMAIN_GRID_COMP.F90 module_DOMAIN_INTERNAL_STATE.F90 module_DYNAMICS_ROUTINES.F90 module_EXCHANGE.F90 module_FLTBNDS.F90 module_GET_CONFIG.F90 module_GET_CONFIG_WRITE.F90 module_GWD.F90 module_H_TO_V.F90 module_INIT_READ_BIN.F90 module_INIT_READ_NEMSIO.F90 module_MICROPHYSICS.F90 module_MY_DOMAIN_SPECS.F90 module_NESTING.F90 module_NMM_GRID_COMP.F90 module_NMM_INTEGRATE.F90 module_NMM_INTERNAL_STATE.F90 module_OUTPUT.F90 module_PARENT_CHILD_CPL_COMP.F90 module_PRECIP_ADJUST.F90 module_RADIATION.F90 module_SOLVER_GRID_COMP.F90 module_SOLVER_INTERNAL_STATE.F90 module_TIMESERIES.F90 module_TURBULENCE.F90 module_VARS.F90 module_VARS_STATE.F90 module_WRITE_GRID_COMP.F90 module_WRITE_INTERNAL_STATE.F90 module_WRITE_ROUTINES.F90 n_namelist_physics_def.f n_layout1.f n_resol_def.f n_compns_physics.f n_mpi_def.f n_module_gfs_mpi_def.f n_mpi_quit.f > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/nmm'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/nmm'
 rm -f libnmm.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/nmm'
 cd io           && gmake clean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/io'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/io'
 makefile:36: depend: No such file or directory
 ls -1 module_include_io.F90 module_io_mpi_def.F90 module_GFS_WRITE.F90 module_WRITE_INTERNAL_STATE_GFS.F90 module_GET_CONFIG_WRITE_GFS.F90 module_WRITE_ROUTINES_GFS.F90 module_WRITE_GRID_COMP_GFS.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/io'
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/io'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/io'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/io'
 rm -f libio.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/io'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/io'
 cd gsm       && gmake clean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm'
 makefile:91: depend: No such file or directory
 ls -1 module_GFS_CORE_SETUP.F90 module_GFS_INTERNAL_STATE.F90 module_GFS_INTEGRATE.F90 module_GFS_GRID_COMP.F90  > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm'
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm'
 cd libutil && gmake clean && cd ..
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/libutil'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/libutil'
 ../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
 makefile:42: warning: ignoring old commands for target `.F90.f90'
 makefile:72: depend: No such file or directory
@@ -104,14 +242,14 @@ ls -1 atmos_phy_chem_cpl_comp_mod_stub.f90 atmos_chem_phy_cpl_comp_mod_stub.f90 
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/libutil'
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/libutil'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/libutil'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/libutil'
 ../../../conf/make.rules:5: warning: overriding commands for target `.F90.f90'
 makefile:42: warning: ignoring old commands for target `.F90.f90'
 rm -f gfs_libutil.a *.f90 *.o *.mod *.lst lm map depend
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/libutil'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/libutil'
 cd dyn && gmake clean && cd ..
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/dyn'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/dyn'
 makefile:287: warning: overriding commands for target `gfs_dyn_physcons.o'
 makefile:254: warning: ignoring old commands for target `gfs_dyn_physcons.o'
 makefile:290: warning: overriding commands for target `sigio_module.o'
@@ -155,8 +293,8 @@ ls -1 num_parthds.f gfs_dynamics_err_msg_mod.f gfs_dynamics_namelist_mod.f gfs_d
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/dyn'
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/dyn'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/dyn'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/dyn'
 makefile:287: warning: overriding commands for target `gfs_dyn_physcons.o'
 makefile:254: warning: ignoring old commands for target `gfs_dyn_physcons.o'
 makefile:290: warning: overriding commands for target `sigio_module.o'
@@ -196,9 +334,9 @@ makefile:254: warning: ignoring old commands for target `gfs_dynamics_grid_comp_
 ../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
 makefile:280: warning: ignoring old commands for target `.f.f90'
 rm -f gfs_dynamics.a *.o *.mod *.lst *.f90 lm map depend
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/dyn'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/dyn'
 cd phys && gmake clean && cd ..
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/phys'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/phys'
 makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
 makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
 makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
@@ -244,8 +382,8 @@ ls -1 glats_physics.f gcycle.f do_physics_one_step.f get_lats_node_shuff_r_fix.f
 echo "." > Filepath
 ../../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/phys'
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/phys'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/phys'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/phys'
 makefile:125: warning: overriding commands for target `gbphys_adv_hyb_gc.o'
 makefile:117: warning: ignoring old commands for target `gbphys_adv_hyb_gc.o'
 makefile:128: warning: overriding commands for target `gbphys_adv_hyb_gc_h.o'
@@ -287,32 +425,32 @@ makefile:113: warning: ignoring old commands for target `gfs_physics_err_msg_mod
 ../../../conf/make.rules:8: warning: overriding commands for target `.f.f90'
 makefile:106: warning: ignoring old commands for target `.f.f90'
 rm -f gfs_physics.a *.o *.mod *.lst *.f90 lm map depend
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm/phys'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm/phys'
 rm -f libgfs.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm'
 cd fim          && gmake clean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim'
 makefile:54: depend: No such file or directory
 ls -1 fim_internal_state.F90 fim_grid_comp.F90 module_FIM_INTEGRATE.F90 module_DYNAMICS_GRID_COMP.F90 module_DYN_PHY_CPL_COMP.F90 module_PHYSICS_GRID_COMP.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim'
 rm -f libfimtop.a *.o *.mod *.f90 *.lst lm map depend
 (cd FIMsrc && ./makefim clean)
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim/FIMsrc'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim/FIMsrc'
 rm -f -rf ../FIMsrc_* macros.make
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim/FIMsrc'
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim/FIMsrc'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim'
 cd gen          && gmake clean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gen'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gen'
 makefile:31: warning: overriding commands for target `module_GEN_INTERNAL_STATE.o'
 makefile:28: warning: ignoring old commands for target `module_GEN_INTERNAL_STATE.o'
 rm -f libgen.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gen'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gen'
 cd post         && gmake clean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/post'
 makefile:39: warning: overriding commands for target `post_nmm.o'
 makefile:36: warning: ignoring old commands for target `post_nmm.o'
 makefile:39: warning: overriding commands for target `post_nems_routines.o'
@@ -330,8 +468,8 @@ ls -1 post_gfs.F90 post_nmm.F90 post_nems_routines.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/post'
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/post'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/post'
 makefile:39: warning: overriding commands for target `post_nmm.o'
 makefile:36: warning: ignoring old commands for target `post_nmm.o'
 makefile:39: warning: overriding commands for target `post_nems_routines.o'
@@ -345,11 +483,11 @@ makefile:39: warning: ignoring old commands for target `post_gfs_stub.o'
 makefile:45: warning: overriding commands for target `post_nmm_stub.o'
 makefile:42: warning: ignoring old commands for target `post_nmm_stub.o'
 rm -f libpost.a *.f90 *.o *.mod *.lst lm map depend
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/post'
 rm -f libatmos.a *.f90 *.o *.mod *.lst depend
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
 cd ENS_Cpl             && gmake clean
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
 makefile:124: depend: No such file or directory
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D Lib_ESMFStateAddGetMod.f > Lib_ESMFStateAddGetMod.f90
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D machine.f > machine.f90
@@ -372,41 +510,41 @@ ls -1 Lib_ESMFStateAddGetMod.f90 machine.f90 ENS_Cpl_InternalState_ESMFMod.f90 E
 echo "." > Filepath
 ../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
 rm -f ENS_Cpl.a *.f90 *.o *.mod *.lst lm map depend
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
 cd chem                && gmake clean GOCART_MODE=full
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem'
 cd gocart/src   && gmake -f GNUmakefile realclean
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
-GNUmakefile:14: /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Config/ESMA_base.mk: No such file or directory
-GNUmakefile:15: /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk: No such file or directory
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src'
+GNUmakefile:14: /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Config/ESMA_base.mk: No such file or directory
+GNUmakefile:15: /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Config/ESMA_arch.mk: No such file or directory
 gmake -C Config esma_install
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Config'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Config'
 ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 GNUmakefile:35: - Node not know, disabling build environment check
 ifort -c -DsysLinux -DESMA64   -DHAVE_SHMEM -DMAPL_IMPORT_HAS_PRECISION -DMAPL_EXPORT_HAS_PRECISION  -I/apps/esmf/6.3.0rp1/intel/intelmpi/include  -I/apps/esmf/6.3.0rp1/intel/intelmpi/mod/modO/Linux.intel.64.intelmpi.default   -I/apps/esmf/6.3.0rp1/intel/intelmpi/include  -I/apps/esmf/6.3.0rp1/intel/intelmpi/mod/modO/Linux.intel.64.intelmpi.default   -r8    -fPIC -fp-model source  -align dcommons fdp.f90
-/bin/mkdir -p /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/lib /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/include \
-		 /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/etc /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/doc /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config
-/bin/cat ESMA_base.mk   > /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/ESMA_base.mk
-/bin/cat ESMA_arch.mk   > /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/ESMA_arch.mk
-/bin/cat ESMA_post.mk   > /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/ESMA_post.mk
-/bin/cat GMAO_base.mk  > /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/GMAO_base.mk
-echo "I = -I"              > /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
-echo "LIB_SDF = /apps/netcdf/4.3.0-intel/lib/libnetcdff.a /apps/netcdf/4.3.0-intel/lib/libnetcdf.a /apps/hdf5/1.8.14-intel/lib/libhdf5_hl.a /apps/hdf5/1.8.14-intel/lib/libhdf5.a" >> /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
-/bin/cat NCEP_base.mk         >> /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
-echo "BASEDIR: /usr/local" > /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/etc/BASEDIR.rc
-/bin/cp -f -p protex /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../src/g5_modules /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../src/g5_modules.sh  mklpath.pl endiantest.pl OScheck.pl esma_timer.sh esma_tgraph.pl /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin
-/bin/cp -f /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../src/Assert.pl /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin/Assert
-./install_fdp ./fdp /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin/fdp
-./install_fdp: installing ./fdp as /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/bin/fdp (module is fdp.mod)
-./CVSTAG_install.pl /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/etc
-./OScheck.pl -q -cp /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux/etc
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Config'
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
-gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
-/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
+/bin/mkdir -p /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/lib /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/include \
+		 /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/etc /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/doc /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config
+/bin/cat ESMA_base.mk   > /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/ESMA_base.mk
+/bin/cat ESMA_arch.mk   > /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/ESMA_arch.mk
+/bin/cat ESMA_post.mk   > /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/ESMA_post.mk
+/bin/cat GMAO_base.mk  > /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/GMAO_base.mk
+echo "I = -I"              > /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+echo "LIB_SDF = /apps/netcdf/4.3.0-intel/lib/libnetcdff.a /apps/netcdf/4.3.0-intel/lib/libnetcdf.a /apps/hdf5/1.8.14-intel/lib/libhdf5_hl.a /apps/hdf5/1.8.14-intel/lib/libhdf5.a" >> /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+/bin/cat NCEP_base.mk         >> /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/Config/NCEP_base.mk
+echo "BASEDIR: /usr/local" > /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/etc/BASEDIR.rc
+/bin/cp -f -p protex /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../src/g5_modules /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../src/g5_modules.sh  mklpath.pl endiantest.pl OScheck.pl esma_timer.sh esma_tgraph.pl /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin
+/bin/cp -f /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../src/Assert.pl /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin/Assert
+./install_fdp ./fdp /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin/fdp
+./install_fdp: installing ./fdp as /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/bin/fdp (module is fdp.mod)
+./CVSTAG_install.pl /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/etc
+./OScheck.pl -q -cp /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux/etc
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Config'
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src'
+gmake[2]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src'
+/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Config/ESMA_arch.mk:64: BASEDIR is undefined --- this will cause an error in the next release!
 for d in Config GMAO_Shared Components Applications; \
 	  do			 \
 	      echo Making esma_distclean in $d	;\
@@ -416,138 +554,138 @@ for d in Config GMAO_Shared Components Applications; \
 Making esma_distclean in Config
 site: Undefined variable.
 site: Undefined variable.
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Config'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Config'
 GNUmakefile:35: - Node not know, disabling build environment check
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Config'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Config'
 Making esma_distclean in GMAO_Shared
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu
-gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu
+gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd] 
 gmake -C mpi0 distclean
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
-gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu/mpi0'
+gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_mpeu'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio
-gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio
+gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
 /bin/rm -f -r *~ *.[aoxd] *.mod *.pyf *.so r4 r8
-gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
+gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/GMAO_gfio'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio
-gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/MAPL_cfio
+gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
 /bin/rm -f -r *~ *.[aoxd] *.[Mm][Oo][Dd] r4 r8 
-gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
+gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/MAPL_cfio'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base
-gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/MAPL_Base
+gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
 GNUmakefile:168: warning: overriding commands for target `lib'
 GNUmakefile:165: warning: ignoring old commands for target `lib'
 gmake local_esma_distclean
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
 GNUmakefile:168: warning: overriding commands for target `lib'
 GNUmakefile:165: warning: ignoring old commands for target `lib'
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd] *___.f90
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
-gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
+gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/MAPL_Base'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base
-gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/Chem_Base
+gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/Chem_Base'
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd] *.xx
-gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Base'
+gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/Chem_Base'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared
-gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/Chem_Shared
+gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
 /bin/rm -f *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/GMAO_Shared'
+gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared/Chem_Shared'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/GMAO_Shared'
 Making esma_distclean in Components
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp
-gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp
+gmake[4]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
 /bin/rm -f O3_ExportSpec___.h O3_GetPointer___.h O3_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/O3_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
 /bin/rm -f CO_ExportSpec___.h CO_GetPointer___.h CO_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CO_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
 /bin/rm -f CO2_ExportSpec___.h CO2_GetPointer___.h CO2_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CO2_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
 /bin/rm -f CFC_ExportSpec___.h CFC_GetPointer___.h CFC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CFC_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
 /bin/rm -f DU_ExportSpec___.h DU_GetPointer___.h DU_History___.rc DU_DeclarePointer___.h *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/DU_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
 /bin/rm -f SS_ExportSpec___.h SS_GetPointer___.h SS_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/SS_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
 /bin/rm -f BC_ExportSpec___.h BC_GetPointer___.h BC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/BC_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
 /bin/rm -f OC_ExportSpec___.h OC_GetPointer___.h OC_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/OC_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
 /bin/rm -f SU_ExportSpec___.h SU_GetPointer___.h SU_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/SU_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
 /bin/rm -f Rn_ExportSpec___.h Rn_GetPointer___.h Rn_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/Rn_GridComp'
 
-Making esma_distclean in /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp'
+Making esma_distclean in /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp'
 /bin/rm -f CH4_ExportSpec___.h CH4_GetPointer___.h CH4_History___.rc *~ *.[aoxd] *.[Mm][Oo][Dd]
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp/CH4_GridComp'
 gmake local_esma_distclean
-gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
+gmake[5]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp'
 /bin/rm -f -f Tests/ExtData Tests/*_Registry.rc Tests/*_GridComp.rc 
 /bin/rm -f -f *~ *.[aoxd] *.[Mm][Oo][Dd] *___.[fF]* 
-gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
-gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components/GOCART_GridComp'
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Components'
+gmake[5]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp'
+gmake[4]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components/GOCART_GridComp'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Components'
 Making esma_distclean in Applications
-gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Applications'
-gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/Applications'
-/bin/rm -f -r /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Config 
-/bin/rm -f -r /scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src/../Linux
-gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem/gocart/src'
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/chem'
+gmake[3]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Applications'
+gmake[3]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/Applications'
+/bin/rm -f -r /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Config 
+/bin/rm -f -r /scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src/../Linux
+gmake[2]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem/gocart/src'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/chem'
 rm -f *.f90 *.lst *.o *.mod lm map ../exe/NEMS.x
 cd atmos/share         && gmake -j2
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/share'
 makefile:43: depend: No such file or directory
 ls -1 module_ERR_MSG.F90 module_INCLUDE.F90 module_CONSTANTS.F90 module_CPLFIELDS.F90 check_esmf_pet.F90 ffsync.F90 idea_composition.f > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/share'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/share'
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_ERR_MSG.F90 > module_ERR_MSG.f90
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_INCLUDE.F90 > module_INCLUDE.f90
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_CONSTANTS.F90 > module_CONSTANTS.f90
@@ -563,16 +701,16 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict  -c module_CONSTANTS.f90
 ar -r libshare.a module_ERR_MSG.o module_INCLUDE.o module_CONSTANTS.o module_CPLFIELDS.o check_esmf_pet.o ffsync.o  idea_composition.o
 ar: creating libshare.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/share'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/share'
 cd atmos/phys          && gmake -j2 gocart_stub
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/phys'
 makefile:210: depend: No such file or directory
 ls -1 module_BL_GFSPBL.F90 module_BL_GFSPBLHUR.F90 module_BL_MYJPBL.F90 module_CU_BMJ.F90 module_CU_SAS.F90 module_CU_SASHUR.F90 module_LS_LISS.F90 module_LS_NOAHLSM.F90 module_MP_ETANEW.F90 module_MP_FER_HIRES.F90 module_mp_thompson.F90 module_mp_radar.F90 module_MP_GFS.F90 module_MP_WSM6.F90 module_RA_GFDL.F90 module_RA_RRTM.F90 module_SF_JSFC.F90 module_SF_GFDL.F90 module_SF_URBAN.F90 machine.f physparam.f physcons.f funcphys.f module_nst_parameters.f module_nst_water_prop.f module_nst_model.f calpreciptype.f gocart_tracer_config_stub.f grrad_nmmb.f radiation_astronomy_nmmb.f radiation_aerosols_nmmb.f radiation_gases_nmmb.f radiation_clouds_nmmb.f radiation_surface_nmmb.f rad_initialize_nmmb.f radlw_param_nmmb.f radlw_datatb_nmmb.f radlw_main_nmmb.f radsw_param_nmmb.f radsw_datatb_nmmb.f radsw_main_nmmb.f radiation_astronomy_gfs.f radiation_aerosols_gfs.f radiation_gases_gfs.f radiation_clouds_gfs.f radiation_surface_gfs.f precpd_nmmb.f iounitdef.f ozne_def.f progtm_module.f date_def.f rascnvv2.f namelist_soilveg.f module_bfmicrophysics.f mersenne_twister.f tracer_const_h.f gfs_phy_tracer_config.f rad_initialize.f radlw_param.f radlw_datatb.f radlw_main.f radsw_param.f radsw_datatb.f radsw_main.f radiation_astronomy.f radiation_aerosols.f radiation_gases.f radiation_clouds.f radiation_surface.f grrad.f ozphys.f ozinterp.f sfcsub.f gbphys.f dcyc2.f dcyc2.pre.rad.f set_soilveg.f sfc_drv.f sfc_land.f progt2.f sfc_sice.f sfc_ocean.f sfc_nst.f sfc_diff.f sfc_diag.f sflx.f moninp.f moninp1.f moninq.f moninedmf.f mfpbl.f gwdps.f gwdc.f rayleigh_damp.f rayleigh_damp_mesopause.f sascnv.f sascnvn.f cnvc90.f tridi2t3.f shalcv.f shalcv_opr.f shalcnv.f lrgsclr.f gscond.f gscondp.f precpd.f precpdp.f mstadb.f mstadbtn.f mstcnv.f get_prs.f gsmddrive.f co2hc.f idea_solar_heating.f idea_tracer.f h2oc.f h2ohdc.f efield.f ideaca.f idea_co2.f idea_h2o.f idea_ion.f idea_o2_o3.f idea_dissipation.f idea_phys.f num_parthds.F > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/phys'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/phys'
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_BL_GFSPBL.F90 > module_BL_GFSPBL.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -O3 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -free -I../share -fpp -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D -r8 -c machine.f
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_BL_GFSPBLHUR.F90 > module_BL_GFSPBLHUR.f90
@@ -724,16 +862,16 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -free -O3 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -I../share -fpp -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D -r8 -c rad_initialize_nmmb.f
 ar -r libphys.a module_BL_GFSPBL.o module_BL_GFSPBLHUR.o module_BL_MYJPBL.o module_CU_BMJ.o module_CU_SAS.o module_CU_SASHUR.o module_LS_LISS.o module_LS_NOAHLSM.o module_MP_ETANEW.o module_MP_FER_HIRES.o module_mp_thompson.o module_mp_radar.o module_MP_GFS.o module_MP_WSM6.o module_RA_GFDL.o module_RA_RRTM.o module_SF_JSFC.o module_SF_GFDL.o module_SF_URBAN.o machine.o physparam.o physcons.o funcphys.o module_nst_parameters.o module_nst_water_prop.o module_nst_model.o calpreciptype.o co2hc.o idea_solar_heating.o idea_tracer.o h2oc.o h2ohdc.o efield.o ideaca.o idea_co2.o idea_h2o.o idea_ion.o idea_o2_o3.o idea_dissipation.o idea_phys.o gocart_tracer_config_stub.o iounitdef.o ozne_def.o progtm_module.o date_def.o rascnvv2.o namelist_soilveg.o module_bfmicrophysics.o mersenne_twister.o tracer_const_h.o gfs_phy_tracer_config.o rad_initialize.o radlw_param.o radlw_datatb.o radlw_main.o radsw_param.o radsw_datatb.o radsw_main.o radiation_astronomy.o radiation_aerosols.o radiation_gases.o radiation_clouds.o radiation_surface.o grrad.o ozphys.o ozinterp.o sfcsub.o gbphys.o dcyc2.o dcyc2.pre.rad.o set_soilveg.o sfc_drv.o sfc_land.o progt2.o sfc_sice.o sfc_ocean.o sfc_nst.o sfc_diff.o sfc_diag.o sflx.o moninp.o moninp1.o moninq.o moninedmf.o mfpbl.o gwdps.o gwdc.o rayleigh_damp.o rayleigh_damp_mesopause.o sascnv.o sascnvn.o cnvc90.o tridi2t3.o shalcv.o shalcv_opr.o shalcnv.o lrgsclr.o gscond.o gscondp.o precpd.o precpdp.o mstadb.o mstadbtn.o mstcnv.o get_prs.o gsmddrive.o grrad_nmmb.o radiation_astronomy_nmmb.o radiation_aerosols_nmmb.o radiation_gases_nmmb.o radiation_clouds_nmmb.o radiation_surface_nmmb.o rad_initialize_nmmb.o radlw_param_nmmb.o radlw_datatb_nmmb.o radlw_main_nmmb.o radsw_param_nmmb.o radsw_datatb_nmmb.o radsw_main_nmmb.o radiation_astronomy_gfs.o radiation_aerosols_gfs.o radiation_gases_gfs.o radiation_clouds_gfs.o radiation_surface_gfs.o precpd_nmmb.o num_parthds.o
 ar: creating libphys.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/phys'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/phys'
 cd atmos/nmm           && gmake -j2
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/nmm'
 makefile:89: depend: No such file or directory
 ls -1 module_BGRID_INTERP.F90 module_CLOCKTIMES.F90 module_CONTROL.F90 module_CONVECTION.F90 module_DERIVED_TYPES.F90 module_DIAGNOSE.F90 module_DIGITAL_FILTER_NMM.F90 module_DM_PARALLEL.F90 module_DOMAIN_GRID_COMP.F90 module_DOMAIN_INTERNAL_STATE.F90 module_DYNAMICS_ROUTINES.F90 module_EXCHANGE.F90 module_FLTBNDS.F90 module_GET_CONFIG.F90 module_GET_CONFIG_WRITE.F90 module_GWD.F90 module_H_TO_V.F90 module_INIT_READ_BIN.F90 module_INIT_READ_NEMSIO.F90 module_MICROPHYSICS.F90 module_MY_DOMAIN_SPECS.F90 module_NESTING.F90 module_NMM_GRID_COMP.F90 module_NMM_INTEGRATE.F90 module_NMM_INTERNAL_STATE.F90 module_OUTPUT.F90 module_PARENT_CHILD_CPL_COMP.F90 module_PRECIP_ADJUST.F90 module_RADIATION.F90 module_SOLVER_GRID_COMP.F90 module_SOLVER_INTERNAL_STATE.F90 module_TIMESERIES.F90 module_TURBULENCE.F90 module_VARS.F90 module_VARS_STATE.F90 module_WRITE_GRID_COMP.F90 module_WRITE_INTERNAL_STATE.F90 module_WRITE_ROUTINES.F90 n_namelist_physics_def.f n_layout1.f n_resol_def.f n_compns_physics.f n_mpi_def.f n_module_gfs_mpi_def.f n_mpi_quit.f > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/nmm'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/nmm'
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_BGRID_INTERP.F90 > module_BGRID_INTERP.f90
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_CLOCKTIMES.F90 > module_CLOCKTIMES.f90
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_CONTROL.F90 > module_CONTROL.f90
@@ -819,23 +957,23 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -O3 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -I../share -I../phys -c module_NMM_GRID_COMP.f90
 ar -r libnmm.a module_BGRID_INTERP.o module_CLOCKTIMES.o module_CONTROL.o module_CONVECTION.o module_DERIVED_TYPES.o module_DIAGNOSE.o module_DIGITAL_FILTER_NMM.o module_DM_PARALLEL.o module_DOMAIN_GRID_COMP.o module_DOMAIN_INTERNAL_STATE.o module_DYNAMICS_ROUTINES.o module_EXCHANGE.o module_FLTBNDS.o module_GET_CONFIG.o module_GET_CONFIG_WRITE.o module_GWD.o module_H_TO_V.o module_INIT_READ_BIN.o module_INIT_READ_NEMSIO.o module_MICROPHYSICS.o module_MY_DOMAIN_SPECS.o module_NESTING.o module_NMM_GRID_COMP.o module_NMM_INTEGRATE.o module_NMM_INTERNAL_STATE.o module_OUTPUT.o module_PARENT_CHILD_CPL_COMP.o module_PRECIP_ADJUST.o module_RADIATION.o module_SOLVER_GRID_COMP.o module_SOLVER_INTERNAL_STATE.o module_TIMESERIES.o module_TURBULENCE.o module_VARS.o module_VARS_STATE.o module_WRITE_GRID_COMP.o module_WRITE_INTERNAL_STATE.o module_WRITE_ROUTINES.o n_namelist_physics_def.o n_layout1.o n_resol_def.o n_compns_physics.o n_mpi_def.o n_module_gfs_mpi_def.o n_mpi_quit.o
 ar: creating libnmm.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/nmm'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/nmm'
 cd atmos/gsm           && gmake stub
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm'
 makefile:91: depend: No such file or directory
 ls -1 module_GFS_CORE_SETUP.F90 module_GFS_INTERNAL_STATE.F90 module_GFS_INTEGRATE.F90 module_GFS_GRID_COMP.F90  > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm'
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_GFS_GRID_COMP_stub.F90 > module_GFS_GRID_COMP_stub.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -O3 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -free -I../share -I../io -Ilibutil -c module_GFS_GRID_COMP_stub.f90
 ar -r libgfs.a module_GFS_GRID_COMP_stub.o
 ar: creating libgfs.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gsm'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gsm'
 cd atmos/gen           && gmake stub
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gen'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gen'
 makefile:31: warning: overriding commands for target `module_GEN_INTERNAL_STATE.o'
 makefile:28: warning: ignoring old commands for target `module_GEN_INTERNAL_STATE.o'
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_GEN_INTERNAL_STATE.F90 > module_GEN_INTERNAL_STATE.f90
@@ -844,23 +982,23 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -O3 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -I../share -c module_GEN_GRID_COMP_stub.f90
 ar -r libgen.a module_GEN_INTERNAL_STATE.o module_GEN_GRID_COMP_stub.o 
 ar: creating libgen.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/gen'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/gen'
 cd atmos/fim           && gmake stub
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim'
 makefile:54: depend: No such file or directory
 ls -1 fim_internal_state.F90 fim_grid_comp.F90 module_FIM_INTEGRATE.F90 module_DYNAMICS_GRID_COMP.F90 module_DYN_PHY_CPL_COMP.F90 module_PHYSICS_GRID_COMP.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim'
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D fim_grid_comp_stub.F90 > fim_grid_comp_stub.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -O3 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -I../share -c fim_grid_comp_stub.f90
 ar -r libfimtop.a fim_grid_comp_stub.o
 ar: creating libfimtop.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/fim'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/fim'
 cd atmos/post          && gmake stub
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/post'
 makefile:39: warning: overriding commands for target `post_nmm.o'
 makefile:36: warning: ignoring old commands for target `post_nmm.o'
 makefile:39: warning: overriding commands for target `post_nems_routines.o'
@@ -878,8 +1016,8 @@ ls -1 post_gfs.F90 post_nmm.F90 post_nems_routines.F90 > Srcfiles
 echo "." > Filepath
 ../../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/post'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/post'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/post'
 makefile:39: warning: overriding commands for target `post_nmm.o'
 makefile:36: warning: ignoring old commands for target `post_nmm.o'
 makefile:39: warning: overriding commands for target `post_nems_routines.o'
@@ -900,25 +1038,25 @@ mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_co
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -I../share -c post_nems_routines_stub.f90
 ar -r libpost.a post_gfs_stub.o post_nmm_stub.o post_nems_routines_stub.o
 ar: creating libpost.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos/post'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos/post'
 cd atmos               && gmake -j2
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
 makefile:39: depend: No such file or directory
 ls -1 module_ATM_INTERNAL_STATE.F90 module_ATM_GRID_COMP.F90 > Srcfiles
 echo "." > Filepath
 ../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_ATM_INTERNAL_STATE.F90 > module_ATM_INTERNAL_STATE.f90
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D module_ATM_GRID_COMP.F90 > module_ATM_GRID_COMP.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Ishare -Inmm -Igsm -Ifim -Iphys -Igen -c module_ATM_INTERNAL_STATE.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Ishare -Inmm -Igsm -Ifim -Iphys -Igen -c module_ATM_GRID_COMP.f90
 ar -r libatmos.a module_ATM_INTERNAL_STATE.o module_ATM_GRID_COMP.o
 ar: creating libatmos.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/atmos'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
 cd ENS_Cpl             && gmake stub
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
 makefile:124: depend: No such file or directory
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D Lib_ESMFStateAddGetMod.f > Lib_ESMFStateAddGetMod.f90
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D machine.f > machine.f90
@@ -941,32 +1079,32 @@ ls -1 Lib_ESMFStateAddGetMod.f90 machine.f90 ENS_Cpl_InternalState_ESMFMod.f90 E
 echo "." > Filepath
 ../../exe/mkDepends.pl -m Filepath Srcfiles > depend
 rm -f Filepath Srcfiles
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
-gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
+gmake[1]: Entering directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D ENS_CplComp_ESMFMod_STUB.F90 > ENS_CplComp_ESMFMod_STUB.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -c ENS_CplComp_ESMFMod_STUB.f90
 ar -r ENS_Cpl.a ENS_CplComp_ESMFMod_STUB.o
 ar: creating ENS_Cpl.a
-gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/save/Ratko.Vasic/trunk/src/ENS_Cpl'
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Ratko.Vasic) Fri Jul  3 17:48:42 UTC 2015 r58041M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=184' module_MEDIATOR.F90 > module_MEDIATOR.f90
+gmake[1]: Leaving directory `/scratch4/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/ENS_Cpl'
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Wed Aug  5 06:27:23 EDT 2015 r58896:59290M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=217' module_MEDIATOR.F90 > module_MEDIATOR.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_MEDIATOR.f90
 rm module_MEDIATOR.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Ratko.Vasic) Fri Jul  3 17:48:42 UTC 2015 r58041M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=184' module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Wed Aug  5 06:27:23 EDT 2015 r58896:59290M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=217' module_MEDIATOR_SpaceWeather.F90 > module_MEDIATOR_SpaceWeather.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_MEDIATOR_SpaceWeather.f90
 rm module_MEDIATOR_SpaceWeather.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Ratko.Vasic) Fri Jul  3 17:48:42 UTC 2015 r58041M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=184' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Wed Aug  5 06:27:23 EDT 2015 r58896:59290M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=217' module_EARTH_INTERNAL_STATE.F90 > module_EARTH_INTERNAL_STATE.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_EARTH_INTERNAL_STATE.f90
 rm module_EARTH_INTERNAL_STATE.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Ratko.Vasic) Fri Jul  3 17:48:42 UTC 2015 r58041M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=184' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Wed Aug  5 06:27:23 EDT 2015 r58896:59290M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=217' module_EARTH_GRID_COMP.F90 > module_EARTH_GRID_COMP.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_EARTH_GRID_COMP.f90
 rm module_EARTH_GRID_COMP.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Ratko.Vasic) Fri Jul  3 17:48:42 UTC 2015 r58041M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=184' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Wed Aug  5 06:27:23 EDT 2015 r58896:59290M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=217' module_NEMS_INTERNAL_STATE.F90 > module_NEMS_INTERNAL_STATE.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_NEMS_INTERNAL_STATE.f90
 rm module_NEMS_INTERNAL_STATE.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Ratko.Vasic) Fri Jul  3 17:48:42 UTC 2015 r58041M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=184' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Wed Aug  5 06:27:23 EDT 2015 r58896:59290M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=217' module_NEMS_GRID_COMP.F90 > module_NEMS_GRID_COMP.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c module_NEMS_GRID_COMP.f90
 rm module_NEMS_GRID_COMP.f90
-/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Ratko.Vasic) Fri Jul  3 17:48:42 UTC 2015 r58041M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=184' MAIN_NEMS.F90 > MAIN_NEMS.f90
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D  -D'SVN_INFO="(Tom.Black) Wed Aug  5 06:27:23 EDT 2015 r58896:59290M https://svnemc.ncep.noaa.gov/projects/nems/trunk/src"' -D'CMP_YEAR=2015' -D'CMP_JD=217' MAIN_NEMS.F90 > MAIN_NEMS.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict -Iatmos -Ichem -Iatmos/share -IENS_Cpl -Iatmos/nmm -Iatmos/fim -Iatmos/gsm -Iatmos/phys -Iatmos/gen  -c MAIN_NEMS.f90
 rm MAIN_NEMS.f90
 mpiifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291 -O3 -g -traceback -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/mod/modO/Linux.intel.64.intelmpi.default -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/src/include  -I/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/incmod/nemsio -I/apps/netcdf/3.6.3-intel/include -fp-model strict  -o ../exe/NEMS.x MAIN_NEMS.o module_MEDIATOR.o module_MEDIATOR_SpaceWeather.o module_EARTH_INTERNAL_STATE.o module_EARTH_GRID_COMP.o module_NEMS_INTERNAL_STATE.o module_NEMS_GRID_COMP.o  atmos/libatmos.a atmos/nmm/libnmm.a atmos/gsm/libgfs.a atmos/fim/libfimtop.a atmos/gen/libgen.a atmos/phys/libphys.a atmos/share/libshare.a atmos/post/libpost.a  ENS_Cpl/ENS_Cpl.a -L/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs -lnemsio -L/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs -lbacio_4 -L/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs -lw3nco_d -lw3emc_d -L/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs -lsp_d -L/apps/netcdf/3.6.3-intel/lib -lnetcdf -L/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/lib/libO/Linux.intel.64.intelmpi.default  -L/apps/intel/impi/5.0.3.048/intel64/lib/release_mt -L/apps/intel/impi/5.0.3.048/intel64/lib -L/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64 -L/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64 -L/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64 -L/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64 -L/apps/intel/composer_xe_2015.1.133/tbb/lib/intel64/gcc4.4 -L/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/ -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../../lib64/ -L/lib/../lib64 -L/lib/../lib64/ -L/usr/lib/../lib64 -L/usr/lib/../lib64/ -L/apps/intel/composer_xe_2015.1.133/compiler/lib/intel64/ -L/apps/intel/composer_xe_2015.1.133/mkl/lib/intel64/ -L/apps/intel/composer_xe_2015.1.133/tbb/lib/intel64/gcc4.4/ -L/usr/lib/gcc/x86_64-redhat-linux/4.4.7/../../../ -L/lib64 -L/lib/ -L/usr/lib64 -L/usr/lib -Wl,-rpath,/scratch4/NCEPDEV/meso/noscrub/Ratko.Vasic/libs/esmf_6/lib/libO/Linux.intel.64.intelmpi.default  -lesmf  -ldl -lrt -lpthread -limf -lsvml -lirng -lm -lipgo -ldecimal -liomp5 -lcilkrts -lstdc++ -lgcc -lgcc_s -lirc -lpthread -lsvml -lgcc -lgcc_s -lirc_s -ldl -lrt -ldl  
