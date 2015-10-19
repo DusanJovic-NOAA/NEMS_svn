@@ -83,6 +83,7 @@ Currently Loaded Modulefiles:
   1) mpt/2.06             3) esmf/6.3.0rp1
   2) intel/13.0.079       4) netcdf/4.1.3-intel
 + eval
++ eval
 cd atmos               && gmake clean
 gmake[1]: Entering directory `/scratch2/portfolios/NCEPDEV/meso/noscrub/Tom.Black/trunk_update/src/atmos'
 cd share        && gmake clean
@@ -3174,6 +3175,7 @@ makefile:45: warning: overriding commands for target `post_gfs_stub.o'
 makefile:39: warning: ignoring old commands for target `post_gfs_stub.o'
 makefile:45: warning: overriding commands for target `post_nmm_stub.o'
 makefile:42: warning: ignoring old commands for target `post_nmm_stub.o'
+/lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D post_nmm.F90 > post_nmm.f90
 /lib/cpp -P -traditional -DCHNK_RRTM=8  -DENABLE_SMP -DTHREAD_2D post_gfs_stub.F90 > post_gfs_stub.f90
 ifort -g -openmp -mkl=sequential -align array32byte -lmkl_intel_lp64 -lmkl_core -lmkl_sequential -lpthread -lm -lmpi -openmp -convert big_endian -assume byterecl -mkl=sequential -diag-disable 8290,8291  -I/apps/esmf/6.3.0rp1/intel/mpt/mod/modO/Linux.intel.64.mpi.default -I/apps/esmf/6.3.0rp1/intel/mpt/include  -I/scratch1/portfolios/NCEPDEV/nems/save/Jun.Wang/nceplibs/src/nemsio/nemsgfs_newrad/incmod -I/apps/netcdf/4.1.3-intel/include -fp-model strict -I../share -c post_gfs_stub.f90
 ifort: warning #10315: specifying -lm before files may supercede the Intel(R) math library and affect performance
